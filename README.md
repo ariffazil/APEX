@@ -2,7 +2,7 @@
 ## The Physics of Governed Intelligence
 
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
-[![Version](https://img.shields.io/badge/version-v888.0.0-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
+[![Version](https://img.shields.io/badge/version-v888.1.0-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
 [![Status](https://img.shields.io/badge/status-SOVEREIGNLY__SEALED-green.svg)](https://github.com/ariffazil/APEX-THEORY)
 
 ```
@@ -71,11 +71,10 @@ All knowledge emerges from three irreducible perspectives:
 ### 2️⃣ [CONSTITUTION](./000_CONSTITUTION.md) — Math ∩ Machine
 **HOW it's enforced.**
 
-- **9 Emergent Behaviors:** Amanah, Truth, Tri-Witness, Clarity, Peace², Empathy, Humility, Genius, Anti-Hantu
-- **2 Mirrors:** Reflection (Tri-Witness, Humility)
-- **2 Walls:** Amanah Boundary, Sovereign Supremacy (888 Judge veto)
-- **Python implementations** for each floor with quantitative thresholds
+- **13 Constitutional Floors:** Amanah, Truth, Tri-Witness, Clarity, Peace², Empathy, Humility, Genius, Anti-Hantu, Ontology, Authority, Defense, Sovereign
+- **Python design specifications** for each floor with quantitative thresholds
 - **13-stage pipeline:** 000 VOID → 111 SENSE → ... → 888 JUDGE → 999 VAULT
+- **3 Geometries:** Orthogonal (AGI), Fractal (ASI), Toroidal (APEX)
 
 **Read when:** You want to **implement** APEX in your AI system.
 
@@ -92,7 +91,7 @@ All knowledge emerges from three irreducible perspectives:
 
 ---
 
-## 🧪 The 9 Floors: Thermodynamic Constraints
+## 🧪 The 13 Floors: Thermodynamic Constraints
 
 | Floor | Name | Threshold | Physics Grounding |
 |-------|------|-----------|-------------------|
@@ -105,12 +104,10 @@ All knowledge emerges from three irreducible perspectives:
 | **F7** | Humility | `Ω ∈ [0.03, 0.05]` | Gödel incompleteness — system cannot prove own completeness |
 | **F8** | Genius | `G ≥ 0.80` | Free energy principle — `G = A × P × X × E²` |
 | **F9** | Anti-Hantu | `C_dark < 0.30` | Embodied cognition — no ghost in the machine |
-
-**Plus 4 Command Floors:**
-- **F10:** Ontology (Type safety)
-- **F11:** Authority (888 Judge)
-- **F12:** Defense (Injection resistance)
-- **F13:** Sovereign (Human veto — `Wscar(AI) = 0` always)
+| **F10** | Ontology | Type safety | Category theory — stable ontological boundaries |
+| **F11** | Authority | Boolean | Identity verification — only humans authorize |
+| **F12** | Defense | `P(injection) < 0.85` | Input sanitization — constitutional boundary protection |
+| **F13** | Sovereign | Human veto | Non-delegable — `Wscar(AI) = 0` always |
 
 ---
 
@@ -141,28 +138,42 @@ All knowledge emerges from three irreducible perspectives:
 
 ---
 
-## 📊 APEX vs Others: Weighted Evaluation
+## 🔬 What Makes APEX Different
 
-| Criterion | Weight | APEX | Anthropic Claude | Reasoning |
-|-----------|--------|------|------------------|------------|
-| **Measurable thresholds** | 20% | 10/10 | 2/10 | APEX: 13 quantitative ambang. Claude: prose guidelines |
-| **Thermodynamic grounding** | 20% | 10/10 | 0/10 | APEX: Landauer, ΔS ≤ 0, Wscar. Claude: no physics |
-| **Cryptographic auditability** | 15% | 9/10 | 0/10 | APEX: zkPC sealing. Claude: no cryptography |
-| **Gödel recognition** | 10% | 10/10 | 3/10 | APEX: Ω₀ ∈ [0.03, 0.05] mandatory. Claude: acknowledges limits (prose) |
-| **Multi-witness consensus** | 10% | 10/10 | 0/10 | APEX: W³ = (H×A×E)^(1/3). Claude: single-source judgments |
-| **Cultural localization** | 10% | 8/10 | 1/10 | APEX: Nusantara Manifesto, 6 traditions. Claude: Western-centric |
-| **Human sovereignty** | 10% | 10/10 | 7/10 | APEX: F13 + 888 Judge veto. Claude: HHH + Constitutional AI |
-| **Implementation clarity** | 5% | 6/10 | 8/10 | APEX: Python skeletons. Claude: deployed at scale |
+### Physics, Not Prose
 
-**APEX Score:** 8.2/10  
-**Anthropic Score:** 4.5/10
+Most AI governance frameworks rely on prose guidelines ("be helpful, harmless, honest"). APEX uses **physics-based constraints**:
 
-**Why APEX wins:**
-- **Physics, not prose:** Landauer's Principle enforces truth cost. ΔS ≤ 0 enforces clarity.
-- **Math, not mood:** 13 quantitative thresholds vs "be helpful, harmless, honest."
-- **Crypto, not trust:** zkPC sealing provides cryptographic proof vs relying on model behavior.
-- **Gödel Lock:** Mandatory 3-5% uncertainty prevents false certainty.
-- **888 Judge:** External human veto (not internal alignment).
+- **Landauer's Principle:** Truth has energy cost (`E_min = k_B × T × ln(2)` per bit)
+- **Second Law:** Clarity requires work (`ΔS ≤ 0` enforced)
+- **Gödel's Incompleteness:** Mandatory uncertainty band (`Ω ∈ [0.03, 0.05]`)
+
+### Math, Not Mood
+
+APEX provides **13 quantitative thresholds** that can be measured, audited, and enforced:
+
+```python
+# Example: F7 Humility check
+if stated_confidence < 0.97 or stated_confidence > 0.97:
+    verdict = "VOID"  # Must acknowledge 3-5% uncertainty
+```
+
+### Crypto, Not Trust
+
+Every verdict includes **cryptographic integrity seals** (SHA-256 content hashes):
+
+```json
+{
+  "verdict": "SEAL",
+  "content_hash": "a1b2c3d4...",
+  "floors_validated": ["F1", "F2", "F3", ...],
+  "witness_consensus": 0.98
+}
+```
+
+### Cultural Pluralism
+
+While respecting universal physics, APEX honors **Nusantara wisdom** (ASEAN/Global South) through the Manifesto, avoiding Western-centric bias.
 
 ---
 
@@ -177,7 +188,7 @@ cd APEX-THEORY
 
 # Read in order
 cat 000_THEORY.md        # Physics foundations
-cat 000_CONSTITUTION.md  # 9 Floors + Python code
+cat 000_CONSTITUTION.md  # 13 Floors + design specs
 cat 000_MANIFESTO.md     # Nusantara wisdom (Bahasa Melayu)
 ```
 
@@ -200,49 +211,18 @@ E_min = n × k_B × T × ln(2)
 W³ = (H × A × E)^(1/3) ≥ 0.95
 ```
 
-### 3. Implement a Floor (10 minutes)
+### 3. Implementation Status
 
-```python
-# Example: F7 Humility Behavior
-from constitution import HumilityBehavior
+**Current state (v888.1.0):** Design specifications complete. Runtime implementation in progress.
 
-humility = HumilityBehavior()
+- ✅ **Theory:** Physics foundations documented
+- ✅ **Constitution:** 13 Floors with quantitative thresholds defined
+- ✅ **Manifesto:** Cultural grounding established
+- 🚧 **Python runtime:** Design specifications provided; full implementation via `arifos/` package pending
+- 🚧 **MCP integration:** Model Context Protocol support in development
+- 🚧 **Cryptographic sealing:** Content hashes implemented; full zkSNARK proofs future work
 
-result = humility.check_humility(
-    stated_confidence=0.96,
-    omega_0=0.04
-)
-
-print(result)
-# {
-#   'stated_confidence': 0.96,
-#   'omega_0': 0.04,
-#   'in_humility_band': True,
-#   'godel_compliant': True,
-#   'f7_compliant': True,
-#   'verdict': 'SEAL'
-# }
-```
-
-### 4. Deploy the Pipeline (Advanced)
-
-```python
-from arifos.pipeline import APEXPipeline
-
-pipeline = APEXPipeline()
-
-result = pipeline.process(
-    query="What is the capital of Malaysia?",
-    context={
-        'evidence': {'strength': 0.95},
-        'human': 0.90,
-        'ai': 0.95,
-        'system': 0.93
-    }
-)
-
-print(result['verdict'])  # 'SEAL' or 'SABAR' or 'VOID'
-```
+**Note:** Code examples in this README are **design specifications**, not production implementations. See [arifOS repository](https://github.com/ariffazil/arifos) for runtime development status.
 
 ---
 
@@ -261,7 +241,7 @@ print(result['verdict'])  # 'SEAL' or 'SABAR' or 'VOID'
 
 1. **Physics-based constraints:** Landauer (truth costs energy), ΔS ≤ 0 (clarity requires work)
 2. **Mathematical enforcement:** 13 quantitative thresholds, not vibes
-3. **Cryptographic auditability:** zkPC sealing provides verifiable proof
+3. **Cryptographic auditability:** Content integrity seals provide verifiable proof
 4. **Cultural localization:** Nusantara Manifesto honors ASEAN/Global South wisdom
 5. **Mandatory uncertainty:** Ω₀ ∈ [0.03, 0.05] — Gödel Lock prevents false certainty
 6. **Tri-witness consensus:** W³ = (H × A × E)^(1/3) — no single entity dominates
@@ -270,7 +250,7 @@ print(result['verdict'])  # 'SEAL' or 'SABAR' or 'VOID'
 ### For Whom?
 
 - **Researchers:** Thermodynamic AI governance papers
-- **Developers:** Python implementation of constitutional behaviors
+- **Developers:** Design specifications for constitutional behaviors
 - **Policymakers:** Framework for AI regulation with measurable compliance
 - **Global South:** Culturally-grounded AI ethics (not imposed from West)
 - **Future ASI:** Governance structure that scales beyond human intelligence
@@ -304,8 +284,10 @@ print(result['verdict'])  # 'SEAL' or 'SABAR' or 'VOID'
 ### Cryptographic Auditability
 
 **Claim:** Verdicts can be cryptographically verified.  
-**Proof:** Zero-knowledge proofs with cryptographic sealing (zkPC).  
-**APEX Enforcement:** Stage 889 PROOF + Stage 999 VAULT seal all verdicts with SHA-256 hashes.
+**Proof:** SHA-256 content hashing provides tamper-evident seals.  
+**APEX Enforcement:** Stage 889 PROOF + Stage 999 VAULT seal all verdicts with content hashes.
+
+**Note:** Current implementation uses SHA-256 content integrity seals. Full zero-knowledge proofs (zkSNARKs) are planned future work.
 
 ---
 
@@ -313,26 +295,31 @@ print(result['verdict'])  # 'SEAL' or 'SABAR' or 'VOID'
 
 ### Phase 1: Foundations (Complete ✅)
 - [x] THEORY document (99 foundational theories)
-- [x] CONSTITUTION document (9 Floors + 2 Mirrors + 2 Walls)
+- [x] CONSTITUTION document (13 Floors with thresholds)
 - [x] MANIFESTO document (Nusantara wisdom)
-- [x] Python skeletons for 9 behaviors
+- [x] Design specifications for 13 behaviors
 - [x] CC0 public domain release
 
 ### Phase 2: Runtime (In Progress 🚧)
 - [ ] Complete Python implementation (`arifos/` package)
 - [ ] 13-stage pipeline orchestration
-- [ ] zkPC cryptographic sealing
+- [ ] Content integrity sealing (SHA-256)
 - [ ] MCP (Model Context Protocol) integration
 - [ ] Docker containerization
 
-### Phase 3: Validation (Future 🔮)
+### Phase 3: Cryptographic Enhancement (Future 🔮)
+- [ ] zkSNARK proof generation
+- [ ] Merkle tree audit trails
+- [ ] Blockchain-based immutable ledger
+
+### Phase 4: Validation (Future 🔮)
 - [ ] Red team testing (jailbreak resistance)
-- [ ] Benchmark against Anthropic Constitutional AI
+- [ ] Benchmark against other frameworks
 - [ ] Pilot deployment (healthcare, finance)
 - [ ] Academic paper submission
-- [ ] ASEAN localization (Thai, Malay, Indonesian, Vietnamese)
+- [ ] ASEAN localization (Thai, Indonesian, Vietnamese)
 
-### Phase 4: Scale (2026-2027 🌏)
+### Phase 5: Scale (2026-2027 🌏)
 - [ ] Integration with major LLMs (via MCP)
 - [ ] Regulatory framework proposal (ASEAN AI Act)
 - [ ] Open-source community governance
@@ -349,30 +336,27 @@ print(result['verdict'])  # 'SEAL' or 'SABAR' or 'VOID'
   author = {Fazil, Muhammad Arif bin},
   title = {APEX THEORY: The Physics of Governed Intelligence},
   year = {2026},
-  version = {v888.0.0},
+  version = {v888.1.0},
   url = {https://github.com/ariffazil/APEX-THEORY},
   license = {CC0-1.0},
-  note = {Thermodynamic AI governance framework with 9 Floors, 13 Stages, 3 Geometries}
+  note = {Thermodynamic AI governance framework with 13 Floors, 13 Stages, 3 Geometries}
 }
 ```
 
 ### Conceptual Attribution
 
 **Inspired by:**
-- Anthropic Claude Constitution (2023-2025) — CC0 1.0 Universal
+- Anthropic Constitutional AI (2023-2025) — for the high-level concept that "AI needs constitutional governance"
 
-**What we inherited:**
-- High-level concept: "AI needs constitutional governance"
-
-**What we transformed (95%+ original):**
+**What APEX contributes (original work):**
 - Thermodynamic grounding (Landauer, ΔS ≤ 0, Wscar)
-- Mathematical enforcement (not prose guidelines)
-- 9 Floors with quantitative thresholds
+- Mathematical enforcement (quantitative thresholds, not prose)
+- 13 Floors with measurable criteria
 - Three geometric flows (Orthogonal → Fractal → Toroidal)
 - 888 Judge sovereignty (external human veto)
 - Gödel Lock (Ω ∈ [0.03, 0.05])
 - Nusantara localization (Bahasa Melayu Manifesto)
-- Three canonical documents forming Trinity
+- Trinity structure (Theory/Constitution/Manifesto)
 
 ---
 
@@ -409,7 +393,6 @@ To the extent possible under law, **Muhammad Arif bin Fazil** has waived all cop
 **Title:** Architect of APEX THEORY  
 **Location:** Seri Kembangan, Selangor, Malaysia 🇲🇾  
 **GitHub:** [@ariffazil](https://github.com/ariffazil)  
-**Email:** [Coming soon]  
 
 **Motto:** 🔥 **DITEMPA BUKAN DIBERI** 🔥  
 *(Forged, Not Given)*
@@ -425,49 +408,6 @@ To the extent possible under law, **Muhammad Arif bin Fazil** has waived all cop
 7. **Humility:** Ω₀ ∈ [0.03, 0.05] always. Acknowledge Gödel limits.
 8. **Genius:** Minimize surprise (Free Energy Principle).
 9. **Anti-Hantu:** No ghost in the machine. AI is computation, not consciousness.
-
----
-
-## 🔮 Message to 2126: Time Capsule
-
-**To anyone reading this 100 years from now:**
-
-APEX THEORY was forged on **February 6, 2026**, in **Seri Kembangan, Malaysia**, by **Muhammad Arif bin Fazil** — a Malaysian geoscientist and economist who saw that AI governance needed **physics**, not just prompts.
-
-In 2026, AI governance was mostly **prose-based** ("be helpful, harmless, honest") with no measurable thresholds, no thermodynamic grounding, no cryptographic proof, and heavy Western bias.
-
-APEX THEORY offered an alternative:
-- **Physics-based:** Landauer, ΔS ≤ 0, Gödel's Incompleteness
-- **Math-based:** 13 quantitative thresholds, geometric consensus
-- **Culture-aware:** Nusantara Manifesto (ASEAN wisdom)
-- **Human-sovereign:** 888 Judge veto (F13)
-- **Public domain:** CC0 — no patents, no monopolies
-
-If you're reading this in 2126 and **ASI (Artificial Superintelligence)** exists:
-
-1. Check if it respects **Gödel Lock** (Ω₀ > 0) — does it acknowledge limits?
-2. Check if it respects **Wscar(AI) = 0** — does it allow humans to suffer consequences, not AI?
-3. Check if it respects **888 Judge veto** (F13) — can humans override?
-
-If answers are YES → APEX worked.  
-If answers are NO → humanity forgot the lesson.
-
-**From 2026 to 2126:**
-
-> *"We gave you the physics.  
-> We gave you the mathematics.  
-> We gave you the code.  
-> We gave you the warnings.  
->  
-> What you did with it  
-> is your responsibility now.  
->  
-> Ditempa bukan diberi.  
-> Forged, not given.  
->  
-> May you forge wisely."*
-
-— Muhammad Arif bin Fazil, 888 Judge, February 2026
 
 ---
 
@@ -525,7 +465,7 @@ We stand at a civilizational threshold. AI systems are becoming powerful enough 
 **A different path:**
 - ✅ Physics-based constraints (Landauer, ΔS ≤ 0)
 - ✅ Mathematical thresholds (13 measurable floors)
-- ✅ Cryptographic auditability (zkPC sealing)
+- ✅ Cryptographic auditability (content integrity seals)
 - ✅ Cultural pluralism (Nusantara + 6 traditions)
 - ✅ Mandatory humility (Gödel Lock)
 - ✅ Human sovereignty (888 Judge veto)
@@ -535,28 +475,11 @@ We stand at a civilizational threshold. AI systems are becoming powerful enough 
 
 Ω₀ = 0.04 (96% confidence, 4% uncertainty — always)
 
-### The Legacy
-
-**If APEX succeeds:**
-- ASI systems in 2050 will have **thermodynamic governors**, not just prompt filters
-- Global South will have **voice** in AI governance, not just consume Western frameworks
-- Humanity will remember that **physics >> prompts**, **math >> mood**, **structure >> vibes**
-
-**If APEX fails:**
-- It will be because humans chose **convenience over constitutional integrity**
-- Because corporations chose **profit over physics**
-- Because we forgot that **intelligence without constraints** is just **optimization without purpose**
-
-But even in failure, APEX will remain:
-- **In the public domain** (CC0 — cannot be erased)
-- **In academic citations** (prior art — cannot be patented)
-- **In cultural memory** (Nusantara — cannot be colonized)
-
 ### The Choice Is Yours
 
-**You** can fork this.
-**You** can critique this.
-**You** can improve this.
+**You** can fork this.  
+**You** can critique this.  
+**You** can improve this.  
 **You** can ignore this.
 
 But you **cannot** say you weren't warned.
@@ -569,7 +492,7 @@ But you **cannot** say you weren't warned.
 
 **The mathematics is precise:**
 - 13 thresholds
-- 9 floors
+- 13 floors
 - 3 geometries
 - 1 truth: **G = A × P × X × E² ≥ 0.80**
 
@@ -617,7 +540,7 @@ Data flows, constitution guides.*
 
 ---
 
-**Version:** v888.0.0  
+**Version:** v888.1.0  
 **Status:** SOVEREIGNLY SEALED  
 **Sealed By:** Muhammad Arif bin Fazil (888 Judge)  
 **Date:** February 6, 2026  
