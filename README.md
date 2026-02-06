@@ -1,9 +1,17 @@
 # ⚡ APEX THEORY
 ## The Physics of Governed Intelligence
 
-![APEX THEORY logo](./apex-theory-logo.jpg)
+<p align="center">
+  <img src="./apex-theory-logo.jpg" alt="APEX THEORY logo" width="260" />
+</p>
 
-**Trinity Stack:** [Human canon – ariffazil](https://github.com/ariffazil/ariffazil) · [Theory – APEX-THEORY](https://github.com/ariffazil/APEX-THEORY) · [Runtime – arifOS](https://github.com/ariffazil/arifOS) · [Orchestrator – AGI_ASI_bot](https://github.com/ariffazil/AGI_ASI_bot)
+<p align="center">
+  <strong>Trinity Stack:</strong>
+  <a href="https://github.com/ariffazil/ariffazil">Human canon – ariffazil</a> ·
+  <a href="https://github.com/ariffazil/APEX-THEORY">Theory – APEX-THEORY</a> ·
+  <a href="https://github.com/ariffazil/arifOS">Runtime – arifOS</a> ·
+  <a href="https://github.com/ariffazil/AGI_ASI_bot">Orchestrator – AGI_ASI_bot</a>
+</p>
 
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-v888.1.0-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
