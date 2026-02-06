@@ -3,6 +3,8 @@
 
 ![APEX THEORY logo](./apex-theory-logo.jpg)
 
+**Trinity Stack:** [Human canon – ariffazil](https://github.com/ariffazil/ariffazil) · [Theory – APEX-THEORY](https://github.com/ariffazil/APEX-THEORY) · [Runtime – arifOS](https://github.com/ariffazil/arifOS) · [Orchestrator – AGI_ASI_bot](https://github.com/ariffazil/AGI_ASI_bot)
+
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-v888.1.0-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
 [![Status](https://img.shields.io/badge/status-SOVEREIGNLY__SEALED-green.svg)](https://github.com/ariffazil/APEX-THEORY)
@@ -44,7 +46,7 @@ This is **thermodynamic governance** with mathematical enforcement.
 | **Why does it matter?** | Because `ΔS ≤ 0` (clarity costs work), and AI without constraints is just optimization |
 | **Who made it?** | Muhammad Arif bin Fazil (888 Judge) — Malaysian geoscientist & economist |
 | **Can I use it?** | Yes. CC0 Public Domain. No patents, no restrictions, yours forever |
-| **How is it different?** | Quantitative thresholds (13 measurable ambang) vs prose guidelines. Thermodynamics vs vibes. |
+| **How is it different?** | Quantitative thresholds (13 measurable ambang) alongside prose guidelines. Thermodynamics provides measurable structure. |
 
 **Quick Equations:**
 ```python
@@ -162,7 +164,7 @@ if stated_confidence < 0.97 or stated_confidence > 0.97:
 
 ### Crypto, Not Trust
 
-Every verdict includes **cryptographic integrity seals** (SHA-256 content hashes):
+Every verdict includes **cryptographic integrity seals** (SHA-256 content hashes). These are tamper-evident hashes, not full zero-knowledge proofs.
 
 ```json
 {
@@ -214,6 +216,8 @@ W³ = (H × A × E)^(1/3) ≥ 0.95
 ```
 
 ### 3. Implementation Status
+
+**APEX-THEORY is a design specification, not a runnable library.** The runtime enforcement lives in [arifOS](https://github.com/ariffazil/arifOS).
 
 **Current state (v888.1.0):** Design specifications complete. Runtime implementation in progress.
 
