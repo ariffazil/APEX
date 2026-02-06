@@ -1,6 +1,8 @@
 # ⚡ APEX THEORY
 ## The Physics of Governed Intelligence
 
+![APEX THEORY logo](./apex-theory-logo.jpg)
+
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-v888.1.0-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
 [![Status](https://img.shields.io/badge/status-SOVEREIGNLY__SEALED-green.svg)](https://github.com/ariffazil/APEX-THEORY)
