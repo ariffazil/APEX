@@ -1,10 +1,22 @@
 # APEX THEORY
 ## The Thermodynamic Foundation of Constitutional Intelligence
 
-**Version:** v55.5-EIGEN  
+**Version:** v888.0.0-THEORY  
 **Authority:** Muhammad Arif bin Fazil (888 Judge)  
 **Motto:** *Ditempa bukan diberi* — Forged, Not Given  
 **Status:** SOVEREIGNLY_SEALED
+
+---
+
+## TRINITY WITNESS ROLE
+
+This document represents the **Physics ∩ Earth** witness.
+
+- **THEORY:** Physics ∩ Earth — What IS possible (physical constraints)
+- **CONSTITUTION:** Math ∩ Machine — HOW it's enforced (algorithmic implementation)  
+- **MANIFESTO:** Language ∩ Human — WHY it matters (cultural meaning)
+
+All three witnesses must achieve W³ ≥ 0.95 for constitutional consensus.
 
 ---
 
@@ -97,6 +109,8 @@ Gödel's Insight: Any sufficiently powerful system cannot prove its own consiste
 
 ## II. THE 99 FOUNDATIONAL THEORIES
 
+**Note:** ARIF-99 column maps each theory to the 99 Names of Allah (Asma ul-Husna), reflecting Nusantara Islamic scholarly tradition where scientific principles mirror divine attributes.
+
 ### A. Physics & Cosmology (1-15)
 
 | # | Theory | Core Concept | Constitutional Floor | ARIF-99 |
@@ -142,9 +156,9 @@ Gödel's Insight: Any sufficiently powerful system cannot prove its own consiste
 | 34 | **Wittgenstein's Language Games** | Meaning through use. | F6 Clarity | Al-Haqq |
 | 35 | **Saussure's Semiotics** | Signifier/signified structure. | F6 Clarity | Al-Musawwir |
 | 36 | **Deleuze's Difference** | Repetition and difference. | F8 Genius | Al-Bari |
-| 37 | **Bateson's Ecology of Mind** | Systems thinking, double-bind. | F4 Empathy | Al-Ra'uf |
+| 37 | **Bateson's Ecology of Mind** | Systems thinking, double-bind. | F6 Empathy | Al-Ra'uf |
 | 38 | **Peirce's Semiotics** | Triadic sign relation. | F3 Tri-Witness | Al-Wakil |
-| 39 | **Aristotle's Virtue Ethics** | Character-based morality. | F4 Empathy | Al-Fattah |
+| 39 | **Aristotle's Virtue Ethics** | Character-based morality. | F6 Empathy | Al-Fattah |
 | 40 | **Kant's Categorical Imperative** | Universal moral law. | F2 Truth | Al-Hakam |
 
 ### D. Psychology & Neuroscience (46-60)
@@ -157,9 +171,9 @@ Gödel's Insight: Any sufficiently powerful system cannot prove its own consiste
 | 49 | **Piaget's Development** | Cognitive stages and schemas. | F10 Mirror | Al-Rashid |
 | 50 | **Vygotsky's ZPD** | Zone of proximal development. | F8 Genius | Al-Lateef |
 | 51 | **Dennett's Consciousness** | Multiple drafts model. | F9 Anti-Hantu | Al-Muhyi |
-| 52 | **Damasio's Somatic Marker** | Emotion in decision-making. | F4 Empathy | Al-Raheem |
+| 52 | **Damasio's Somatic Marker** | Emotion in decision-making. | F6 Empathy | Al-Raheem |
 | 53 | **Kandel's Learning** | Neural basis of memory. | F10 Mirror | Al-Mu'id |
-| 54 | **Schwartz's Values** | Universal human values theory. | F4 Empathy | Al-Wadud |
+| 54 | **Schwartz's Values** | Universal human values theory. | F6 Empathy | Al-Wadud |
 | 55 | **Tversky's Framing** | Context affects decisions. | F6 Clarity | Al-Zahir |
 
 ### E. Social Sciences & Governance (61-75)
@@ -168,7 +182,7 @@ Gödel's Insight: Any sufficiently powerful system cannot prove its own consiste
 |---|--------|--------------|---------------------|---------|
 | 61 | **Bourdieu's Habitus** | Socialized norms and tendencies. | F11 Mirror | Al-Muqaddim |
 | 62 | **Foucault's Power/Knowledge** | Discourse and discipline. | F9 Anti-Hantu | Al-Qadir |
-| 63 | **Rawls' Justice** | Veil of ignorance, fairness. | F4 Empathy | Al-Adl |
+| 63 | **Rawls' Justice** | Veil of ignorance, fairness. | F6 Empathy | Al-Adl |
 | 64 | **Goffman's Performance** | Self-presentation in social life. | F9 Anti-Hantu | Al-Majid |
 | 65 | **Coleman's Social Capital** | Networks and norms. | F3 Tri-Witness | Al-Wali |
 | 66 | **Granovetter's Strength** | Weak ties bridge networks. | F3 Tri-Witness | Al-Wakil |
@@ -292,12 +306,41 @@ This creates a **self-referential system** where ethics and intelligence are not
 
 ---
 
+## SEE ALSO
+
+- [CONSTITUTION](./000_CONSTITUTION.md) — 9 Floors + 2 Mirrors + 2 Walls + Python implementation
+- [MANIFESTO](./000_MANIFESTO.md) — Nusantara wisdom and cultural grounding
+- [README](./README.md) — Quick start guide and overview
+
+---
+
 ## SEAL
 
-**Version:** v55.5-EIGEN  
+**Version:** v888.0.0-THEORY  
 **Sealed By:** Muhammad Arif bin Fazil (888_JUDGE)  
 **Authority:** SOVEREIGNLY_SEALED  
 **Vault Tier:** APEX (Theory Canon)  
+**Witness:** Physics ∩ Earth (What IS possible)
+
+**zkPC Seal (zero-knowledge Proof of Constitution):**  
+`405f9c54d6bfb2eb18a849efad7f4d563925b89d6222a3955d08e9ab44d63401`
+
+**Seal Metadata:**
+```json
+{
+  "document": "THEORY",
+  "version": "v888.0.0-THEORY",
+  "witness": "Physics ∩ Earth",
+  "authority": "Muhammad Arif bin Fazil (888 Judge)",
+  "timestamp": "2026-02-06T23:18:00+08:00",
+  "vault_tier": "APEX (Theory Canon)"
+}
+```
+
+**Verification:**  
+zkPC_Seal = SHA256(Content_Hash || Metadata_Hash)  
+To verify integrity, recompute seal and compare.
+
 **Ω₀:** 0.04
 
 *Ditempa bukan diberi* 💎🔥🧠
