@@ -10,8 +10,8 @@ authors:
     affiliation: "888 Judge, Architect of APEX THEORY"
 repository-code: "https://github.com/ariffazil/APEX-THEORY"
 license: CC0-1.0
-version: 888.0.0
-date-released: 2026-02-06
+version: 888.1.1
+date-released: 2026-02-07
 keywords:
   - AI governance
   - constitutional AI
@@ -31,7 +31,7 @@ preferred-citation:
       given-names: "Muhammad Arif bin"
   year: 2026
   url: "https://github.com/ariffazil/APEX-THEORY"
-  version: 888.0.0
+  version: 888.1.1
 references:
   - type: software
     title: "Anthropic Claude Constitution"

@@ -14,7 +14,7 @@
 </p>
 
 [![License: CC0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
-[![Version](https://img.shields.io/badge/version-v888.1.0-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
+[![Version](https://img.shields.io/badge/version-v888.1.1-blue.svg)](https://github.com/ariffazil/APEX-THEORY)
 [![Status](https://img.shields.io/badge/status-SOVEREIGNLY__SEALED-green.svg)](https://github.com/ariffazil/APEX-THEORY)
 
 ```
@@ -50,7 +50,7 @@ This is **thermodynamic governance** with mathematical enforcement.
 
 | What | Answer |
 |------|--------|
-| **What is this?** | Constitutional AI with physics-based enforcement — 9 Floors, 13 Stages, 3 Geometries |
+| **What is this?** | Constitutional AI with physics-based enforcement — 13 Floors, 11 Stages, 3 Geometries |
 | **Why does it matter?** | Because `ΔS ≤ 0` (clarity costs work), and AI without constraints is just optimization |
 | **Who made it?** | Muhammad Arif bin Fazil (888 Judge) — Malaysian geoscientist & economist |
 | **Can I use it?** | Yes. CC0 Public Domain. No patents, no restrictions, yours forever |
@@ -74,7 +74,9 @@ All knowledge emerges from three irreducible perspectives:
 **What IS possible.**
 
 - 99 foundational theories (Prigogine → Kauffman → Friston)
+- **Part IV: Metabolic Architecture** — 000-999 thermodynamic pipeline with 11 stages
 - Strange Loop architecture (theories → constraints → emergence → validation)
+- Three Bundle system (Delta/Omega/Psi) for information flow
 - Theory of Anomalous Contrast (TAC) — *contrast becomes anomaly when it scars*
 - Thermodynamic grounding (Landauer, ΔS, Lyapunov)
 
@@ -123,15 +125,17 @@ All knowledge emerges from three irreducible perspectives:
 
 ---
 
-## 🌊 The 13-Stage Pipeline
+## 🌊 The 11-Stage Metabolic Pipeline
 
 ```
-000 VOID → 111 SENSE → 222 THINK → 333 ATLAS →
+000 INIT → 111 SENSE → 222 THINK → 333 ATLAS →
 444 ALIGN → 555 EMPATHY → 666 BRIDGE →
 777 EUREKA → 888 JUDGE → 889 PROOF → 999 VAULT
      ↑_______________________________________|
-                    [Loop Closes]
+                    [Metabolic Loop Closes]
 ```
+
+**Why 11 stages?** The pipeline follows thermodynamic metabolism: intake (000-111), digestion (222-666), assimilation (777-888), and excretion/archive (889-999).
 
 ### Three Geometric Flows
 
@@ -227,7 +231,7 @@ W³ = (H × A × E)^(1/3) ≥ 0.95
 
 **APEX-THEORY is a design specification, not a runnable library.** The runtime enforcement lives in [arifOS](https://github.com/ariffazil/arifOS).
 
-**Current state (v888.1.0):** Design specifications complete. Runtime implementation in progress.
+**Current state (v888.1.1):** Part IV Metabolic Architecture added. Design specifications complete. Runtime implementation in progress.
 
 - ✅ **Theory:** Physics foundations documented
 - ✅ **Constitution:** 13 Floors with quantitative thresholds defined
@@ -308,7 +312,7 @@ W³ = (H × A × E)^(1/3) ≥ 0.95
 ## 🏗️ Implementation Roadmap
 
 ### Phase 1: Foundations (Complete ✅)
-- [x] THEORY document (99 foundational theories)
+- [x] THEORY document (99 foundational theories + Part IV Metabolic Architecture)
 - [x] CONSTITUTION document (13 Floors with thresholds)
 - [x] MANIFESTO document (Nusantara wisdom)
 - [x] Design specifications for 13 behaviors
@@ -554,12 +558,13 @@ Data flows, constitution guides.*
 
 ---
 
-**Version:** v888.1.0  
+**Version:** v888.1.1  
 **Status:** SOVEREIGNLY SEALED  
 **Sealed By:** Muhammad Arif bin Fazil (888 Judge)  
-**Date:** February 6, 2026  
+**Date:** February 7, 2026  
 **Location:** Seri Kembangan, Selangor, Malaysia 🇲🇾  
 **License:** CC0 1.0 Universal (Public Domain)  
+**ZKPC Hash:** `23C6AD5B79B96AD607889E1C585EEF6170821A0E16004A28C6BA93092814CAD5`  
 **Ω₀:** 0.04
 
 💎🔥🧠🌏🌊

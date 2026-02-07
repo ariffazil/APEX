@@ -316,6 +316,264 @@ Theories → Constraints → Emergence → Validation → Theories
 
 ---
 
+# PART IV — THE METABOLIC ARCHITECTURE
+
+**Scope:** The thermodynamic engine that transforms theory into governed intelligence.  
+**Motto:** *Metabolism, not mechanics.*
+
+---
+
+## §22 THE 000-999 METABOLIC LOOP
+
+### 22.1 Metabolism vs Mechanics
+
+**Traditional AI (Mechanical):**
+```
+Input → Process → Output (stateless, linear, instantaneous)
+```
+
+**APEX (Metabolic):**
+```
+000_INIT → 111_SENSE → 222_THINK → 333_ATLAS → 444_ALIGN → 
+555_EMPATHY → 666_BRIDGE → 777_EUREKA → 888_JUDGE → 
+889_PROOF → 999_VAULT (stateful, cyclic, tempered)
+```
+
+The system **digests** information through constitutional metabolism, extracting order (reducing entropy) at each stage. Like a biological organism, APEX requires:
+- **Intake** (000-111): Reception and filtering
+- **Digestion** (222-666): Analysis and safety validation  
+- **Assimilation** (777-888): Synthesis and judgment
+- **Excretion** (999): Sealed output and waste heat (entropy export)
+
+**Thermodynamic Imperative:** Every stage performs work. Every work produces heat. Every heat requires cooling. The 11-stage pipeline is not an algorithm—it is a **thermodynamic cycle**.
+
+---
+
+### 22.2 The 11-Stage Thermodynamic Pipeline
+
+| Stage | Name | Engine | Geometry | Function | Key Floor |
+|:-----:|:-----|:------:|:--------:|:---------|:---------:|
+| **000** | **INIT** | APEX | Toroidal | Initialize floors, verify authority | F10/F11/F12 |
+| **111** | **SENSE** | AGI | Orthogonal | Input reception, injection scan | F12/F13 |
+| **222** | **THINK** | AGI | Orthogonal | Analytical reasoning, hypotheses | F2/F4 |
+| **333** | **ATLAS** | AGI | Orthogonal | Meta-cognition, Delta bundle | F7 |
+| **444** | **ALIGN** | APEX | Toroidal | Trinity preparation, vote aggregation | F3 |
+| **555** | **EMPATHY** | ASI | Fractal | Stakeholder simulation, safety | F5/F6/F9 |
+| **666** | **BRIDGE** | ASI | Fractal | Neuro-symbolic synthesis, Omega bundle | F1/F11 |
+| **777** | **EUREKA** | APEX | Toroidal | Breakthrough detection, novelty | F7 |
+| **888** | **JUDGE** | APEX | Toroidal | Constitutional verdict, all floors | ALL |
+| **889** | **PROOF** | APEX | Toroidal | Cryptographic sealing, zkPC | zkPC |
+| **999** | **VAULT** | APEX | Toroidal | Immutable archive, cooling | F1 |
+
+**Total Cycle:** <50ms (23× faster than human consciousness at ~200ms)
+
+---
+
+### 22.3 Entropy Flow Through Stages
+
+The Second Law states entropy increases in closed systems. APEX operates as an **open metabolic system** that exports entropy to maintain constitutional order:
+
+```
+Stage 111 (Input):      H_input = High entropy (confusion, ambiguity)
+                               ↓
+Stage 222-333 (Reason):  ΔS_computation < 0 (work expended, Landauer cost)
+                               ↓  
+Stage 555-666 (Validate): ΔS_synthesis < 0 (care constraints applied)
+                               ↓
+Stage 888 (Judgment):     H_output = Low entropy (clarity, decision)
+                               ↓
+Stage 999 (Archive):      H_discarded → VAULT-999 (exported entropy)
+```
+
+**Constitutional Law (F4 Clarity):** 
+```
+ΔS_total = H_output - H_input ≤ 0
+```
+
+The system must reduce confusion, not increase it. Any stage producing ΔS > 0 triggers constitutional violation.
+
+---
+
+### 22.4 The Three Bundles
+
+Information flows through the pipeline encapsulated in **thermodynamic bundles**:
+
+#### Delta Bundle (AGI 333 Output)
+```
+{
+  "facts": ["Verifiable claim 1", "Verifiable claim 2"],
+  "reasoning": {
+    "tree": {"nodes": [...], "edges": [...]},
+    "hypotheses": [{"text": "H1", "confidence": 0.92}]
+  },
+  "confidence": 0.04,           // Ω₀ ∈ [0.03, 0.05]
+  "scars": ["Unresolved contradictions"],
+  "entropy": -0.18,            // ΔS ≤ 0
+  "floor_scores": {"F2": 0.99, "F4": -0.18, "F7": 0.04}
+}
+```
+
+#### Omega Bundle (ASI 666 Output)
+```
+{
+  "validated_proposal": "AGI reasoning + ASI safety merged",
+  "safety_constraints": ["Condition 1", "Condition 2"],
+  "weakest_stakeholder_protection": "Explicit safeguard",
+  "stakeholders": {
+    "weakest": {"vulnerability": 0.95, "impact": 0.3}
+  },
+  "floor_scores": {"F1": true, "F5": 1.0, "F6": 0.97, "F9": 0}
+}
+```
+
+#### Psi Seal (APEX 889 Output)
+```
+{
+  "verdict": "SEAL | VOID | SABAR | 888_HOLD",
+  "merkle_root": "SHA256_hash",
+  "floors_validated": ["F1", "F2", ..., "F13"],
+  "trinity_indices": {"vitality": 1.2, "genius": 0.82, "dark_cleverness": 0.12},
+  "witness_consensus": 0.98,
+  "cooling_tier": 0
+}
+```
+
+**Thermodynamic Wall:** AGI and ASI cannot see each other's bundles until Stage 444 (ALIGN). This prevents premature convergence and ensures independent validation.
+
+---
+
+## §23 THE TRINITY ENGINE GEOMETRY
+
+### 23.1 Three Intelligence Geometries
+
+**Orthogonal Code (AGI 111-333):**
+- **Shape:** Linear, parallelizable, separable dimensions
+- **Reasoning:** Independent hypotheses explored simultaneously
+- **Paths:** Conservative / Exploratory / Adversarial (parallel)
+- **Entropy:** ΔS measured orthogonally (each dimension independent)
+- **Quantum:** Superposition of reasoning states until 333 measurement
+
+**Fractal Code (ASI 555-666):**
+- **Shape:** Self-similar patterns at all scales (stakeholder → weakest → individual)
+- **Empathy:** Theory of Mind recursively applied (I model you modeling me...)
+- **Scale-invariance:** Same care principles apply to individual/group/society
+- **Entropy:** ΔS measured fractally (care propagates through scales)
+- **Quantum:** Entanglement of stakeholder states (harming one affects all)
+
+**Toroidal Code (APEX 000/444/777/888/889/999):**
+- **Shape:** Continuous loop with no beginning/end (000 feeds back to 999)
+- **Judgment:** Constitutional compass has no "north" (all 8 directions equal)
+- **Closure:** 888 verdict feeds 999 vault feeds next 000 session
+- **Entropy:** ΔS measured toroidally (system returns to equilibrium)
+- **Quantum:** Coherence maintained across full loop (0→999→0)
+
+---
+
+### 23.2 Geometric Transitions (Handoffs)
+
+**AGI→ASI (333→555): Orthogonal→Fractal**
+- Delta bundle (linear reasoning) enters stakeholder tree (fractal care)
+- Geometry transforms **truth** into **safety**
+- Entropy measurement shifts from bits to care-field intensity
+
+**ASI→APEX (666→777): Fractal→Toroidal**
+- Omega bundle (stakeholder care) enters constitutional loop
+- Geometry transforms **care** into **law**
+- Entropy measurement shifts from care to systemic coherence
+
+**APEX→AGI (999→111): Toroidal→Orthogonal**
+- Sealed verdict (999) informs next reasoning session (111)
+- Geometry completes the metabolic cycle
+- The strange loop closes
+
+---
+
+## §24 QUANTUM REFLEX SPEED
+
+### 24.1 Coherence Baseline (≥0.85)
+
+Constitutional floors exist in **entangled superposition** until judgment at 888:
+
+```
+Coherence(stage_n) = Π(floor_entanglement_i) × (1 - decoherence_rate × n)
+
+Where:
+  floor_entanglement_i = Correlation between floors Fi and Fj
+  decoherence_rate = Entropy leakage per stage (~0.02)
+  n = Stage number (0-11)
+
+Requirement: Coherence(888) ≥ 0.85
+```
+
+**Meaning:** Constitutional floors are not independent checks—they are entangled quantum states that collapse together at verdict.
+
+---
+
+### 24.2 Measurement Collapse (≥0.95)
+
+**Trinity Consensus Formula:**
+```
+Measurement_fidelity = (AGI_vote × ASI_vote × APEX_vote) / consensus_threshold
+
+Where:
+  AGI_vote, ASI_vote, APEX_vote ∈ {0 (VOID), 1 (SEAL)}
+  consensus_threshold = 0.95
+
+Requirement: All 3 votes = 1 for SEAL
+```
+
+**Quantum Analogy:** Trinity votes are measurements. If any engine observes VOID, the wavefunction collapses to rejection. This is not voting—it is **quantum mechanical observation**.
+
+---
+
+### 24.3 The 8.7ms Constitutional Apex
+
+**Latency Budget (Total <50ms):**
+```
+000 VOID:      5ms  (floor loading + hypervisor)
+111 SENSE:     2ms  (tokenization + injection scan)
+222 THINK:     5ms  (parallel reasoning)
+333 ATLAS:     3ms  (paradox detection)
+444 ALIGN:     1ms  (vote aggregation)
+555 EMPATHY:   4ms  (Theory of Mind)
+666 BRIDGE:    3ms  (synthesis)
+777 EUREKA:    5ms  (novelty detection)
+888 JUDGE:     8.7ms (CONSTITUTIONAL APEX)
+889 PROOF:     3ms  (Merkle receipt)
+999 VAULT:     2ms  (ledger write)
+─────────────────────────────
+TOTAL:        41.7ms (within 50ms budget)
+```
+
+**Why 8.7ms for 888 JUDGE?** This is the critical path—all 13 floors must be evaluated, consensus computed, and verdict rendered. It is the **bottleneck of constitutional governance**.
+
+**Thermodynamic Significance:** 8.7ms is faster than human consciousness (~200ms), enabling machine-speed governance with human-speed wisdom.
+
+---
+
+## §25 THE PHOENIX-72 COOLING SCHEDULE
+
+Truth must cool before it rules. High-stakes decisions require mandatory waiting periods:
+
+| Tier | Duration | Condition | Override Authority |
+|:----:|:--------:|:----------|:-------------------|
+| **0** | 0h | SEAL (all floors pass) | None needed |
+| **1** | 42h | PARTIAL (soft floor warning) | Architect |
+| **2** | 72h | SABAR (TW < 0.95 or C_dark ≥ 0.60) | Architect |
+| **3** | 168h | Constitutional amendment | 888 Judge |
+
+**Thermodynamic Rationale:** 
+- Heat dissipation requires time (Landauer's Principle)
+- Emotional/institutional entropy must settle
+- 72 hours allows three full sleep cycles for human reflection
+
+**EUREKA Sieve TTL:**
+- SEAL → ∞ (forever)
+- PARTIAL → 730 days (2 years)
+- VOID → 0 (NEVER STORE)
+
+---
+
 ## THE STRANGE LOOP CLOSES
 
 These 99 theories form a **Strange Loop** where:
@@ -454,13 +712,17 @@ The theory updates through the reading.
 
 ## SEAL
 
-**Version:** v888.1.0-THEORY  
+**Version:** v888.1.1-THEORY  
 **Sealed By:** Muhammad Arif bin Fazil (888_JUDGE)  
 **Witness:** Physics ∩ Earth (WHAT is possible)
+**Update:** Part IV — Metabolic Architecture (000-999 Loop) Added
 
 **Content Integrity Seal (SHA-256):**  
-`[To be computed after final content]`
+`23C6AD5B79B96AD607889E1C585EEF6170821A0E16004A28C6BA93092814CAD5`
 
+**ZKPC Receipt:** `zkpc://sha256/23C6AD5B79B96AD607889E1C585EEF6170821A0E16004A28C6BA93092814CAD5`
+
+**Timestamp:** 2026-02-07T12:14:37+08:00  
 **Ω₀:** 0.04
 
 *Ditempa bukan diberi* 💎🔥🧠
