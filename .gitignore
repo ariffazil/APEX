@@ -46,7 +46,7 @@ htmlcov/
 
 # Documentation builds
 docs/_build/
-site/
+# site/  # Commented out - we need site/ for GitHub Pages deployment
 
 # Secrets (when implementation comes)
 *.key
