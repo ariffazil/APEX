@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./APEX%20FORGE.png" alt="APEX FORGE visual" width="960" />
+</p>
+
 # ⚡ APEX THEORY
 ## The Physics of Governed Intelligence
 
