@@ -3,12 +3,12 @@
   "layer": "THEORY",
   "symbol": "Ψ",
   "version": "v55.3",
-  "updated": "2026-02-03",
+  "updated": "2026-02-10",
   "authority": "Muhammad Arif bin Fazil",
   "files": {
     "llms_txt": {
       "path": "/llms.txt",
-      "hash_sha256": "4085c161735d8354c869461a33eba62946a06b79c5b80aadadf85b2f5eeaadb3"
+      "hash_sha256": "77a73c2835a50f9efacc7f14f236ad41435ea4a1b963169b629bd2beb384ea06"
     },
     "llms_json": {
       "path": "/llms.json",

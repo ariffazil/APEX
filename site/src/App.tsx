@@ -90,8 +90,18 @@ function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" className="border-amber-500/30 text-amber-400 hover:bg-amber-950/50 hover:text-amber-200 rounded-none text-xs tracking-widest">
-              DOWNLOAD PDF
+            <Button
+              asChild
+              variant="outline"
+              className="border-amber-500/30 text-amber-400 hover:bg-amber-950/50 hover:text-amber-200 rounded-none text-xs tracking-widest"
+            >
+              <a
+                href="/T-000%20%C2%B7%20APEX%20THEORY%20(Canon).pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CANON PDF
+              </a>
             </Button>
           </div>
 
@@ -140,6 +150,20 @@ function App() {
                 EXPLORE 99 THEORIES
               </Button>
             </a>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-none border-amber-500/30 text-amber-400 hover:bg-amber-950/50 hover:text-white tracking-widest px-8"
+            >
+              <a
+                href="/T-000%20%C2%B7%20APEX%20THEORY%20(Canon).pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CANON PDF
+              </a>
+            </Button>
           </div>
         </div>
 

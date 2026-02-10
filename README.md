@@ -351,6 +351,12 @@ W³ = (H × A × E)^(1/3) ≥ 0.95
 
 ## 📖 Citation & Attribution
 
+## ✅ Verification
+
+- **llms.txt SHA-256:** `77a73c2835a50f9efacc7f14f236ad41435ea4a1b963169b629bd2beb384ea06`
+
+Canonical PDF: [docs/T-000 · APEX THEORY (Canon).pdf](docs/T-000%20%C2%B7%20APEX%20THEORY%20(Canon).pdf)
+
 ### Academic Citation (BibTeX)
 
 ```bibtex

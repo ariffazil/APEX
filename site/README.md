@@ -15,6 +15,7 @@ Live at [apex.arif-fazil.com](https://apex.arif-fazil.com)
 ## Features
 
 - **APEX Constitutional Canon** — Formal paper with 44 peer-reviewed citations
+- **Canonical PDF** — [T-000 · APEX THEORY (Canon).pdf](public/T-000%20%C2%B7%20APEX%20THEORY%20(Canon).pdf)
 - **13 Floors Specification** — Interactive floor visualizer with thresholds and types
 - **Three-Engine Architecture** — ARIF (Δ), ADAM (Ω), APEX (Ψ) engine diagrams
 - **Metabolic Loop** — EMD (Encoder → Metabolizer → Decoder) protection relay
@@ -23,6 +24,10 @@ Live at [apex.arif-fazil.com](https://apex.arif-fazil.com)
 - **BibTeX Export** — Citation-ready academic reference
 - **Bootstrap Prompt** — Copy-to-clipboard system prompt for AI governance
 - **Geometric Background** — Gold orthogonal grid with animated canvas lines
+
+## Verification
+
+- **llms.txt SHA-256:** `77a73c2835a50f9efacc7f14f236ad41435ea4a1b963169b629bd2beb384ea06`
 
 ## Technology Stack
 

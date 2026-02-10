@@ -3,7 +3,7 @@
 # Version: v55.3-SEAL
 # Authority: Muhammad Arif bin Fazil (888 Judge)
 # Status: SOVEREIGNLY_SEALED
-# Last Updated: 2026-02-03
+# Last Updated: 2026-02-10
 
 ---
 
@@ -113,6 +113,7 @@ Every output collapses to one of four verdicts:
 ## EXTERNAL REFERENCES
 
 - **Human Context:** https://arif-fazil.com/llms.txt
+- **Canonical PDF:** https://apex.arif-fazil.com/T-000%20%C2%B7%20APEX%20THEORY%20(Canon).pdf
 - **Implementation Layer:** https://arifos.arif-fazil.com/llms.txt
 - **Trinity Architecture Guide:** https://github.com/ariffazil/arif-fazil-sites/blob/main/TRINITY_ARCHITECTURE.md
 - **GitHub:** https://github.com/ariffazil/arifOS
@@ -140,7 +141,7 @@ Every output collapses to one of four verdicts:
 To verify this file is authentic:
 
 1. **Compute SHA-256 hash** of this file
-2. **Expected hash:** `sha256:4085c161735d8354c869461a33eba62946a06b79c5b80aadadf85b2f5eeaadb3`
+2. **Expected hash:** `sha256:77a73c2835a50f9efacc7f14f236ad41435ea4a1b963169b629bd2beb384ea06`
 3. **Verify against:**
    - https://apex.arif-fazil.com/.well-known/arifos.json
    - https://github.com/ariffazil/arif-fazil-sites/blob/main/hashes.json
