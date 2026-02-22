@@ -260,13 +260,136 @@
   background-size: 40px 40px;
 }
 
-.sacred-grid::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(107, 140, 206, 0.07) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(107, 140, 206, 0.07) 2px, transparent 2px);
-  background-size: 200px 200px;
-  pointer-events: none;
+/* === TRINITY NAV STYLES === */
+:root {
+  --gold-forged: #e6c25d;
+}
+
+.trinity-nav {
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 209, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  font-family: 'Space Mono', monospace;
+}
+
+.trinity-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trinity-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trinity-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-decoration: none !important;
+}
+
+.trinity-logo .arif { color: var(--gold-forged); }
+.trinity-logo .os { color: #fff; }
+
+.trinity-badge {
+  font-size: 0.65rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(230, 194, 93, 0.1);
+  border: 1px solid rgba(230, 194, 93, 0.3);
+  border-radius: 50px;
+  color: var(--gold-forged);
+  font-family: 'Space Mono', monospace;
+  text-transform: uppercase;
+}
+
+.trinity-center {
+  display: flex;
+  gap: 2rem;
+}
+
+.trinity-link {
+  color: #e5e5e5;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+
+.trinity-link:hover {
+  color: var(--gold-forged);
+}
+
+.trinity-link.active {
+  color: var(--gold-forged);
+  border-bottom: 2px solid var(--gold-forged);
+}
+
+.trinity-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.trinity-right a {
+  color: #888;
+  text-decoration: none !important;
+}
+
+.trinity-right a:hover {
+  color: var(--gold-forged);
+}
+
+.trinity-enter {
+  color: var(--gold-forged) !important;
+  font-weight: 700;
+}
+/* === UNIFIED TRINITY FOOTER === */
+.trinity-footer {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(230, 194, 93, 0.15);
+  background: #000;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  line-height: 2;
+  position: relative;
+  z-index: 10;
+}
+
+.trinity-footer b {
+  color: #e6c25d;
+}
+
+.trinity-footer .links {
+  margin-bottom: 1.5rem;
+}
+
+.trinity-footer .links a {
+  margin: 0 1rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.trinity-footer .links a:hover,
+.trinity-footer .links a b {
+  color: #e6c25d;
 }

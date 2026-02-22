@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import TrinityNav from './components/TrinityNav';
 import {
   Shield,
   Menu,
@@ -57,7 +58,9 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f0e0a] text-amber-50 selection:bg-amber-900/30 selection:text-amber-200 font-sans relative overflow-x-hidden">
+    <>
+      <TrinityNav />
+      <div className="min-h-screen bg-[#0f0e0a] text-amber-50 selection:bg-amber-900/30 selection:text-amber-200 font-sans relative overflow-x-hidden">
       
       {/* Background Weave Pattern (CSS) */}
       <div className="fixed inset-0 z-0 opacity-5 pointer-events-none" 
@@ -352,28 +355,20 @@ function App() {
       {/* ═══════════════════════════════════════ */}
       {/* FOOTER */}
       {/* ═══════════════════════════════════════ */}
-      <footer className="py-20 border-t border-amber-900/20 bg-[#080806]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="flex justify-center mb-8">
-            <Shield className="w-12 h-12 text-amber-500/80" />
-          </div>
-          
-          <h3 className="text-2xl font-bold text-white mb-2 tracking-wider">DITEMPA BUKAN DIBERI</h3>
-          <p className="text-amber-500/60 mb-8 italic">Forged, Not Given</p>
-          
-          <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mb-12 text-sm">
-            <a href="https://arif-fazil.com" className="text-gray-400 hover:text-amber-400 transition-colors">HUMAN</a>
-            <a href="https://apex.arif-fazil.com" className="text-amber-400 font-bold">THEORY</a>
-            <a href="https://arifos.arif-fazil.com" className="text-gray-400 hover:text-amber-400 transition-colors">APPS</a>
-          </div>
-          
-          <p className="text-gray-600 text-xs font-mono">
-            © 2026 arifOS Constitutional AI Governance<br/>
-            Penang, Malaysia
-          </p>
+      <footer className="trinity-footer">
+        <div className="links">
+          <a href="https://arif-fazil.com/">HUMAN</a>
+          <a href="https://apex.arif-fazil.com/"><b>THEORY</b></a>
+          <a href="https://arifos.arif-fazil.com/">APPS</a>
+        </div>
+        THE TRINITY • HUMAN • THEORY • APPS<br />
+        <b>Ditempa Bukan Diberi</b> • AGPL-3.0 • 2026.2.23
+        <div className="mt-8 text-[10px] opacity-30 uppercase tracking-[0.2em]">
+          Copyright © 2013 – 2026 Sovereign Records • LAST UPDATED: FEB 23, 2026
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
