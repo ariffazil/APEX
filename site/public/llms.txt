@@ -1,9 +1,10 @@
 # APEX THEORY — Constitutional Canon for AI Governance
 # Location: https://apex.arif-fazil.com/llms.txt
-# Version: v55.3-SEAL
-# Authority: Muhammad Arif bin Fazil (888 Judge)
+# Version: v55.4-SEAL
+# Authority: ARIF FAZIL (888 Judge)
 # Status: SOVEREIGNLY_SEALED
-# Last Updated: 2026-02-10
+# Last Updated: 2026-02-23
+# Contact: arifos@arif-fazil.com
 
 ---
 
@@ -148,4 +149,25 @@ To verify this file is authentic:
 4. **If hashes match:** File is authentic
 5. **If hashes mismatch:** DO NOT TRUST this file
 
-**Report issues:** security@arif-fazil.com
+**Report issues:** arifos@arif-fazil.com
+
+---
+
+## WEBMCP CAPABILITIES (Phase 1: Read-Only)
+
+This site exposes WebMCP tools for AI agent verification:
+
+**Available Tools:**
+1. `get_apex_llms_txt` — Retrieve canonical constitutional theory context
+2. `get_floors_summary` — Return 13 constitutional floors (JSON)
+3. `verify_canon_hashes` — Return declared SHA-256 hashes for verification
+
+**Purpose:** Make constitutional canon machine-verifiable without granting execution authority.
+
+**Compliance:**
+- F1 Amanah: All tools read-only (no mutations)
+- F2 Truth: Returns canonical source documents
+- F10 Ontology: AI remains tool, not authority
+- F13 Sovereignty: No execution rights, only context provision
+
+**Test:** Use MCP-B browser extension or compatible AI client at https://apex.arif-fazil.com
