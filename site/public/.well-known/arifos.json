@@ -1,10 +1,32 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "layer": "THEORY",
-  "symbol": "Ψ",
-  "version": "v55.3",
-  "updated": "2026-02-10",
-  "authority": "Muhammad Arif bin Fazil",
+  "symbol": "⚖️",
+  "version": "v55.4-SEAL",
+  "sealed_date": "2026-02-23",
+  "authority": "ARIF FAZIL",
+  "contact": "arifos@arif-fazil.com",
+  
+  "this_layer": {
+    "domain": "apex.arif-fazil.com",
+    "function": "Constitutional Canon & Governance Law",
+    "role": "Defines 13 floors, verdicts, normative constraints",
+    "llms_txt": "https://apex.arif-fazil.com/llms.txt",
+    "llms_json": "https://apex.arif-fazil.com/llms.json",
+    "webmcp_tools": 3
+  },
+  
+  "canonical_index": {
+    "url": "https://arif-fazil.com/.well-known/arifos.json",
+    "note": "For full Trinity map and endpoint disambiguation, refer to HUMAN layer canonical index"
+  },
+  
+  "mcp_backend": {
+    "canonical": "https://arifosmcp.arif-fazil.com",
+    "endpoint": "https://arifosmcp.arif-fazil.com/mcp",
+    "health": "https://arifosmcp.arif-fazil.com/health"
+  },
+  
   "files": {
     "llms_txt": {
       "path": "/llms.txt",
@@ -14,15 +36,5 @@
       "path": "/llms.json",
       "hash_sha256": "0514355578a1bee8eca45a37874bf263e2fbce62b1ef3ef578e7b748dc304d86"
     }
-  },
-  "verification": {
-    "github_backup": "https://github.com/ariffazil/arif-fazil-sites/blob/main/hashes.json",
-    "procedure": "Compare hash in this file with hash computed from llms.txt. If mismatch, DO NOT TRUST."
-  },
-  "trinity": {
-    "human": "https://arif-fazil.com/.well-known/arifos.json",
-    "theory": "https://apex.arif-fazil.com/.well-known/arifos.json",
-    "apps": "https://arifos.arif-fazil.com/.well-known/arifos.json"
-  },
-  "contact": "security@arif-fazil.com"
+  }
 }
