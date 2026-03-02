@@ -73,3 +73,6 @@ Thumbs.db
 # package-lock.json
 # Pipfile.lock
 # poetry.lock
+node_modules/
+.env
+*.log
