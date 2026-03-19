@@ -9,9 +9,9 @@
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge)](LICENSE)
 [![Theory Canon](https://img.shields.io/badge/Theory-7--Organ_Canon-8B5CF6?style=for-the-badge)](docs/10_THEORY/000_THEORY/_OUTLINE.md)
-[![13 Floors](https://img.shields.io/badge/Constitution-13_Floors-FF6600?style=for-the-badge)](0_KERNEL/FLOORS/K000_LAW.md)
+[![13 Floors](https://img.shields.io/badge/Constitution-13_Floors-FF6600?style=for-the-badge)](KERNEL/FLOORS/K000_LAW.md)
 
-**[→ QUICKSTART](QUICK_START.md)** | **[→ 7-Organ Canon](docs/10_THEORY/000_THEORY/_OUTLINE.md)** | **[→ 13 Floors](0_KERNEL/FLOORS/K000_LAW.md)** | **[→ THE BODY (Runtime)](https://github.com/ariffazil/arifosmcp)**
+**[→ QUICKSTART](QUICK_START.md)** | **[→ 7-Organ Canon](docs/10_THEORY/000_THEORY/_OUTLINE.md)** | **[→ 13 Floors](KERNEL/FLOORS/K000_LAW.md)** | **[→ THE BODY (Runtime)](https://github.com/ariffazil/arifosmcp)**
 
 </div>
 
@@ -125,7 +125,7 @@ The definitive intelligence kernel is governed by these 7 core documents:
 | **F12** | Injection | Risk < 0.85 | Attack Defense |
 | **F13** | Sovereign | Human Veto | Final Authority |
 
-**Full specification:** [0_KERNEL/FLOORS/K000_LAW.md](0_KERNEL/FLOORS/K000_LAW.md)
+**Full specification:** [KERNEL/FLOORS/K000_LAW.md](KERNEL/FLOORS/K000_LAW.md)
 
 ---
 
@@ -134,7 +134,7 @@ The definitive intelligence kernel is governed by these 7 core documents:
 ### To Understand the Theory
 1. Read [QUICK_START.md](QUICK_START.md) — 5-minute overview
 2. Read [AGENTS/EUREKA_COMPENDIUM.md](AGENTS/EUREKA_COMPENDIUM.md) — 10 core insights
-3. Explore [0_KERNEL/FLOORS/](0_KERNEL/FLOORS/) — The 13 Floors
+3. Explore [KERNEL/FLOORS/](KERNEL/FLOORS/) — The 13 Floors
 
 ### To Run the Implementation
 👉 Go to [**arifosmcp**](https://github.com/ariffazil/arifosmcp) (THE BODY):
@@ -149,7 +149,7 @@ python -m arifos_aaa_mcp
 
 ```
 arifOS/                          ← YOU ARE HERE (THE MIND)
-├── 0_KERNEL/                    ← Constitutional Core (L0)
+├── KERNEL/                    ← Constitutional Core (L0)
 │   ├── FLOORS/                  ← 13 Constitutional Floors (F01-F13)
 │   ├── ROOT/                    ← Theoretical foundations
 │   └── spec/                    ← Technical specifications

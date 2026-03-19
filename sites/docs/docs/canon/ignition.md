@@ -7,7 +7,7 @@ description: The constitutional airlock. What happens at stage 000 - authority v
 
 # Ignition - Stage 000
 
-> Canonical source: [`0_KERNEL/ROOT/K000_ROOT.md`](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/ROOT/K000_ROOT.md)  
+> Canonical source: [`KERNEL/ROOT/K000_ROOT.md`](https://github.com/ariffazil/arifOS/blob/main/KERNEL/ROOT/K000_ROOT.md)  
 > Implementation (THE BODY): [`arifosmcp/core/organs/_0_init.py`](https://github.com/ariffazil/arifosmcp/blob/main/core/organs/_0_init.py)  
 > Symbol:  . Stage: 000 . Motto: *Ditempa Bukan Diberi*
 

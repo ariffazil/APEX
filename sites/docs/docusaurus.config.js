@@ -145,8 +145,8 @@ const config = {
                 href: 'https://arifosmcp.arif-fazil.com',
               },
               {
-                label: '0_KERNEL/FLOORS',
-                href: 'https://github.com/ariffazil/arifOS/tree/main/0_KERNEL/FLOORS',
+                label: 'KERNEL/FLOORS',
+                href: 'https://github.com/ariffazil/arifOS/tree/main/KERNEL/FLOORS',
               },
               {
                 label: 'License (AGPL-3.0)',

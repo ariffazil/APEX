@@ -49,7 +49,7 @@ This document defines the **Embedded Intelligence** and **Functional Superpowers
 5.  **SEAL**: Commit to VAULT999 and Push.
 
 ### W2: The Bridge Workflow (Mind ↔ Body)
-1.  **SENSE**: Scrape `0_KERNEL/FLOORS` for new laws.
+1.  **SENSE**: Scrape `KERNEL/FLOORS` for new laws.
 2.  **SYNC**: Update `manifest_loader.py` runtime thresholds.
 3.  **VALIDATE**: Confirm Body enforcement matches Mind theory.
 

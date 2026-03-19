@@ -545,7 +545,7 @@ Here’s the situation, straight and clear:
 
 ### Forge + seal docs
 - `333_APPS/FORGE_SEAL.md`
-- `VAULT999/L0_KERNEL_FORGE_SEAL_v65.0.md`
+- `VAULT999/KERNEL_FORGE_SEAL_v65.0.md`
 - `VAULT999/MCP_CONFIG_FORGE_SEAL_v65.0.md`
 
 ### Tool templates

@@ -13,7 +13,7 @@ Both repositories contain **overlapping code**, creating a split-brain architect
 ### arifOS (THE MIND) — Currently Contains:
 | Category | Items | SHOULD BE IN... |
 |----------|-------|-----------------|
-| **Theory** | `0_KERNEL/`, `AGENTS/` (docs) | ✅ arifOS (correct) |
+| **Theory** | `KERNEL/`, `AGENTS/` (docs) | ✅ arifOS (correct) |
 | **Code** | `core/`, `aaa_mcp/`, `aclip_cai/`, `arifosmcp/` | ❌ arifosmcp (wrong!) |
 | **Build** | `pyproject.toml`, `docker-compose.yml`, `Dockerfile` | ❌ arifosmcp (wrong!) |
 | **Tests** | `tests/` | ❌ arifosmcp (wrong!) |
@@ -37,7 +37,7 @@ Both repositories contain **overlapping code**, creating a split-brain architect
 
 ```
 arifOS/
-├── 0_KERNEL/              ← Canonical 13 Floors (F01-F13)
+├── KERNEL/              ← Canonical 13 Floors (F01-F13)
 │   ├── FLOORS/            ← Constitutional Law
 │   ├── ROOT/              ← Theoretical foundations
 │   └── spec/              ← Technical specifications
@@ -72,7 +72,7 @@ arifosmcp/
 ├── pyproject.toml         ← Package manifest
 ├── docker-compose.yml     ← Orchestration
 └── README.md              ← Runtime setup guide
-└── (NO 0_KERNEL/)         ← Theory references via link
+└── (NO KERNEL/)         ← Theory references via link
 └── (NO heavy theory)      ← Links to arifOS docs
 ```
 
@@ -122,7 +122,7 @@ rm -f .pre-commit-config.yaml  # Keep only docs linting
 
 ```
 arifOS/
-├── 0_KERNEL/              ✅ KEEP
+├── KERNEL/              ✅ KEEP
 ├── AGENTS/                ✅ KEEP  
 ├── CIVILIZATION/          ✅ KEEP
 ├── OPERATION/             ✅ KEEP (deployment theory only)
@@ -152,7 +152,7 @@ The constitutional theory and 13 Floors are defined in **arifOS** (THE MIND):
 
 | Document | Purpose |
 |----------|---------|
-| [13 Floors](https://github.com/ariffazil/arifOS/tree/main/0_KERNEL/FLOORS) | Constitutional Law |
+| [13 Floors](https://github.com/ariffazil/arifOS/tree/main/KERNEL/FLOORS) | Constitutional Law |
 | [AGENTS Guide](https://github.com/ariffazil/arifOS/tree/main/AGENTS) | Agent protocols |
 | [Architecture](https://github.com/ariffazil/arifOS/blob/main/ARCHITECTURE.md) | System blueprint |
 ```

@@ -31,7 +31,7 @@ arifOS/                          ← YOU ARE HERE (The Mind)
 ├── CLAUDE.md                    ← Claude-specific guide
 ├── llms.txt                     ← LLM-optimized context
 │
-├── 0_KERNEL/                    ← Constitutional Core (L0)
+├── KERNEL/                      ← Constitutional Core (L0)
 │   ├── FLOORS/                  ← 13 Constitutional Floors (F1-F13)
 │   ├── ROOT/                    ← Canonical theory documents
 │   ├── archive/                 ← Historical versions
@@ -68,9 +68,9 @@ arifOS/                          ← YOU ARE HERE (The Mind)
 |--------|------------|
 | Understand arifOS | `AGENTS/EUREKA_COMPENDIUM.md` |
 | I'm an AI agent | `AGENTS/EUREKA_COMPENDIUM.md` → `AGENTS/A110_CANON.md` |
-| Implement 13 Floors | `0_KERNEL/FLOORS/K000_LAW.md` → F01-F13 |
+| Implement 13 Floors | `KERNEL/FLOORS/K000_LAW.md` → F01-F13 |
 | Deployment | `OPERATION/O_DEPLOY_MASTER.md` |
-| API/Protocol specs | `0_KERNEL/spec/K111_SPEC.md` |
+| API/Protocol specs | `KERNEL/spec/K111_SPEC.md` |
 | Design patterns | `PATTERNS/` |
 
 ---
@@ -93,7 +93,7 @@ arifOS/                          ← YOU ARE HERE (The Mind)
 | **F12** | `F12_INJECTION.md` | Injection Defense |
 | **F13** | `F13_SOVEREIGN.md` | Sovereign / Human Veto |
 
-**Start:** `0_KERNEL/FLOORS/K000_LAW.md`
+**Start:** `KERNEL/FLOORS/K000_LAW.md`
 
 ---
 
@@ -101,11 +101,11 @@ arifOS/                          ← YOU ARE HERE (The Mind)
 
 | Domain | Symbol | Document |
 |--------|--------|----------|
-| **AGI Mind** | Δ | `0_KERNEL/ROOT/K111_PHYSICS.md` |
-| **ASI Heart** | Ω | `0_KERNEL/ROOT/K555_HEART.md` |
-| **APEX Soul** | Ψ | `0_KERNEL/ROOT/K777_APEX.md` |
-| **VAULT** | — | `0_KERNEL/ROOT/K999_VAULT.md` |
-| **FORGE** | — | `0_KERNEL/ROOT/K888_FORGE.md` |
+| **AGI Mind** | Δ | `KERNEL/ROOT/K111_PHYSICS.md` |
+| **ASI Heart** | Ω | `KERNEL/ROOT/K555_HEART.md` |
+| **APEX Soul** | Ψ | `KERNEL/ROOT/K777_APEX.md` |
+| **VAULT** | — | `KERNEL/ROOT/K999_VAULT.md` |
+| **FORGE** | — | `KERNEL/ROOT/K888_FORGE.md` |
 
 ---
 

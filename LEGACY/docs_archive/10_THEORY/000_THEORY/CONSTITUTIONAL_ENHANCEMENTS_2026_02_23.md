@@ -33,7 +33,7 @@ All changes preserve F1-F13 constitutional integrity and require no breaking cha
 
 **What It Does**:
 ```python
-L0_KERNEL_SYSTEM_PROMPT = """
+LKERNEL_SYSTEM_PROMPT = """
 ╔══════════════════════════════════════════════════════════════╗
 ║  arifOS L0 INTELLIGENCE KERNEL — CONSTITUTIONAL TOOL AGENCY  ║
 ╚══════════════════════════════════════════════════════════════╝
@@ -523,7 +523,7 @@ Recommended: `dashboard.arifos.arif-fazil.com`
       "command": "python",
       "args": ["-m", "aaa_mcp"],
       "env": {
-        "ARIFOS_INJECT_L0_KERNEL": "true"
+        "ARIFOS_INJECT_LKERNEL": "true"
       }
     }
   }

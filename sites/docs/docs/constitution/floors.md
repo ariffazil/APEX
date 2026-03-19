@@ -12,7 +12,7 @@ The **13 Constitutional Floors** are mathematical thresholds that govern all AI 
 
 :::tip Canonical Source
 The complete, authoritative specification is in the repository:  
-👉 [`0_KERNEL/FLOORS/K000_LAW.md`](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/K000_LAW.md)
+👉 [`KERNEL/FLOORS/K000_LAW.md`](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/K000_LAW.md)
 :::
 
 ---
@@ -109,19 +109,19 @@ At stage 888 (JUDGE), one of these verdicts is issued:
 
 | Floor | Document | Key Concept |
 |-------|----------|-------------|
-| F1 | [F01_AMANAH.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F01_AMANAH.md) | Reversibility Covenant |
-| F2 | [F02_TRUTH.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F02_TRUTH.md) | Fidelity τ ≥ 0.99 |
-| F3 | [F03_WITNESS.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F03_WITNESS.md) | Quad-Witness W₄ |
-| F4 | [F04_CLARITY.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F04_CLARITY.md) | Entropy ΔS ≤ 0 |
-| F5 | [F05_PEACE.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F05_PEACE.md) | Stability P² |
-| F6 | [F06_EMPATHY.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F06_EMPATHY.md) | Care κᵣ |
-| F7 | [F07_HUMILITY.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F07_HUMILITY.md) | Uncertainty Ω₀ |
-| F8 | [F08_GENIUS.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F08_GENIUS.md) | Wisdom G |
-| F9 | [F09_ANTIHANTU.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F09_ANTIHANTU.md) | No Ghost C_dark |
-| F10 | [F10_ONTOLOGY.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F10_ONTOLOGY.md) | Category Lock |
-| F11 | [F11_AUTH.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F11_AUTH.md) | Command Authority |
-| F12 | [F12_INJECTION.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F12_INJECTION.md) | Attack Defense |
-| F13 | [F13_SOVEREIGN.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F13_SOVEREIGN.md) | Human Veto |
+| F1 | [F01_AMANAH.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F01_AMANAH.md) | Reversibility Covenant |
+| F2 | [F02_TRUTH.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F02_TRUTH.md) | Fidelity τ ≥ 0.99 |
+| F3 | [F03_WITNESS.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F03_WITNESS.md) | Quad-Witness W₄ |
+| F4 | [F04_CLARITY.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F04_CLARITY.md) | Entropy ΔS ≤ 0 |
+| F5 | [F05_PEACE.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F05_PEACE.md) | Stability P² |
+| F6 | [F06_EMPATHY.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F06_EMPATHY.md) | Care κᵣ |
+| F7 | [F07_HUMILITY.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F07_HUMILITY.md) | Uncertainty Ω₀ |
+| F8 | [F08_GENIUS.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F08_GENIUS.md) | Wisdom G |
+| F9 | [F09_ANTIHANTU.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F09_ANTIHANTU.md) | No Ghost C_dark |
+| F10 | [F10_ONTOLOGY.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F10_ONTOLOGY.md) | Category Lock |
+| F11 | [F11_AUTH.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F11_AUTH.md) | Command Authority |
+| F12 | [F12_INJECTION.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F12_INJECTION.md) | Attack Defense |
+| F13 | [F13_SOVEREIGN.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F13_SOVEREIGN.md) | Human Veto |
 
 ---
 

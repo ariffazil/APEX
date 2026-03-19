@@ -60,7 +60,7 @@ This gives you the **10 Eureka insights** — the core philosophy of arifOS.
 
 ### Step 2: Understand the 13 Floors (3 min)
 ```
-File: 0_KERNEL/FLOORS/K000_LAW.md
+File: KERNEL/FLOORS/K000_LAW.md
 ```
 
 These are the **13 Constitutional Floors** (F1-F13) — mathematical thresholds that govern all actions.
@@ -133,14 +133,14 @@ At stage 888, one of these is issued:
 ### "I need to understand the system"
 ```
 Read: AGENTS/EUREKA_COMPENDIUM.md
-Then:  0_KERNEL/FLOORS/K000_LAW.md
-Then:  0_KERNEL/ROOT/K000_ROOT.md
+Then:  KERNEL/FLOORS/K000_LAW.md
+Then:  KERNEL/ROOT/K000_ROOT.md
 ```
 
 ### "I'm implementing a tool"
 ```
-Read: 0_KERNEL/spec/K111_SPEC.md
-Read: 0_KERNEL/ROOT/mcp/QUICK_REF.md
+Read: KERNEL/spec/K111_SPEC.md
+Read: KERNEL/ROOT/mcp/QUICK_REF.md
 Read: PATTERNS/README.md (P-009 Constitutional Decorator)
 ```
 
@@ -174,7 +174,7 @@ Use:   TEMPLATES/AGENT_SPEC.md
 | File | Purpose | When to Read |
 |------|---------|--------------|
 | `AGENTS/EUREKA_COMPENDIUM.md` | 10 core insights | **First** |
-| `0_KERNEL/FLOORS/K000_LAW.md` | 13 Floors overview | After Eureka |
+| `KERNEL/FLOORS/K000_LAW.md` | 13 Floors overview | After Eureka |
 | `INDEX.md` | Full navigation | When lost |
 | `PATTERNS/README.md` | Design patterns | Implementing |
 | `AGENTS/AGENTS_BRIDGE.md` | Mind-Body sync | Cross realms |
@@ -218,7 +218,7 @@ A: `@a-architect`, `@a-engineer`, `@a-auditor`, `@a-validator`
 ## ✅ Checklist
 
 - [ ] Read `AGENTS/EUREKA_COMPENDIUM.md`
-- [ ] Read `0_KERNEL/FLOORS/K000_LAW.md`
+- [ ] Read `KERNEL/FLOORS/K000_LAW.md`
 - [ ] Know your agent role (ΔΩΨ)
 - [ ] Understand the 13 Floors
 - [ ] Know the Metabolic Loop stages

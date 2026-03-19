@@ -179,7 +179,7 @@ Version verification displays T000 version stamp (Libraries.io) :
 
 $ python -m aaa_mcp --version
 arifOS 2026.02.17-FORGE-VPS-SEAL
-L0_KERNEL: DEFINED
+KERNEL: DEFINED
 8_LAYER_STACK: L0-L7 COMPLETE
 REALITY_INDEX: 0.97
 ZKPC_COMMITMENT: sha256:9ff233cbba955e6db12702d5d8b012bd95d49e13

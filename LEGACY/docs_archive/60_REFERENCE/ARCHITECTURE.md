@@ -368,7 +368,7 @@ arifos_aaa_mcp/
 
 ```
 333_APPS/
- |-- L0_KERNEL/      Constitutional substrate docs                        SEALED
+ |-- LKERNEL/      Constitutional substrate docs                        SEALED
  |-- L1_PROMPT/      System prompt & examples                             Production
  |-- L2_SKILLS/      9 A-CLIP actions + utility skills                    Production
  |-- L3_WORKFLOW/    000->999 constitutional workflow definitions          Production

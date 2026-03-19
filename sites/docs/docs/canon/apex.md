@@ -130,8 +130,8 @@ APEX sits at the top of the Trinity — the final checkpoint before action reach
 
 ## Canonical Sources
 
-- [0_KERNEL/ROOT/K777_APEX.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/ROOT/K777_APEX.md)
-- [0_KERNEL/FLOORS/F13_SOVEREIGN.md](https://github.com/ariffazil/arifOS/blob/main/0_KERNEL/FLOORS/F13_SOVEREIGN.md)
+- [KERNEL/ROOT/K777_APEX.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/ROOT/K777_APEX.md)
+- [KERNEL/FLOORS/F13_SOVEREIGN.md](https://github.com/ariffazil/arifOS/blob/main/KERNEL/FLOORS/F13_SOVEREIGN.md)
 
 ---
 

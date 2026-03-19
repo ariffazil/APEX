@@ -159,7 +159,7 @@ Nvidia NeMo Guardrails
 ├─ Strength: Low-latency, predictable behavior
 └─ Limitation: Brittle outside predefined intent space
 
-arifOS L0_KERNEL (Proposed)
+arifOS KERNEL (Proposed)
 ├─ Focus: Thermodynamic governance of intelligence emergence
 ├─ Paradigm: 13 Constitutional Floors + Tri-Witness consensus
 ├─ Strength: Principled, mathematically constrained safety
@@ -191,7 +191,7 @@ Aeon (Neuro-symbolic caching)
 ├─ Strength: Sub-5µs retrieval, zero-copy interface
 └─ Limitation: Complex implementation; not open-source
 
-arifOS L0_KERNEL (Proposed)
+arifOS KERNEL (Proposed)
 ├─ recall_memory + vault_seal architecture
 ├─ Thermodynamic constraints on memory entropy (ΔS<0)
 ├─ Strength: Principled memory governance aligned with floors
@@ -214,7 +214,7 @@ arifOS L0_KERNEL (Proposed)
 
 ```
 ⚠ arifOS Implementation Status:
-   • L0_KERNEL architecture documented but not compiled
+   • KERNEL architecture documented but not compiled
    • AAA MCP tools exist as API wrappers, not kernel modules
    • 13 Floors are design specifications, not runtime enforcers
    • APEX dials are mathematical formulations, not tuned parameters
@@ -272,7 +272,7 @@ arifOS L0_KERNEL (Proposed)
 │          systems requires human sovereign validation        │
 │                                                             │
 │  KEY INSIGHT:                                               │
-│  arifOS L0_KERNEL represents a principled architectural    │
+│  arifOS KERNEL represents a principled architectural    │
 │  vision that exceeds existing tools in governance scope,   │
 │  but requires implementation validation before production  │
 │  parity claims can be substantiated.                       │
