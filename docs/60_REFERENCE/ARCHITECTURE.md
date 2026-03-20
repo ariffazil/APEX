@@ -1,6 +1,6 @@
 # arifOS Architecture
 
-**Version:** v2026.2.28 | **Package:** `arifos` (PyPI)
+**Version:** v2026.03.07-ARCH-SEAL | **Package:** `arifos` (PyPI)
 **Python:** >=3.12 | **License:** AGPL-3.0-only
 **Motto:** *DITEMPA BUKAN DIBERI -- Forged, Not Given*
 
@@ -74,15 +74,15 @@ VAULT999/vault999.jsonl         Immutable ledger (hash-chained, force-tracked in
 Three thermodynamically isolated engines process in sequence, then converge:
 
 ```
-000_INIT --> AGI Delta (111-333) --> ASI Omega (444-666) --> APEX Psi (777-888) --> VAULT999 (999)
+000_INIT --> AGI Delta (111-333) --> ASI Omega (555-666) --> APEX Psi (444-888) --> VAULT999 (999)
                Mind                    Heart                   Soul                  Memory
 ```
 
 | Engine | Symbol | Stages | Role | Floors |
 |--------|--------|--------|------|--------|
 | **AGI** | Delta (Mind) | 111-333 | Reasoning, logic, hypothesis | F2, F4, F7, F8 |
-| **ASI** | Omega (Heart) | 444-666 | Safety, empathy, alignment | F1, F5, F6, F9 |
-| **APEX** | Psi (Soul) | 777-888 | Judgment, verdict, sealing | F3, F8, F10-F13 |
+| **ASI** | Omega (Heart) | 555-666 | Safety, empathy, alignment | F5, F6, F9 |
+| **APEX** | Psi (Soul) | 444-888 | Judgment, verdict, sealing | F1, F3, F10-F13 |
 
 AGI and ASI are **thermodynamically isolated** until stage 444 (`compute_consensus()`). This prevents confirmation bias between reasoning and safety engines.
 
@@ -98,7 +98,7 @@ Implemented in `core/organs/`. Each organ owns specific stages of the 000-999 pi
 | **AGI** | `_1_agi.py` | 111-333 | Mind -- sense, think (3-path), reason | 552 |
 | **PHOENIX** | (in _1_agi) | 222 | Subconscious -- associative memory (Omega-0 softened Jaccard) | - |
 | **ASI** | `_2_asi.py` | 555-666 | Heart -- empathize, align (SBERT scoring) | 149 |
-| **APEX** | `_3_apex.py` | 444,777-888 | Soul -- trinity sync, eureka forge, final judgment | 283 |
+| **APEX** | `_3_apex.py` | 444-888 | Soul -- trinity sync, eureka forge, final judgment | 283 |
 | **FORGE** | (in _3_apex) | 777 | Hands -- sandboxed execution (requires signed ConstitutionalTensor) | - |
 | **VAULT** | `_4_vault.py` | 999 | Memory -- immutable ledger, EUREKA sieve, Merkle integrity | 401 |
 
@@ -143,7 +143,7 @@ Stage 222 (THINK) runs internally inside `reason_mind` -- three parallel paths (
 
 | Floor | Name | Threshold | Function |
 |-------|------|-----------|----------|
-| F3 | Tri-Witness | >= 0.95 | External calibration (Human * AI * Earth) |
+| F3 | Quad-Witness (W4) | >= 0.75 | ∜(H × A × E × V) BFT consensus |
 | F8 | Genius (G) | >= 0.80 | Internal coherence (A * P * X * E-squared) |
 
 **Execution order:** F12->F11 (Walls) --> AGI Floors (F1,F2,F4,F7) --> ASI Floors (F5,F6,F9) --> Mirrors (F3,F8) --> Ledger
@@ -160,24 +160,24 @@ All defined in `aaa_mcp/server.py` with `@mcp.tool()` decorators. Backend logic 
 
 | Tool | Lane | Stage | Floors | Purpose |
 |------|------|-------|--------|---------|
-| `anchor_session` | Delta | 000 | F11, F12, F13 | Session ignition & injection defense |
-| `reason_mind` | Delta | 111-444 | F2, F4, F7, F8 | AGI cognition (Stage 222 THINK internal) |
-| `recall_memory` | Omega | 555 | F4, F7, F13 | Associative memory via EUREKA sieve |
-| `simulate_heart` | Omega | 555-666 | F4, F5, F6 | Stakeholder impact & care constraints |
-| `critique_thought` | Omega | 666 | F4, F7, F8 | 7-organ alignment & bias critique |
-| `apex_judge` | Psi | 777-888 | F1-F13 | Sovereign verdict + governance_token |
-| `eureka_forge` | Psi | 888 | F1, F11, F12 | Sandboxed action execution |
-| `seal_vault` | Psi | 999 | F1, F3, F10 | Immutable ledger (token-locked) |
+| `anchor_session` | Delta | 000 | F11, F12, F13 | Session ignition & auth |
+| `reason_mind` | Delta | 111-333 | F2, F4, F7, F8 | AGI cognition (3-path logic) |
+| `vector_memory` | Omega | 555 | F4, F7, F13 | BGE-M3 + Qdrant semantic recall |
+| `simulate_heart` | Omega | 555-666 | F4, F5, F6 | Stakeholder impact & care |
+| `critique_thought` | Omega | 666 | F4, F7, F8 | Alignment & adversarial critique |
+| `apex_judge` | Psi | 888 | F1-F13 | Final verdict + governance_token |
+| `eureka_forge` | Psi | 777 | F1, F11, F12 | Sandboxed action execution |
+| `seal_vault` | Psi | 999 | F1, F3, F10 | Immutable Merkle ledger commit |
 
 ### Utility Tools (5 tools, read-only)
 
 | Tool | Lane | Stage | Floors | Purpose |
 |------|------|-------|--------|---------|
-| `search_reality` | Delta | 111 | F2, F4, F12 | Web grounding (Jina Reader primary → Perplexity → Brave) |
-| `fetch_content` | Delta | 444 | F2, F4, F12 | URL content retrieval + taint lineage |
-| `inspect_file` | Delta | 111 | F1, F4, F11 | Filesystem read-only inspection |
-| `audit_rules` | Delta | 333 | F2, F8, F10 | Governance rule audits |
-| `check_vital` | Omega | 555 | F4, F5, F7 | System health & vital signs |
+| `search_reality` | Delta | 111 | F2, F4, F12 | Web grounding (Jina/Perplexity/Brave) |
+| `ingest_evidence` | Delta | 222 | F2, F4, F12 | URL/File extraction & cleaning |
+| `check_vital` | Omega | 555 | F4, F5, F7 | Hardware & thermodynamic telemetry |
+| `audit_rules` | Delta | READ | F2, F8, F10 | Read-only floor/state audit |
+| `metabolic_loop` | Psi | ALL | ALL | Full 000-999 orchestration |
 
 All tools return: `{verdict, stage, session_id, floors, truth, next_actions}`
 
@@ -214,7 +214,7 @@ core/
  |   |-- constitutional_decorator.py   @constitutional_floor() wrapper
  |   |-- engine_adapters.py        F1-F13 evaluation adapters
  |   |-- heuristics.py             Entropy, tone, complexity scoring
- |   |-- stage_orchestrator.py     Stages 444-999 orchestration
+ |   |-- stage_orchestrator.py     Stages 444-888 orchestration
  |   |-- mcp_tool_service.py       Tool name <-> function mapping
  |   |-- mcp_transport_kernel.py   Response normalization
  |   `-- init_000_anchor.py        Alternative Stage 000 (legacy)
@@ -228,7 +228,7 @@ core/
  |
  |-- shared/                       Foundation modules
  |   |-- floors.py                 CANONICAL 13-floor implementations (THRESHOLDS dict)
- |   |-- physics.py                W_3, delta_S, Omega_0, Peace2, kappa_r, G, ConstitutionalTensor
+ |   |-- physics.py                W_4, delta_S, Omega_0, Peace2, kappa_r, G, ConstitutionalTensor
  |   |-- atlas.py                  ATLAS query routing (Lane, GPV, Lambda, Theta, Phi)
  |   |-- types.py                  Pydantic contracts (AgiOutput, AsiOutput, FloorScores, Verdict)
  |   |-- crypto.py                 Ed25519, SHA-256, Merkle trees

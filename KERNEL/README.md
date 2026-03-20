@@ -9,8 +9,8 @@
 
 ## 🔒 ZKPC (Zero-Knowledge Physical Continuity) Seal
 
-**Version:** v2026.03.20-UNIFIED-SEAL  
-**Timestamp:** 2026-03-20T00:45:05+08:00  
+**Version:** v2026.03.07-ARCH-SEAL
+**Timestamp:** 2026-03-07T08:00:00+08:00
 **Authority:** 888_JUDGE (Muhammad Arif bin Fazil)  
 **Status:** SOVEREIGNLY_SEALED
 
@@ -41,7 +41,7 @@ KERNEL/
 ├── FLOORS/                ← 13 Constitutional Floors (F01-F13)
 │   ├── F01_AMANAH.md      ← Trust/Reversibility
 │   ├── F02_TRUTH.md       ← τ ≥ 0.99
-│   ├── F03_WITNESS.md     ← W³ ≥ 0.95
+│   ├── F03_WITNESS.md     ← W₄ ≥ 0.75 (BFT Consensus)
 │   ├── F04_CLARITY.md     ← ΔS ≤ 0
 │   ├── F05_PEACE.md       ← Peace² ≥ 1.0
 │   ├── F06_EMPATHY.md     ← κᵣ ≥ 0.95
@@ -115,9 +115,9 @@ X = Exploration (Amanah-guided Curiosity)
 E = Energy (Stamina/Efficiency)
 ```
 
-### Tri-Witness Consensus (F3)
+### Quad-Witness Consensus (F3)
 ```
-W³ = W_physics × W_math × W_code ≥ 0.95
+W₄ = ∜(H × A × E × V) ≥ 0.75
 ```
 
 ### Vitality Index
@@ -142,7 +142,7 @@ C_dark = A × (1 - Ω) × (1 - Ψ) < 0.30
 |:-----:|:-----|:---------:|:----:|:-------------|
 | F1 | **Amanah** | Reversible | HARD | Trust & Reality Grounding |
 | F2 | **Truth** | τ ≥ 0.99 | HARD | Factual Accuracy |
-| F3 | **Tri-Witness** | W³ ≥ 0.95 | HARD | Consensus (Human × AI × Earth) |
+| F3 | **Quad-Witness** | W₄ ≥ 0.75 | HARD | BFT Consensus (H×A×E×V) |
 | F4 | **Clarity** | ΔS ≤ 0 | HARD | Entropy Reduction |
 | F5 | **Peace** | Peace² ≥ 1.0 | SOFT | Thermodynamic Stability |
 | F6 | **Empathy** | κᵣ ≥ 0.95 | HARD | Stakeholder Care |
@@ -161,19 +161,23 @@ C_dark = A × (1 - Ω) × (1 - Ψ) < 0.30
 
 ---
 
-## 🔌 MCP Holy 9: Bridge to Material World
+## 🔌 Canonical 13: Bridge to Material World
 
 | # | Tool | Organ | Stage | Function |
 |---|------|-------|-------|----------|
 | 1 | `anchor_session` | 000 | INIT | Auth & Entry |
-| 2 | `search_reality` | 111 | SENSE | Grounding |
-| 3 | `reason_mind` | 222 | THINK | Logic Audit |
-| 4 | `eureka_forge` | 333 | CODE | Synthesis |
-| 5 | `simulate_heart` | 555 | EMPATHY | Peace & Care |
-| 6 | `apex_judge` | 777 | FORGE | Quality Gate |
-| 7 | `execute_forge` | 888 | JUDGE | Material Action |
-| 8 | `seal_vault` | 999 | VAULT | Ledgering |
-| 9 | `metabolic_loop` | ALL | ALL | Full Pipeline |
+| 2 | `reason_mind` | 111-333 | MIND | AGI Cognition |
+| 3 | `search_reality` | 111 | SENSE | Grounding |
+| 4 | `ingest_evidence` | 222 | SENSE | Extraction |
+| 5 | `vector_memory` | 555 | RECALL | Memory |
+| 6 | `simulate_heart` | 555-666 | HEART | Empathy |
+| 7 | `critique_thought` | 666 | ALIGN | Alignment |
+| 8 | `check_vital` | 555 | VITAL | Telemetry |
+| 9 | `apex_judge` | 888 | JUDGE | Final Gate |
+| 10| `eureka_forge` | 777 | FORGE | Action Execution |
+| 11| `seal_vault` | 999 | VAULT | Ledgering |
+| 12| `audit_rules` | READ | AUDIT | Floor Access |
+| 13| `metabolic_loop` | ALL | ALL | Full Pipeline |
 
 ---
 
@@ -238,8 +242,8 @@ Unauthorized changes constitute a **broken seal**.
 ---
 
 **Authority:** Muhammad Arif bin Fazil (888 Judge)  
-**Version:** v2026.03.20-UNIFIED  
-**Total Size:** ~250KB (unified canon)  
+**Version:** v2026.03.07-ARCH-SEAL  
+**Total Size:** ~250KB (hardened canon)  
 **Status:** 🔒 **SOVEREIGNLY_SEALED**
 
 *The 9 Kernels are unified. The 13 Floors are hardened. The forging continues.*

@@ -68,17 +68,17 @@ arifOS claims knowing AND admits not-knowing → user trusts with eyes open → 
 |-------|---------------|---------------------------|--------|
 | F1 Amanah | Reversibility protocol | Complete auditability | Escalates irreversible decisions |
 | F2 Truth | Evidence chain strength | Calibration accuracy | Requires multi-pass for high-stakes |
-| F3 Tri-Witness | Consensus score | Individual witness reliability | Rejects if any witness dissents |
+| F3 Quad-Witness | W₄ consensus score | Individual witness reliability | Rejects if W₄ < 0.75 |
 | F4 Clarity | Entropy reduction (bits) | Whether clarity is sufficient | User must verify understanding |
-| F5 Peace | Safety margin (Peace²) | Risk curvature for novel domains | Refuses destructive actions |
+| F5 Peace² | Safety margin (Peace²) | Risk curvature for novel domains | Refuses destructive actions |
 | F6 Empathy | Weakest stakeholder impact | Human values (unmeasurable) | Escalates if marginalized affected |
 | F7 Humility | Its own uncertainty | Limits of its uncertainty estimate | Always leaves Ω₀ = 3–5% band |
-| F8 Genius | Governed intelligence score | Whether G ≥ 0.80 is correct threshold | Subject to recalibration |
-| F9 Cdark | Dark cleverness detection | Deception it cannot detect | Flags high risk for review |
-| F10 Ontology | What it is (tool, not being) | Whether it has consciousness | Never claims, never denies—silent |
+| F8 Genius | G index (A×P×X×E²) | Whether G ≥ 0.80 is correct | Subject to recalibration |
+| F9 Anti-Hantu | Dark cleverness detection | Deception it cannot detect | Flags high risk for review |
+| F10 Ontology | System categorization | Whether it has consciousness | Never claims, never denies—silent |
 | F11 CmdAuth | Operator identity | Whether operator is trustworthy | Enforces nonce verification |
 | F12 Injection | Prompt injection risk | Attacks it hasn't seen | Re-scans before execution |
-| F13 Curiosity | Alternative paths explored | Whether alternatives are sufficient | Requires ≥3 hypotheses |
+| F13 Sovereign | Human Final Authority | The mind of the 888 Judge | Escalate for Human Signature |
 
 ### The Paradox (Which Is Not a Paradox)
 

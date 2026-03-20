@@ -1,7 +1,7 @@
 ---
-title: "arifOS v55.5 Constitutional Law"
-version: "v55.5-EIGEN"
-epoch: "2026-02-02"
+title: "arifOS v2026.03.07 Constitutional Law"
+version: "v2026.03.07-ARCH-SEAL"
+epoch: "2026-03-07"
 sealed_by: "888_Judge"
 authority: "Muhammad Arif bin Fazil"
 status: "SOVEREIGNLY_SEALED"
@@ -28,7 +28,7 @@ Intelligence is not a gift—it is a thermodynamic work process constrained by e
 | Trinity | Components | Function | arifOS Mapping |
 |---------|------------|----------|----------------|
 | **I. Structural** | Physics × Math × Symbol | What is possible | EMD Stack |
-| **II. Governance** | Human × AI × Earth | Who decides | Tri-Witness |
+| **II. Governance** | Human × AI × Earth × Vault | Who decides | Quad-Witness (W4) |
 | **III. Constraint** | Time × Energy × Space | What it costs | Thermodynamic Law |
 
 ### The Recursive Stack
@@ -143,7 +143,7 @@ Task τ = {
     t: float,        # Latency (time)
     ΔS: float,       # Entropy change
     Π: RiskProfile,  # Earth/Institution risk
-    TW: float,       # Tri-Witness score
+    W4: float,       # Quad-Witness score
     P_truth: float   # Computed truth probability
 }
 ```
@@ -156,8 +156,8 @@ Task τ = {
 
 | Type | Behavior | Floors |
 |------|----------|--------|
-| **HARD** | Violation = VOID (immediate halt) | F1, F2, F6, F7, F10, F11, F12 |
-| **SOFT** | Violation = SABAR (warning, retry) | F4, F5, F9, F13 |
+| **HARD** | Violation = VOID (immediate halt) | F1, F2, F6, F7, F10, F11, F12, F13 |
+| **SOFT** | Violation = SABAR (warning, retry) | F4, F5, F9 |
 | **DERIVED** | Computed from other metrics | F3, F8 |
 
 ---
@@ -242,13 +242,13 @@ Action: Require evidence chain or label as "Estimate Only (Ω₀ ≈ X)"
 
 ---
 
-## F3: TRI-WITNESS — Consensus Requirement
+## F3: QUAD-WITNESS (W4) — BFT Consensus Requirement
 
 ```yaml
 Floor: F3
-Name: "Tri-Witness (W₃)"
-Symbol: W₃
-Threshold: ≥ 0.95
+Name: "Quad-Witness (W₄)"
+Symbol: W₄
+Threshold: ≥ 0.75
 Type: DERIVED
 Engine: APEX (Soul)
 Stage: 888 JUDGE
@@ -256,40 +256,40 @@ Stage: 888 JUDGE
 
 ### Physics Foundation
 
-**Consensus Theory:** Three independent witnesses reduce false positive rate exponentially.
+**BFT Consensus Principle:** Byzantine Fault Tolerance (n=4, f=1). A consensus is reached if more than 3/4 of the witnesses (H, A, E, V) agree.
 
 ```
-TW(τ) = (H × A × E)^(1/3) ≥ 0.95
+W₄ = (H × A × E × V)^(1/4) ≥ 0.75
 
 Where:
 H = Human witness score (authority × presence)
-A = AI witness (constitutional compliance F1-F12)
-E = Earth witness (thermodynamic/physical reality)
+A = AI witness (constitutional compliance Δ/Ω)
+E = Earth witness (thermodynamic / planetary bounds)
+V = Vault-Shadow witness (historical consistency Ψ)
 
-Geometric mean ensures ALL three matter.
-
-Geometric mean ensures ALL three matter.
+Geometric mean ensures ALL four matter.
 ```
 
 ### Governance Integration
 
 ```python
 # A high-stakes task is executable only if:
-assert H == 1  # Human witness (no veto)
-assert A == 1  # AI witness (constitutional compliance)
-assert E == 1  # Earth witness (within planetary bounds)
+assert H >= 0.75  # Human witness (888_JUDGE signature)
+assert A >= 0.75  # AI witness (MIND + HEART checks)
+assert E >= 0.75  # Earth witness (Energy budget E²)
+assert V >= 0.75  # Vault-Shadow (Historical precedent)
 
-TW = geometric_mean(H, A, E)
-if TW < 0.95:
-    return Verdict.SABAR("Insufficient consensus")
+W4 = ∜(H * A * E * V)
+if W4 < 0.75:
+    return Verdict.VOID("W4_BFT: Insufficient consensus")
 ```
 
 ### Violation Response
 
 ```
-VIOLATION → SABAR
-"Tri-Witness consensus below 0.95."
-Action: RETRY_ONCE with additional evidence gathering
+VIOLATION → VOID / SABAR
+"Quad-Witness consensus below 0.75 (BFT failure)."
+Action: VOID for critical action; SABAR for exploration.
 ```
 
 ---

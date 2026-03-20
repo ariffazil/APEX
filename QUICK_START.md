@@ -88,7 +88,7 @@ Every decision flows through three domains:
 |--------|------|----------|--------|
 | **Δ** | AGI Mind | Reason, Logic | 111-333 |
 | **Ω** | ASI Heart | Empathy, Impact | 555-666 |
-| **Ψ** | APEX Soul | Judgment, Final | 777-888 |
+| **Ψ** | APEX Soul | Judgment, Final | 444-888 |
 
 ### 2. The Metabolic Loop (000-999)
 
@@ -114,7 +114,7 @@ Every request flows through these stages. At **888 JUDGE**, the 13 Floors are ch
 | **F10** | Ontology | Protect categorization |
 | **F11** | Authority | Verified identity required |
 | **F12** | Injection | Risk < 0.85 (Defend against attacks) |
-| **F13** | Sovereign | Human has final veto |
+| **F13** | Sovereign | Human Final Veto (888_JUDGE) |
 
 ### 4. Verdicts
 

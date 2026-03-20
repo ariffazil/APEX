@@ -377,7 +377,7 @@ pre-commit run --all-files
 
 ---
 
-## 8. The 42-Tool Canonical Surface
+## 8. The 13-Tool Canonical Surface
 
 All tools are defined in `arifosmcp/runtime/mcp_server.py` with `@mcp.tool()` decorators.
 
@@ -404,6 +404,7 @@ All tools are defined in `arifosmcp/runtime/mcp_server.py` with `@mcp.tool()` de
 - `SABAR` — Execution paused (cooling period)
 - `VOID` — Hard floor violation, execution blocked
 - `888_HOLD` — Human cryptographic signature required
+- `W4_BFT` — Byzantine Fault Tolerance threshold (W4 ≥ 0.75) required for critical actions
 
 ---
 
@@ -508,7 +509,7 @@ To add a new tool to the 13-tool surface:
 4. **Register floor mapping** in `core/kernel/constitutional_decorator.py`
 5. **Mirror** in `arifos_arifosmcp/runtime/mcp_server.py` and add to `AAA_TOOLS`
 6. **Add tests** in `tests/`
-7. **Update tool count assertion:** `assert len(AAA_CANONICAL_TOOLS) == 42`
+7. **Update tool count assertion:** `assert len(AAA_CANONICAL_TOOLS) == 13`
 
 **Note:** The tool count is a runtime invariant. If adding a tool, you must remove or consolidate another to maintain exactly 13 tools.
 
