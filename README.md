@@ -23,7 +23,7 @@
 |:-----------|:-----|:--------|
 | **arifOS** (this) | **THE MIND** | Theory, Constitution, Canonical Law |
 | [**arifosmcp**](https://github.com/ariffazil/arifosmcp) | **THE BODY** | Runtime MCP server, Execution |
-| [**ariffazil**](https://github.com/ariffazil/ariffazil) | **THE SURFACE** | Human professional portal, Interface |
+| [**ariffazil**](https://github.com/ariffazil/ariffazil) | **THE SOUL** | Human professional portal, Interface |
 
 ---
 
