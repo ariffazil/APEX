@@ -51,7 +51,7 @@ Used for **arifOS** when:
 ```bash
 git tag -a 2026.03.20-APEX-SITE-SEAL -m "SEAL: Theory-site alignment complete
 - arifOS = THE MIND (pure theory)
-- All KERNEL links verified
+- All 0_KERNEL links verified
 - 18 dead refs removed
 - Site deploys to arifos.arif-fazil.com
 
@@ -70,7 +70,7 @@ Used for **arifosmcp** when:
 **Example:**
 ```bash
 git tag -a 2026.03.20-MCP-RUNTIME-FORGE -m "FORGE: Runtime stable
-- core/ organs aligned with KERNEL/FLOORS
+- core/ organs aligned with 0_KERNEL/FLOORS
 - 13 MCP tools functional
 - Tests passing
 - Paired with MIND: 2026.03.20-APEX-SITE-SEAL

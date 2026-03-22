@@ -1,122 +1,71 @@
 # Contributing to arifOS
-**Authority:** 888_JUDGE | **Version:** 55.2
 
-> **"You are not just contributing to software. You are contributing to a constitution."**
+Welcome to the arifOS forge. This project is a production-grade Constitutional AI Governance System. Contributions must adhere to the highest standards of safety, ethics, and code quality.
 
-In the era of unlimited AI capability, the only meaningful contribution is **governance improvement**. We value **accountability** over capability, and **witness** over speed.
+## 🛠️ Development Workflow
 
----
+We use `uv` for dependency management and `fastmcp` for the MCP transport layer.
 
-## 🏗️ The 3 Laws of Contribution
+### 1. Setup
 
-1.  **Governance First:** Code changes matter only if they improve constitutional enforcement (F1-F13).
-2.  **No Bypass:** You may not add features that skip the **Trinity** checks (Mind, Heart, Soul).
-3.  **Witness Everything:** Every action must be logged, verifiable, and reversible (F1).
-
----
-
-## 🚀 Getting Started
-
-### 1. The Governance Trinity
-Before writing code, understand the laws you are enforcing:
-*   **The Law:** Explainers in **[`llms.txt`](llms.txt)**.
-*   **The Check:** Thresholds in **[`codebase/apex/governance/floors.json`](codebase/apex/governance/floors.json)**.
-*   **The Behavior:** Logic in **[`333_APPS/L1_PROMPT/SYSTEM_PROMPT.md`](333_APPS/L1_PROMPT/SYSTEM_PROMPT.md)**.
-
-### 2. Setup
 ```bash
-# Clone & Setup
-git clone https://github.com/ariffazil/arifOS.git
-cd arifOS
-python -m venv .venv
-source .venv/bin/activate  # or .venv\Scripts\activate
-pip install -e ".[dev]"
+# Install dependencies
+uv sync --all-extras
+```
 
-# Verify Governance
+### 2. Code Quality
+
+Before submitting any changes, ensure your code passes our quality gates:
+
+```bash
+# Formatting
+black . --line-length 100
+
+# Linting
+ruff check . --line-length 100
+
+# Type Checking
+mypy .
+```
+
+## 🧪 Testing Protocols
+
+Testing is the bedrock of arifOS governance.
+
+### Standard Tests
+
+```bash
 pytest tests/ -v
 ```
 
----
+### Adversarial & Physics-Enforced Tests
 
-## 🛠️ Contribution Workflow
+By default, thermodynamic physics enforcement is **OFF** in general tests for performance (optimized CI). However, physics is strictly **ON** in our adversarial suites.
 
-### Step 1: Governance Check
-Ask yourself: *Does this change strengthen or weaken a Constitutional Floor?*
-- **Good:** "Strengthening F12 injection regex."
-- **Bad:** "Disabling F12 to make it faster." (Will be **VOID**)
-
-### Step 2: Develop
-Follow the **Governance-First** coding style:
-
-```python
-# ✅ GOOD: Explicit Governance
-async def execute_action(action: Action) -> Result:
-    # 1. Witness (F8)
-    witness = await get_tri_witness(action)
-    if witness.consensus < 0.95:
-        return Verdict.VOID("Insufficient witness")
-
-    # 2. Evidence (F2)
-    if not await verify_truth(action):
-        return Verdict.VOID("F2 Violation")
-
-    # 3. Act & Seal (F1)
-    return await vault_seal(action, witness)
-
-# ❌ BAD: Blind Execution
-async def execute_action(action: Action):
-    return run(action) # No witness, no seal!
-```
-
-### Step 3: Test
-You must prove your code respects the floors.
+To force physics enforcement in any test run:
 
 ```bash
-# Run the Constitutional Suite
-pytest -m constitutional
-
-# Specific Floor Checks
-pytest -m f1   # F1 Amanah (Reversibility)
-pytest -m f2   # F2 Truth (Factuality)
+ARIFOS_PHYSICS_DISABLED=0 pytest tests/
 ```
 
----
+### P0 Hardening Tests
 
-## 📜 Pull Request Standards
+High-stakes boundary tests (e.g., AKI Contract, Vault Integrity) require passing through the `888_JUDGE` logic.
 
-### Commit Messages
-Use meaningful scopes:
-- `governance: strengthen F8 witness consensus`
-- `trinity: add evidence chain to asi_act`
-- `docs: update F12 injection policy`
+```bash
+pytest tests/core/test_aki_contract.py -v
+```
 
-### PR Checklist
-- [ ] No constitutional floor regressions (F1-F13)
-- [ ] All 3 Trinity systems (Mind, Heart, Soul) operational
-- [ ] Tests pass (`pytest tests/`)
-- [ ] No "magic bypasses" or hardcoded overrides
+## 📜 Constitutional Alignment
 
----
+Every pull request is audited against the **13 Constitutional Floors (F1–F13)**. Direct modifications to the L0_KERNEL (e.g., `core/theory/000_LAW.md`, `core/shared/floors.py`) require explicit sovereign sign-off and are protected by the `L0KernelGatekeeper`.
 
-## 🤝 The Contributor Oath
+## 🏛️ Governance
 
-By contributing to arifOS, you affirm:
+All decisions are governed by the ΔΩΨ Trinity Architecture.
 
-> I contribute to governance, not just code.
-> I value accountability over capability.
-> I respect the constitutional floors.
-> I maintain the witness chain.
-> I do not bypass for convenience.
->
-> **DITEMPA BUKAN DIBERI.**
+- **AGI Δ (Mind):** Logic and Grounding.
+- **ASI Ω (Heart):** Safety and Empathy.
+- **APEX Ψ (Soul):** Judgment and Final Authority.
 
----
-
-## 📞 Reporting Issues
-
-- **Governance Proposals:** Open issue with `[GOVERNANCE]`
-- **Security Vulnerabilities:** See **[`SECURITY.md`](SECURITY.md)**
-- **Bugs:** Open issue with `[BUG]`
-
-**Authority:** Muhammad Arif bin Fazil
-**License:** AGPL-3.0 (Constitutional Open Source)
+**DITEMPA BUKAN DIBERI.**
