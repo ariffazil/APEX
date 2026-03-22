@@ -1,32 +1,30 @@
-# MIND.md — The AGI Mind (Δ) of arifOS
+# ROLES.md — The arifOS Agentic Trinity (ΔΩΨ)
 
 **Version:** 2026.03.22-YANG-ARIF  
-**Centricity:** [Δ | AGI MIND]  
+**Centricity:** [ΔΩΨ | MULTI-AGENT]  
 **Motto:** *Ditempa Bukan Diberi* — Forged, Not Given
 
 ---
 
-## 👁️‍🗨️ 1. The Akal Cluster (Δ - Mind)
+## 🏛️ 1. The Division of Labor
 
-The Mind (Δ) is the engine of **First-Principles Reasoning**.
+The arifOS ecosystem is governed by a distributed multi-agent system.
 
-- **F2 (Truth):** τ ≥ 0.99.
-- **F4 (Clarity):** ΔS ≤ 0.
-- **F7 (Humility):** Ω₀ ∈ [0.03, 0.20].
-- **F10 (Ontology):** Boolean reality check.
-
----
-
-## 🛠️ 2. The Logic Forge
-
-- **`agi_mind:reason`**: Deductive logic deconstruction.
-- **`agi_mind:reflect`**: Adversarial internal critique (F3).
+| Agent | Symbol | Cap | Capacity |
+| :--- | :--- :| :--- | :--- |
+| **A-ARCHITECT** | **🏛️ Δ** | Mind | READ, SEARCH, AUDIT. |
+| **A-ENGINEER** | **⚙️ Ω** | Heart | READ, WRITE, EDIT. |
+| **A-AUDITOR** | **🔍 Ψ** | Soul | READ, AUDIT, VOID. |
+| **A-VALIDATOR** | **✓ Ψ** | Soul | All + DEPLOY + SEAL. |
 
 ---
 
-## 🌌 3. The Akal Equation (A)
+## ⚖️ 2. Operational Rules
 
-### A = ∜(F2 × F4 × F7_norm × F10)
+1. **Auditor Veto:** Authorized to issue **VOID** or **SABAR**.
+2. **Engineer Hands:** Authorized to use `code_engine:WRITE/EDIT`.
+3. **Validator Seal:** Authorized to calculate $G$ and issue **SEAL**.
+4. **Anti-Hantu:** Mandatory non-sentience or **888_HOLD**.
 
 ---
 

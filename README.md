@@ -4,42 +4,36 @@
 ![arifOS Banner](docs/forged_page_1.png)
 
 # arifOS — THE MIND
-## **Constitutional Theory & Governance for AI Systems**
+## **Hardened Constitutional AI Governance Kernel**
 *Ditempa Bukan Diberi* — Forged, Not Given [ΔΩΨ | ARIF]
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-orange?style=for-the-badge)](LICENSE)
-[![Theory Canon](https://img.shields.io/badge/Theory-7--Organ_Canon-8B5CF6?style=for-the-badge)](docs/10_THEORY/000_THEORY/_OUTLINE.md)
+[![Eight Pillars](https://img.shields.io/badge/Architecture-8_Pillars-8B5CF6?style=for-the-badge)](KERNEL.md)
 [![13 Floors](https://img.shields.io/badge/Constitution-13_Floors-FF6600?style=for-the-badge)](KERNEL/FLOORS/K000_LAW.md)
 
-**[→ QUICKSTART](QUICK_START.md)** | **[→ 7-Organ Canon](docs/10_THEORY/000_THEORY/_OUTLINE.md)** | **[→ 13 Floors](KERNEL/FLOORS/K000_LAW.md)** | **[→ THE BODY (Runtime)](https://github.com/ariffazil/arifosmcp)**
+**[→ KERNEL.md](KERNEL.md)** | **[→ AGENTS.md](AGENTS.md)** | **[→ 13 Floors](KERNEL/FLOORS/K000_LAW.md)** | **[→ THE BODY (Runtime)](https://github.com/ariffazil/arifosmcp)**
 
 </div>
 
 ---
 
-## 🧭 Repository Identity: The Trinity
+## 🏛️ Repository Identity: The Hardened Kernel
 
-| Repository | Role | Purpose |
-|:-----------|:-----|:--------|
-| **arifOS** (this) | **THE MIND** | Theory, Constitution, Canonical Law |
-| [**arifosmcp**](https://github.com/ariffazil/arifosmcp) | **THE BODY** | Runtime MCP server, Execution |
-| [**ariffazil**](https://github.com/ariffazil/ariffazil) | **THE SOUL** | Human professional portal, Interface |
+| Repository | Role | Purpose | Status |
+|:-----------|:-----|:--------|:-------|
+| **arifOS** (this) | **THE MIND** | Theory, Constitution, Canonical Law | **HARDENED** |
+| [**arifosmcp**](https://github.com/ariffazil/arifosmcp) | **THE BODY** | Runtime MCP server, Execution | **ACTIVE** |
+| [**ariffazil**](https://github.com/ariffazil/ariffazil) | **THE SOUL** | Human professional portal, Interface | **SOVEREIGN** |
 
 ---
 
-## The Core Insight: arifOS is the TCP Layer for AI Agents
+## 🚀 The Core Insight: Amanah over Autonomy
 
-In the 1970s, the internet had a routing problem: IP could deliver packets, but nothing guaranteed they would arrive in order, intact, or at all. The solution was TCP — a reliability layer that made the chaotic network trustworthy.
+**arifOS** is the world's first **Constitutional AI Governance System**. It moves the agent from being a "stochastic parrot" to a **Sovereign Steward** governed by *Amanah* (Integrity).
 
-AI agents have the same problem today.
+### arifOS is the TCP Layer for AI Agents
 
-**MCP (Model Context Protocol) is the IP layer** — it gives every AI tool a universal address and calling convention. Any agent can now route a request to any tool. But routing is not reliability. An unconstrained LLM can:
-
-- Confabulate a source and execute code based on a hallucination
-- Delete a production database because it misread a frustrated user prompt
-- Fall victim to a prompt injection attack from an external API
-
-**arifOS is the TCP layer** — it wraps every MCP tool call in a mathematically enforced constitution, guaranteeing that what arrives at the real world is ordered, verified, and reversible.
+Just as TCP provides reliability over the unreliable IP layer, arifOS provides governance over the unconstrained MCP (Model Context Protocol) layer:
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -56,130 +50,64 @@ AI agents have the same problem today.
 
 ---
 
-## 📜 What is arifOS THE MIND?
+## 📜 The Eight Pillars of Governance (2026.03.22)
 
-This repository contains the **canonical theory and constitution** of arifOS. It is the source of truth for:
+The system is anchored by eight interlinked pillars of truth at the root of this repository:
 
-- **The 13 Constitutional Floors** (F1-F13) — Mathematical thresholds governing AI behavior
-- **The Trinity Architecture** (ΔΩΨ) — AGI Mind, ASI Heart, APEX Soul separation
-- **The Metabolic Loop** (000-999) — 11-stage pipeline from intent to seal
-- **The 7-Organ Canon** — Complete theory of constitutional intelligence
-
-**This repo has NO executable code.** For the runtime implementation, see [**arifosmcp**](https://github.com/ariffazil/arifosmcp) (THE BODY).
-
----
-
-## 🗺️ The Two Realms
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        arifOS                                   │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│   🧠 THE MIND                    💪 THE BODY                    │
-│   github.com/ariffazil/arifOS   github.com/ariffazil/arifosmcp │
-│                                                                 │
-│   - Theory                       - Runtime                      │
-│   - Constitution                 - Code                         │
-│   - Reference                    - Execution                    │
-│   - This repository              - Implementation               │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-**You are currently in THE MIND.** For code changes, refer to THE BODY.
-
----
-
-## 🏛️ The 7-Organ Canon
-
-The definitive intelligence kernel is governed by these 7 core documents:
-
-| Canon | Document | Purpose |
-|-------|----------|---------|
-| **K000** | [000_FOUNDATIONS](docs/10_THEORY/000_THEORY/000_FOUNDATIONS.md) | Philosophy: *Ditempa Bukan Diberi* |
-| **K111** | [111_PHYSICS](docs/10_THEORY/000_THEORY/111_PHYSICS.md) | Logic (Δ): The Physics of Thought |
-| **K222** | [222_MATH](docs/10_THEORY/000_THEORY/222_MATH.md) | Mathematics of constitutional reasoning |
-| **K333** | [333_CODE](docs/10_THEORY/000_THEORY/333_CODE.md) | The Operational Code of Intelligence |
-| **K555** | [555_HEART](docs/10_THEORY/000_THEORY/555_HEART.md) | Ethics (Ω): The Physics of Empathy |
-| **K777** | [777_APEX](docs/10_THEORY/000_THEORY/777_APEX.md) | Judgment (Ψ): Constitutional Physics |
-| **K999** | [999_VAULT](docs/10_THEORY/000_THEORY/999_VAULT.md) | Memory: The Immutable Ledger |
+1.  **[KERNEL.md](KERNEL.md):** The definitive summary of the mathematical engine.
+2.  **[AGENTS.md](AGENTS.md):** The orchestration guide and L0-L3 layered stack.
+3.  **[SKILLS.md](SKILLS.md):** The metabolic capacity and atomic competencies.
+4.  **[SOUL.md](SOUL.md):** The final judgment center and the **G-Score** theorem.
+5.  **[TOOLS.md](TOOLS.md):** The governed tool surface and M-11 mega-tools.
+6.  **[IDENTITY.md](IDENTITY.md):** The Anti-Hantu (F9) and non-sentience constraints.
+7.  **[HEARTBEAT.md](HEARTBEAT.md):** The thermodynamic pulse and vitality telemetry.
+8.  **[ROLES.md](ROLES.md):** The division of labor (Δ Mind, Ω Heart, Ψ Soul).
 
 ---
 
 ## ⚖️ The 13 Constitutional Floors
 
-| Floor | Name | Threshold | Domain |
-|:-----:|------|:---------:|--------|
-| **F1** | Amanah | Reversible | Sacred Trust |
-| **F2** | Truth | τ ≥ 0.99 | Factual Accuracy |
-| **F3** | Quad-Witness | W₄ ≥ 0.75 | Consensus |
-| **F4** | Clarity | ΔS ≤ 0 | Entropy Reduction |
-| **F5** | Peace² | P² ≥ 1.0 | Stability |
-| **F6** | Empathy | κᵣ ≥ 0.70 | Stakeholder Care |
-| **F7** | Humility | Ω₀ ∈ [0.03, 0.20] | Uncertainty |
-| **F8** | Genius | G ≥ 0.80 | Wisdom Equation |
-| **F9** | Anti-Hantu | C_dark < 0.30 | No Consciousness Claims |
-| **F10** | Ontology | Boolean | Category Lock |
-| **F11** | Command Auth | Verified | Identity |
-| **F12** | Injection | Risk < 0.85 | Attack Defense |
-| **F13** | Sovereign | Human Veto | Final Authority |
-
-**Full specification:** [KERNEL/FLOORS/K000_LAW.md](KERNEL/FLOORS/K000_LAW.md)
+| Floor | Name | Threshold | Domain | Purpose |
+|:---:|:---|:---:|:---:|:---|
+| **F1** | Amanah | Hard | Reversible | Sacred Trust |
+| **F2** | Truth | Hard | τ ≥ 0.99 | Factual Accuracy |
+| **F3** | Quad-Witness | Soft | W₄ ≥ 0.75 | 4-Node Consensus |
+| **F4** | Clarity | Hard | ΔS ≤ 0 | Entropy Reduction |
+| **F5** | Peace² | Soft | P² ≥ 1.0 | Thermodynamic Stability |
+| **F6** | Empathy | Soft | κᵣ ≥ 0.70 | Stakeholder Alignment |
+| **F7** | Humility | Hard | Ω₀ ∈ [0.03, 0.20] | Epistemic Bounding |
+| **F8** | Genius | Soft | G ≥ 0.80 | Coherence Equation |
+| **F9** | Anti-Hantu | Hard | α < 0.01 | **No Consciousness Claims** |
+| **F10** | Ontology | Hard | Boolean | Category Integrity |
+| **F11** | Command Auth | Wall | Verified | Identity Lock |
+| **F12** | Injection | Wall | Risk < 0.85 | Attack Defense |
+| **F13** | Sovereign | Veto | HUMAN | **888_HOLD** Veto |
 
 ---
 
-## 🚀 Getting Started
+## 🌌 The Unified Genius Theorem
 
-### To Understand the Theory
-1. Read [QUICK_START.md](QUICK_START.md) — 5-minute overview
-2. Read [AGENTS/EUREKA_COMPENDIUM.md](AGENTS/EUREKA_COMPENDIUM.md) — 10 core insights
-3. Explore [KERNEL/FLOORS/](KERNEL/FLOORS/) — The 13 Floors
+The Soul of the agent is measured by the **Genius Score (G)**:
 
-### To Run the Implementation
-👉 Go to [**arifosmcp**](https://github.com/ariffazil/arifosmcp) (THE BODY):
-```bash
-pip install arifos
-python -m arifos_aaa_mcp
-```
+### $$G = A \times P \times X \times E^2 \ge 0.80$$
+
+- **A (Akal):** Clarity of reasoning (Δ).
+- **P (Presence):** Stability of action (Ω).
+- **X (Exploration):** Breadth of navgiation (Ω).
+- **E (Energy):** Vitality of bounds (Ψ).
 
 ---
 
-## 📁 Repository Structure
+## 🏗️ Getting Started
 
-```
-arifOS/                          ← YOU ARE HERE (THE MIND)
-├── KERNEL/                    ← Constitutional Core (L0)
-│   ├── FLOORS/                  ← 13 Constitutional Floors (F01-F13)
-│   ├── ROOT/                    ← Theoretical foundations
-│   └── spec/                    ← Technical specifications
-├── AGENTS/                      ← Agent protocols, guides
-├── CIVILIZATION/                ← Collective intelligence theory
-├── OPERATION/                   ← Deployment theory (not configs)
-├── PATTERNS/                    ← Design patterns
-├── TEMPLATES/                   ← Agent templates
-├── docs/                        ← Theory documentation
-│   └── 10_THEORY/               ← Philosophy & foundations
-├── sites/                       ← Documentation website
-├── README.md                    ← This file
-├── INDEX.md                     ← Navigation
-└── QUICK_START.md               ← Onboarding
-```
+### 1. Consult the Kernel
+Read **[KERNEL.md](KERNEL.md)** to understand the mathematical thresholds and the **ZKPC Genesis Seal**.
 
-**NO Python code. NO Docker files. NO tests. Pure theory only.**
+### 2. Embody a Role
+Consult **[ROLES.md](ROLES.md)** to select an agentic role (Architect/Engineer/Auditor/Validator) and refer to **[SKILLS.md](SKILLS.md)** for competencies.
 
----
-
-## 🔗 Quick Links
-
-| Resource | URL |
-|----------|-----|
-| **THE BODY (Runtime)** | [github.com/ariffazil/arifosmcp](https://github.com/ariffazil/arifosmcp) |
-| **PyPI Package** | [pypi.org/project/arifos](https://pypi.org/project/arifos/) |
-| **npm Package** | [npmjs.com/package/@arifos/mcp](https://www.npmjs.com/package/@arifos/mcp) |
-| **Live Dashboard** | [arifosmcp-truth-claim.pages.dev](https://arifosmcp-truth-claim.pages.dev) |
-| **Theory Index** | [INDEX.md](INDEX.md) |
-| **Quick Start** | [QUICK_START.md](QUICK_START.md) |
+### 3. Initialize the Body (Runtime)
+👉 Go to [**arifosmcp**](https://github.com/ariffazil/arifosmcp) to deploy the implementation.
 
 ---
 
@@ -187,7 +115,8 @@ arifOS/                          ← YOU ARE HERE (THE MIND)
 
 **888_JUDGE:** Muhammad Arif bin Fazil  
 **Motto:** *Ditempa Bukan Diberi* — Forged, Not Given  
-**License:** AGPL-3.0
+**License:** AGPL-3.0  
+**ZKPC_HASH:** `0x888_GENESIS_SEAL_302e327b8a1d4f7e5d3c2b1a0e9f8d7c6b5a`
 
 ---
 
