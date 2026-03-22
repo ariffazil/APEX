@@ -142,18 +142,22 @@ async def init_anchor(
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
-    actor_id: str | None = None,
-    declared_name: str | None = None,
-    intent: IntentType = None,
-    raw_input: str | None = None,
-    session_id: str | None = None,
+    allow_execution: bool = False,
     human_approval: bool = False,
-    reason: str | None = None,
-    caller_context: CallerContext | None = None,
     ctx: Context | None = None,
-    proof: str | dict[str, Any] | None = None,  # P0: Naming protocol support
-    pns_shield: dict[str, Any] | None = None,  # P0: F12 injection defense data from orchestrator
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "init_anchor" if "init_anchor" != "init_anchor" else "init"
+
     del auth_context, risk_tier, dry_run, caller_context, pns_shield
     ctx = ctx or CurrentContext()
 
@@ -249,12 +253,21 @@ async def arifOS_kernel(
     risk_tier: str = "medium",
     dry_run: bool = True,
     allow_execution: bool = False,
-    query: str | None = None,
-    session_id: str | None = None,
-    caller_context: CallerContext | None = None,
+    human_approval: bool = False,
     ctx: Context | None = None,
-    intent: IntentType = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "arifOS_kernel" if "arifOS_kernel" != "init_anchor" else "init"
+
     del caller_context
     ctx = ctx or CurrentContext()
     if mode is None:
@@ -283,13 +296,27 @@ async def arifOS_kernel(
 
 
 async def apex_soul(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "apex_soul" if "apex_soul" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await apex_soul_dispatch_impl(
         mode=mode,
@@ -302,13 +329,27 @@ async def apex_soul(
 
 
 async def vault_ledger(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "vault_ledger" if "vault_ledger" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await vault_ledger_dispatch_impl(
         mode=mode,
@@ -321,13 +362,27 @@ async def vault_ledger(
 
 
 async def agi_mind(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "agi_mind" if "agi_mind" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await agi_mind_dispatch_impl(
         mode=mode,
@@ -340,13 +395,27 @@ async def agi_mind(
 
 
 async def asi_heart(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "asi_heart" if "asi_heart" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await asi_heart_dispatch_impl(
         mode=mode,
@@ -359,13 +428,27 @@ async def asi_heart(
 
 
 async def engineering_memory(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "engineering_memory" if "engineering_memory" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await engineering_memory_dispatch_impl(
         mode=mode,
@@ -378,13 +461,27 @@ async def engineering_memory(
 
 
 async def physics_reality(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "physics_reality" if "physics_reality" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await physics_reality_dispatch_impl(
         mode=mode,
@@ -397,13 +494,27 @@ async def physics_reality(
 
 
 async def math_estimator(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "math_estimator" if "math_estimator" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await math_estimator_dispatch_impl(
         mode=mode,
@@ -416,13 +527,27 @@ async def math_estimator(
 
 
 async def code_engine(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "code_engine" if "code_engine" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await code_engine_dispatch_impl(
         mode=mode,
@@ -435,13 +560,27 @@ async def code_engine(
 
 
 async def architect_registry(
-    mode: str,
-    payload: dict[str, Any],
+    mode: str | None = None,
+    payload: dict[str, Any] | None = None,
     auth_context: dict[str, Any] | None = None,
     risk_tier: str = "medium",
     dry_run: bool = True,
+    allow_execution: bool = False,
+    human_approval: bool = False,
     ctx: Context | None = None,
+    **kwargs: Any,
 ) -> RuntimeEnvelope:
+    # P0: Unified ABI Adapter — Normalize flat kwargs into payload
+    payload = dict(payload or {})
+    if kwargs:
+        for k, v in kwargs.items():
+            if v is not None:
+                payload.setdefault(k, v)
+    
+    # P0: Mode auto-resolution (if only flat args are used)
+    if mode is None:
+        mode = "architect_registry" if "architect_registry" != "init_anchor" else "init"
+
     resolved_payload = dict(payload or {})
     return await architect_registry_dispatch_impl(
         mode=mode,
@@ -1158,9 +1297,7 @@ def register_tools(mcp: FastMCP, profile: str = "full") -> None:
             query: str | None = None,
             session_id: str | None = None,
             actor_id: str | None = None,
-            declared_name: str | None = None,  # P0: ABI v1.0 Identity
-            intent: IntentType = None,         # P0: ABI v1.0 Structured Intent
-            human_approval: bool = False,      # P0: ABI v1.0 Sovereign Flag
+            intent: Any | None = None,
             url: str | None = None,
             content: str | None = None,
             spec: str | None = None,
@@ -1180,12 +1317,11 @@ def register_tools(mcp: FastMCP, profile: str = "full") -> None:
             hold_id: str | None = None,
             full_scan: bool | None = None,
             auth_context: dict[str, Any] | None = None,
-            caller_context: dict[str, Any] | None = None,  # P0: ABI v1.0 Context
             risk_tier: str = "medium",
             dry_run: bool = True,
             allow_execution: bool = False,
             ctx: Context | None = None,
-        ) -> RuntimeEnvelope:
+        ) -> dict[str, Any]:
             payload = _build_legacy_payload(
                 mega_tool,
                 mode,
@@ -1193,9 +1329,7 @@ def register_tools(mcp: FastMCP, profile: str = "full") -> None:
                     "query": query,
                     "session_id": session_id,
                     "actor_id": actor_id,
-                    "declared_name": declared_name,
                     "intent": intent,
-                    "human_approval": human_approval,
                     "url": url,
                     "content": content,
                     "spec": spec,
@@ -1217,23 +1351,8 @@ def register_tools(mcp: FastMCP, profile: str = "full") -> None:
                 },
             )
             handler = FINAL_TOOL_IMPLEMENTATIONS[mega_tool]
-
-            # P0: Governance Parameter Extraction
-            # Ensure governance flags are passed explicitly if the handler accepts them
-            gov_params = {}
-            if mega_tool == "init_anchor":
-                gov_params = {
-                    "actor_id": actor_id or declared_name,
-                    "declared_name": declared_name,
-                    "intent": intent,
-                    "human_approval": human_approval,
-                    "session_id": session_id,
-                    # CallerContext expects a model, but we might receive a dict from MCP
-                    "caller_context": caller_context,
-                }
-
             if mega_tool == "arifOS_kernel":
-                return await handler(
+                return normalize_tool_result(await handler(
                     mode=mode,
                     payload=payload,
                     auth_context=auth_context,
@@ -1241,26 +1360,15 @@ def register_tools(mcp: FastMCP, profile: str = "full") -> None:
                     dry_run=dry_run,
                     allow_execution=allow_execution,
                     ctx=ctx,
-                )
-
-            if mega_tool == "init_anchor" and mode == "init":
-                return await handler(
-                    mode=mode,
-                    auth_context=auth_context,
-                    risk_tier=risk_tier,
-                    dry_run=dry_run,
-                    ctx=ctx,
-                    **gov_params,
-                )
-
-            return await handler(
+                ))
+            return normalize_tool_result(await handler(
                 mode=mode,
                 payload=payload,
                 auth_context=auth_context,
                 risk_tier=risk_tier,
                 dry_run=dry_run,
                 ctx=ctx,
-            )
+            ))
 
         _shim.__name__ = f"{alias}_shim"
         return _shim

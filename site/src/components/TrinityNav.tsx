@@ -19,6 +19,9 @@ export default function TrinityNav() {
         </div>
 
         <div className="trinity-right">
+          <a href="https://arifos.arif-fazil.com/docs/overview.html" target="_blank" rel="noopener noreferrer">
+            Docs
+          </a>
           <a href="https://github.com/ariffazil/APEX-THEORY" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
