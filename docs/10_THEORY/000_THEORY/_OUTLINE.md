@@ -1,6 +1,6 @@
 # 000_THEORY — Canon Outline
 
-**Version:** v55.5 | **Status:** SEALED
+**Version:** 2026.03.21-ARCH-SEAL | **Status:** SEALED
 
 > **The Map is not the Territory.** This file outlines the structure of the Constitutional Canon.
 
@@ -10,12 +10,12 @@
 
 The philosophical and physical axioms of the system.
 
+- **[arifOS_Whitepaper.md](../../arifOS_Whitepaper.md)**
+  - **The Formal Whitepaper**: A unified thermodynamic and sovereign framework.
+- **[MANIFESTO.md](../../MANIFESTO.md)**
+  - **The Philosophical Foundation**: Values, intent, and the *Ditempa Bukan Diberi* doctrine.
 - **[000_FOUNDATIONS.md](./000_FOUNDATIONS.md)**
-  - **Philosophy**: The Unified Intelligence Manifesto (*Ditempa Bukan Diberi*).
-  - Thermodynamic Laws: G = A × P × X × E².
-- **[000_LAW.md](./000_LAW.md)**
-  - **Constitution**: The 13 Constitutional Floors (F1-F13).
-  - The difference between Hard Floors (VOID) and Soft Floors (SABAR).
+  - **Deep Foundations**: Thermodynamic Laws: G = A × P × X × E².
 
 ## ⚙️ II. The Metabolic Loop (111-999)
 
@@ -39,14 +39,15 @@ The protocols for reality instantiation.
 
 ## 🔌 IV. Technical Implementation
 
-*   **[codebase/mcp/README.md](../codebase/mcp/README.md)**
-    *   Model Context Protocol implementation & Architecture.
-*   **[codebase/mcp/tools/VAULT_SPEC.md](../codebase/mcp/tools/VAULT_SPEC.md)**
-    *   The Immutable Ledger protocol.
+- [codebase/mcp/README.md](../codebase/mcp/README.md)
+  - Model Context Protocol implementation & Architecture.
+- [codebase/mcp/tools/VAULT_SPEC.md](../codebase/mcp/tools/VAULT_SPEC.md)
+  - The Immutable Ledger protocol.
 
 ---
 
 **Status:**
+
 - [x] v55.5 Canon Updated
 - [x] Redundant files archived (FEDERATION.md, etc.)
 - [x] Security reframed as Governance Emergence
