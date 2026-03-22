@@ -67,14 +67,15 @@ The interface is consolidated into **11 Governed Mega-Tools**. See **[TOOLS.md](
 
 ## 🏁 The Eight Pillars (Interlinked Logic)
 
-1. **[AGENTS.md](file:///C:/arifOS/AGENTS.md)**: Orchestration Guide.
-2. **[SKILLS.md](file:///C:/arifOS/SKILLS.md)**: Metabolic Capacity.
-3. **[SOUL.md](file:///C:/arifOS/SOUL.md)**: Terminal Judgment.
-4. **[TOOLS.md](file:///C:/arifOS/TOOLS.md)**: Execution Surface.
-5. **[IDENTITY.md](file:///C:/arifOS/IDENTITY.md)**: Mirror Constraints.
-6. **[HEARTBEAT.md](file:///C:/arifOS/HEARTBEAT.md)**: Vitality Telemetry.
-7. **[MIND.md](file:///C:/arifOS/MIND.md)**: Reasoning Logic.
-8. **[ROLES.md](file:///C:/arifOS/ROLES.md)**: Labor Division.
+1. **[KERNEL.md](file:///C:/arifOS/KERNEL.md)**: Final Kernel Logic.
+2. **[AGENTS.md](file:///C:/arifOS/AGENTS.md)**: Orchestration Guide.
+3. **[SKILLS.md](file:///C:/arifOS/SKILLS.md)**: Metabolic Capacity.
+4. **[SOUL.md](file:///C:/arifOS/SOUL.md)**: Terminal Judgment.
+5. **[TOOLS.md](file:///C:/arifOS/TOOLS.md)**: Execution Surface.
+6. **[IDENTITY.md](file:///C:/arifOS/IDENTITY.md)**: Mirror Constraints.
+7. **[HEARTBEAT.md](file:///C:/arifOS/HEARTBEAT.md)**: Vitality Telemetry.
+8. **[MIND.md](file:///C:/arifOS/MIND.md)**: Reasoning Logic.
+9. **[ROLES.md](file:///C:/arifOS/ROLES.md)**: Labor Division.
 
 ---
 
