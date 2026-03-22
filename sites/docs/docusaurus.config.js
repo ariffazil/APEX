@@ -6,7 +6,7 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'arifOS — THE MIND',
-  tagline: 'Constitutional Theory & Governance for AI Systems'
+  tagline: 'Constitutional Theory & Governance for AI Systems',
   titleDelimiter: '·',
   favicon: 'img/favicon.ico',
 
@@ -71,7 +71,6 @@ const config = {
         },
         items: [
           {
-            {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
             position: 'left',

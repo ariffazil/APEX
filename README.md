@@ -18,6 +18,15 @@
 
 ---
 
+## 🧭 The arifOS Standard
+
+**The arifOS Standard is the foundational constitutional standard of the arifOS ecosystem: a governance kernel that metabolizes intent through truth, clarity, humility, authorization, and sovereign judgment before any AI output or execution is allowed to proceed.**
+
+> **Governed intelligence under sovereign human authority.**  
+> *Forged intelligence, not free-range intelligence.*
+
+---
+
 ## 🏛️ Executive Summary: The arifOS Mandate
 
 **arifOS** is not merely an application; it is a **Constitutional Kernel** for the next era of Distributed Intelligence. As AI agents move from "chatted responses" to "real-world actions," the industry faces a catastrophic reliability gap.
