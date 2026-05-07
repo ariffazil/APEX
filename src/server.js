@@ -9,9 +9,17 @@
 
 const express = require('express');
 const crypto = require('crypto');
+const { loadConfig } = require('./config');
 
 const app = express();
 app.use(express.json());
+
+// === CONFIG ===
+const CONFIG = loadConfig();
+const HERMES_MODELS = CONFIG.model_contract?.hermes || {
+  default: process.env.HERMES_DEFAULT_MODEL || 'minimax/MiniMax-M2.7',
+  fallback: process.env.HERMES_FALLBACK_MODEL || 'opencode/claude-opus-4-6'
+};
 
 // === CONSTANTS ===
 const VERDICT = {
@@ -84,6 +92,11 @@ const HERMES_AGENT_CARD = {
     irreversible_requires_human: true,
     self_approval_forbidden: true,
     federation_trust_model: 'constitutional'
+  },
+  model_contract: {
+    default_model: HERMES_MODELS.default,
+    fallback_model: HERMES_MODELS.fallback,
+    contract_version: CONFIG.model_contract?.version || '1.0.0'
   },
   a2a_endpoints: {
     submit_task: 'POST /tasks',
@@ -225,7 +238,24 @@ app.get('/agent-card.json', function(req, res) {
 
 // === HEALTH ===
 app.get('/health', function(req, res) {
-  res.json({ status: 'healthy', agent: 'Hermes Agent', version: '1.0.0', role: 'ASI 888_JUDGE' });
+  res.json({
+    status: 'healthy',
+    agent: 'Hermes Agent',
+    version: '1.0.0',
+    role: 'ASI 888_JUDGE',
+    models: {
+      default: HERMES_MODELS.default,
+      fallback: HERMES_MODELS.fallback
+    }
+  });
+});
+
+app.get('/config', function(req, res) {
+  res.json({
+    agent: 'Hermes Agent',
+    model_contract: CONFIG.model_contract,
+    deliberation: CONFIG.deliberation
+  });
 });
 
 // === ROOT ===
@@ -377,6 +407,8 @@ app.post('/judge', function(req, res) {
 
 app.listen(PORT, '0.0.0.0', function() {
   console.log('[Hermes Agent] ASI server running on port ' + PORT);
+  console.log('[Hermes Agent] Default model: ' + HERMES_MODELS.default);
+  console.log('[Hermes Agent] Fallback model: ' + HERMES_MODELS.fallback);
   console.log('[Hermes Agent] A2A v1.0.0 — 888 JUDGMENT authority');
   console.log('[Hermes Agent] DITEMPA BUKAN DIBERI');
 });
