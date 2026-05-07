@@ -7,8 +7,8 @@ describe('HERMES config', () => {
     const cfg = loadConfig();
     assert.ok(cfg.model_contract, 'model_contract exists');
     assert.strictEqual(cfg.model_contract.hermes.default, 'minimax/MiniMax-M2.7');
-    assert.strictEqual(cfg.model_contract.hermes.fallback, 'opencode/claude-opus-4-6');
-    assert.strictEqual(cfg.model_contract.openclaw.default, 'opencode/claude-opus-4-6');
+    assert.strictEqual(cfg.model_contract.hermes.fallback, 'kimi/kimi-k2.6');
+    assert.strictEqual(cfg.model_contract.openclaw.default, 'kimi/kimi-k2.6');
     assert.strictEqual(cfg.model_contract.openclaw.fallback, 'minimax/MiniMax-M2.7');
   });
 });
