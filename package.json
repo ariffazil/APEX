@@ -1,0 +1,13 @@
+{
+  "name": "hermes-agent",
+  "version": "1.0.0",
+  "description": "Hermes Agent — ASI deliberative server for arifOS AAA federation",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
