@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "description": "Cross-agent model resilience contract — each agent uses the other's fallback as its default",
     "hermes": {
-      "default": "minimax/MiniMax-M2.7",
-      "fallback": "kimi/kimi-k2.6",
-      "rationale": "HERMES deliberates on MiniMax by default (OpenClaw's fallback). Falls back to Kimi Code (OpenClaw's default) for deep constitutional reasoning."
+      "default": "kimi/kimi-k2.6",
+      "fallback": "minimax/MiniMax-M2.7",
+      "rationale": "HERMES deliberates with Kimi K2.6 deep reasoning by default. Falls back to MiniMax-M2.7 for fast constitutional triage."
     },
     "openclaw": {
       "default": "kimi/kimi-k2.6",
