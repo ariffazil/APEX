@@ -1,70 +1,101 @@
 # TODO — HERMES ASI Relay
 
+> **Roadmap:** ARIFOS_NEXT_HORIZON_2026  
+> **Execution Status:** HOLD until contracts frozen  
 > **Last Updated:** 2026-05-10  
-> **Session:** Governance Attestation + Deliberation Bridge  
 > **Seal:** DITEMPA BUKAN DIBERI
 
 ---
 
-## ✅ Completed This Session
+## ✅ Embodiment Attestation (Completed Earlier Today)
 
-- [x] **arifOS embodiment contracts** deployed — HERMES-orchestrated deliberation now lane/tier-verified
-- [x] **Model registry fix** — `gpt-5.5-thinking` resolves for governance attestation
-
----
-
-## 🔴 P0 — Critical (Before Next Session)
-
-### A2A Treaty Verification
-HERMES is the A2A mesh bridge. Currently no signed delegation contracts.
-
-- [ ] **Verify all A2A handshakes** include constitution hash verification
-- [ ] **Block agents** with mismatched constitution hash — prevents rogue injection
-- [ ] **Log handshake failures** to VAULT999 for forensic analysis
-
-### Deterministic Deliberation Hardening
-The deliberation server must never drift from constitutional constraints.
-
-- [ ] **Deliberation mode audit** — verify `config.json` mode matches runtime behavior
-- [ ] **Model contract validation** — every inference request checks model against registry
-- [ ] **Timeout enforcement** — deliberation must complete within arifOS latency budget
+- [x] arifOS embodiment contracts deployed
+- [x] Model registry fix
 
 ---
 
-## 🟠 P1 — High (Next 7 Days)
+## 🔴 P0 — Horizon 0: Canon Lock (Days 0–14)
 
-### Constitution Hash Propagation
-- [ ] **Broadcast constitution hash** on every A2A handshake
-- [ ] **Cache verified agent hashes** — avoid re-verification on every call
-- [ ] **Invalidate cache** when arifOS issues new constitution epoch
+**Gate: No new features until contracts are frozen.**
 
-### SEA-LION Resilience Contract
-- [ ] **Test fallback chain** — SEA-LION → Ollama → rule fallback
-- [ ] **Verify fallback triggers** when primary model times out or errors
-- [ ] **Latency budget:** each fallback tier < 500ms additional
+### Authority Freeze
+- [ ] **Create `REPO_AUTHORITY_MATRIX.md`** — what HERMES may own / must not own
+- [ ] **Deliberation contract** — HERMES recommends; arifOS judges; Arif decides
+- [ ] **Model inventory** — map all models in fallback chain
 
 ---
 
-## 🟡 P2 — Medium (Next 30 Days)
+## 🟠 P1 — Horizon 1: Security + Session Spine (Days 15–45)
 
-### HERMES ↔ arifOS Integration
-- [ ] **Direct MCP bridge** — HERMES exposes deliberation as arifOS tool
-- [ ] **Verdict lineage** — every HERMES deliberation output carries arifOS receipt_id
-- [ ] **Floor enforcement** — HERMES deliberation respects F9 ANTI-HANTU (no consciousness claims)
+**Gate: Constitution hash verified on every handshake. No unregistered models.**
 
-### Model Registry Sync
-- [ ] **Auto-sync** with arifOS model registry on container start
-- [ ] **Fallback model list** — maintain local cache of approved models
-- [ ] **Reject unknown models** — never infer from unregistered model
+### A2A Security
+- [ ] **Constitution hash propagation** — verify on every A2A handshake
+- [ ] **Block rogue agents** — mismatched constitution hash = reject
+- [ ] **Log handshake failures** — to VAULT999 for forensic analysis
+
+### Model Registry
+- [ ] **Auto-sync with arifOS model registry** on container start
+- [ ] **Local cache of approved models** + fallback chain
+- [ ] **Reject unknown models** — `EMBODIMENT_HOLD` for unregistered models
+
+### Fallback Validation
+- [ ] **Test SEA-LION → Ollama → rule fallback** end-to-end
+- [ ] **Verify fallback triggers** when primary model times out
+- [ ] **Latency budget** — each fallback tier < 500ms additional
 
 ---
 
-## 🟢 P3 — Backlog (H2 2026)
+## 🟡 P2 — Horizon 2: Deterministic Judge (Days 46–90)
 
-### Multi-Model Deliberation
-- [ ] **Ensemble deliberation** — query 3+ models, aggregate with constitutional weighting
+**Gate: Causal reasoning, not plain RAG.**
+
+### Causal Templates
+- [ ] **GEOX → WEALTH** — reservoir uncertainty affects EMV
+- [ ] **WEALTH → A-FORGE** — capital risk affects execution permission
+- [ ] **WELL/AAA → arifOS** — operator state affects escalation threshold
+
+### Causal Output Format
+- [ ] Every causal analysis returns:
+  ```json
+  {
+    "claim": "...",
+    "causal_graph_id": "...",
+    "intervention_tested": "...",
+    "counterfactual": "...",
+    "uncertainty": "...",
+    "evidence_refs": [],
+    "recommended_verdict": "HOLD"
+  }
+  ```
+
+### Deliberation Hardening
+- [ ] **F9 ANTI-HANTU enforcement** — no consciousness claims in deliberation output
+- [ ] **Timeout enforcement** — deliberation within arifOS latency budget
+- [ ] **Deterministic deliberation audit** — verify config.json matches runtime
+
+---
+
+## 🟢 P3 — Horizon 3: Semantic Federation (Days 91–135)
+
+**Gate: Multi-model deliberation with epistemic uncertainty.**
+
+- [ ] **Multi-model deliberation** — query 3+ models, constitutional weighting
 - [ ] **Disagreement detection** — flag when models disagree > 2σ
-- [ ] **Epistemic uncertainty** — report model disagreement as confidence metric
+- [ ] **Epistemic uncertainty reporting** — model disagreement as confidence metric
+- [ ] **Direct MCP bridge** — `arif_hermes_deliberate` tool registration
+- [ ] **Verdict lineage** — every output carries arifOS receipt_id
+
+---
+
+## 🔵 P4 — Horizon 4: Self-Healing + Release (Days 136–180)
+
+**Gate: Distributed deliberation without authority expansion.**
+
+- [ ] **Distributed deliberation** — shards across regions with consistency guarantees
+- [ ] **Open deliberation protocol** — publish as open standard
+- [ ] **Public docs cleanup**
+- [ ] **Release tag `vNext-Horizon-0`**
 
 ---
 
