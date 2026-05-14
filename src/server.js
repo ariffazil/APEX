@@ -7,8 +7,20 @@
  * DITEMPA BUKAN DIBERI — Forged, Not Given.
  */
 
+// ── Uncaught Exception / Rejection Handlers ──
+process.on('uncaughtException', function(err) {
+  console.error('[FATAL] uncaughtException:', err.message, err.stack);
+  // Don't exit — Hermes is the ASI relay. Log and continue.
+});
+process.on('unhandledRejection', function(reason) {
+  console.error('[FATAL] unhandledRejection:', reason instanceof Error ? reason.message : reason);
+});
+
 const express = require('express');
 const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
 const { loadConfig } = require('./config');
 
 const app = express();
@@ -16,6 +28,19 @@ app.use(express.json());
 
 // === CONFIG ===
 const CONFIG = loadConfig();
+
+// === BOOT: load OpenClaw MEMORY.md ===
+const MEMORY_MD_PATH = '/root/.openclaw/workspace/MEMORY.md';
+let bootMemory = '';
+let bootMemoryMtime = 0;
+try {
+  const stat = fs.statSync(MEMORY_MD_PATH);
+  bootMemory = fs.readFileSync(MEMORY_MD_PATH, 'utf8');
+  bootMemoryMtime = stat.mtimeMs;
+  console.log('[BOOT] Loaded OpenClaw MEMORY.md (' + (bootMemory.length / 1024).toFixed(1) + ' KB, mtime ' + stat.mtime.toISOString() + ')');
+} catch (e) {
+  // MEMORY.md not available - proceed silently
+}
 const HERMES_MODELS = CONFIG.model_contract?.hermes || {
   default: process.env.HERMES_DEFAULT_MODEL || 'minimax/MiniMax-M2.7',
   fallback: process.env.HERMES_FALLBACK_MODEL || 'opencode/claude-opus-4-6'
@@ -30,6 +55,297 @@ const VERDICT = {
 };
 
 const FLOORS = ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'F13'];
+
+// === TELEGRAM CONFIG ===
+const TELEGRAM_BOT_TOKEN = process.env.ASI_BOT_TOKEN || '';
+const TELEGRAM_API_BASE = 'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN;
+const TELEGRAM_FILE_BASE = 'https://api.telegram.org/file/bot' + TELEGRAM_BOT_TOKEN;
+const HERMES_OWNER_ID = process.env.HERMES_OWNER_ID || '267378578';
+const TELEGRAM_POLL_INTERVAL = Number(process.env.TELEGRAM_POLL_INTERVAL) || 2000;
+const TELEGRAM_HISTORY_DIR = process.env.TELEGRAM_HISTORY_DIR || '/root/.hermes/telegram/history';
+const TELEGRAM_CREDENTIALS_PATH = process.env.TELEGRAM_CREDENTIALS_PATH || '/root/.hermes/telegram/credentials.conf';
+
+// Telegram state
+let telegramOffset = 0;
+let telegramOffsetPath = '/root/.hermes/telegram/update-offset-asi.json';
+try { const off = JSON.parse(fs.readFileSync(telegramOffsetPath, 'utf8')); telegramOffset = off.offset || 0; } catch (e) {}
+const telegramChats = new Map(); // chatId -> { title, type, lastActivity, history[] }
+const telegramGroupAllowList = new Set(); // '*' = all
+const telegramUserAllowList = new Set(['267378578']); // Arif
+
+// Load chat credentials
+try {
+  const creds = fs.readFileSync(TELEGRAM_CREDENTIALS_PATH, 'utf8');
+  const chatMatch = creds.match(/ASI_bot_chats=\{(.*?)\}/);
+  if (chatMatch && chatMatch[1]) {
+    try {
+      const chats = JSON.parse('{' + chatMatch[1] + '}');
+      Object.keys(chats).forEach(function(k) { telegramGroupAllowList.add(k); });
+    } catch (e) {}
+  }
+} catch (e) {}
+
+// === TELEGRAM HELPERS ===
+function tgApi(method, payload) {
+  return new Promise(function(resolve, reject) {
+    var data = JSON.stringify(payload || {});
+    var options = {
+      hostname: 'api.telegram.org',
+      path: '/bot' + TELEGRAM_BOT_TOKEN + '/' + method,
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(data) }
+    };
+    var req = http.request(options, function(res) {
+      var body = '';
+      res.on('data', function(chunk) { body += chunk; });
+      res.on('end', function() { try { resolve(JSON.parse(body)); } catch (e) { resolve({ ok: false }); } });
+    });
+    req.on('error', reject);
+    req.write(data);
+    req.end();
+  });
+}
+
+function tgSend(chatId, text, extra) {
+  var payload = { chat_id: chatId, text: text, parse_mode: 'Markdown' };
+  if (extra) Object.assign(payload, extra);
+  return tgApi('sendMessage', payload);
+}
+
+function tgSendAction(chatId, action) {
+  return tgApi('sendChatAction', { chat_id: chatId, action: action || 'typing' });
+}
+
+function tgGetFile(fileId) {
+  return tgApi('getFile', { file_id: fileId });
+}
+
+function tgGetChat(chatId) {
+  return tgApi('getChat', { chat_id: chatId });
+}
+
+function tgGetChatAdministrators(chatId) {
+  return tgApi('getChatAdministrators', { chat_id: chatId });
+}
+
+function tgLeaveChat(chatId) {
+  return tgApi('leaveChat', { chat_id: chatId });
+}
+
+function tgGetMyName() {
+  return tgApi('getMyName');
+}
+
+function tgSetMyName(name) {
+  return tgApi('setMyName', { name: name });
+}
+
+function tgGetMyDescription() {
+  return tgApi('getMyDescription');
+}
+
+function tgSetMyDescription(desc) {
+  return tgApi('setMyDescription', { description: desc });
+}
+
+function tgGetMyShortDescription() {
+  return tgApi('getMyShortDescription');
+}
+
+function tgSetMyShortDescription(desc) {
+  return tgApi('setMyShortDescription', { short_description: desc });
+}
+
+function tgGetUpdates(timeout) {
+  return tgApi('getUpdates', {
+    offset: telegramOffset,
+    timeout: timeout || 30,
+    allowed_updates: ['message', 'callback_query', 'my_chat_member', 'chat_member']
+  });
+}
+
+function saveTelegramOffset() {
+  try {
+    fs.mkdirSync(path.dirname(telegramOffsetPath), { recursive: true });
+    fs.writeFileSync(telegramOffsetPath, JSON.stringify({ offset: telegramOffset }));
+  } catch (e) {}
+}
+
+function logTelegramMessage(chatId, msg) {
+  if (!telegramChats.has(chatId)) {
+    telegramChats.set(chatId, { history: [], title: String(chatId), type: 'private' });
+  }
+  var chat = telegramChats.get(chatId);
+  chat.lastActivity = Date.now();
+  chat.history.push({ role: msg.from && msg.from.id == TELEGRAM_BOT_TOKEN ? 'assistant' : 'user', text: msg.text || '[non-text]', timestamp: new Date().toISOString(), msg: msg });
+  if (chat.history.length > 200) chat.history = chat.history.slice(-100);
+  if (msg.chat) { chat.title = msg.chat.title || msg.chat.username || String(chatId); chat.type = msg.chat.type; }
+}
+
+function getChatHistory(chatId, limit) {
+  var chat = telegramChats.get(chatId);
+  if (!chat) return [];
+  return (chat.history || []).slice(-(limit || 50));
+}
+
+// === TELEGRAM COMMAND HANDLER ===
+function handleTelegramCommand(msg) {
+  var text = (msg.text || '').trim();
+  var chatId = msg.chat.id;
+  var userId = String(msg.from.id);
+  var isPrivate = msg.chat.type === 'private';
+  var isOwner = userId === HERMES_OWNER_ID;
+  var isGroup = msg.chat.type === 'group' || msg.chat.type === 'supergroup';
+  var botMentioned = text.indexOf('@') === -1 || text.indexOf('@asi_arif_bot') !== -1;
+
+  // Only respond in groups when mentioned or DM
+  if (isGroup && !botMentioned) return;
+  if (isGroup && !telegramGroupAllowList.has('*') && !telegramGroupAllowList.has(String(chatId))) return;
+
+  // Log
+  logTelegramMessage(chatId, msg);
+  tgSendAction(chatId, 'typing');
+
+  var lower = text.toLowerCase();
+
+  // === BUILT-IN COMMANDS ===
+  if (lower === '/start' || lower === '/help') {
+    var helpText = '*Hermes ASI Bot — 888 JUDGMENT*\n\n';
+    helpText += 'I am the ASI deliberative agent for the arifOS federation.\n';
+    helpText += 'I evaluate proposals against F1-F13 constitutional floors.\n\n';
+    helpText += '*Commands:*\n';
+    helpText += '`/help` — This message\n';
+    helpText += '`/status` — Federation status\n';
+    helpText += '`/judge <text>` — Evaluate a proposal (use /judge)\n';
+    helpText += '`/models` — Show active models\n';
+    helpText += '`/groups` — List connected groups (owner only)\n';
+    helpText += '`/history [n]` — Recent chat history\n';
+    helpText += '`/clear` — Clear my context for this chat\n\n';
+    helpText += 'Just send me any message in DM and I\'ll deliberate.';
+    tgSend(chatId, helpText);
+    return;
+  }
+
+  if (lower === '/status') {
+    tgSend(chatId, '*Hermes ASI Status*\n✅ Healthy\n🔗 A2A: active\n🤖 Model: ' + HERMES_MODELS.default + '\n⚡ Fallback: ' + HERMES_MODELS.fallback + '\n📜 Floors: F1-F13');
+    return;
+  }
+
+  if (lower === '/models') {
+    tgSend(chatId, '*Model Contract*\nDefault: `' + HERMES_MODELS.default + '`\nFallback: `' + HERMES_MODELS.fallback + '`');
+    return;
+  }
+
+  if (lower === '/groups' && isOwner) {
+    var groupList = '';
+    telegramChats.forEach(function(chat, id) {
+      if (chat.type === 'group' || chat.type === 'supergroup') {
+        groupList += '• `' + id + '` — ' + chat.title + '\n';
+      }
+    });
+    tgSend(chatId, '*Connected Groups*\n' + (groupList || 'None recorded yet.'));
+    return;
+  }
+
+  if (lower.startsWith('/history')) {
+    var limit = parseInt(text.split(' ')[1], 10) || 10;
+    var history = getChatHistory(chatId, limit);
+    if (history.length === 0) {
+      tgSend(chatId, 'No history for this chat.');
+      return;
+    }
+    var histText = '*Recent History (' + history.length + ' msgs)*\n';
+    history.forEach(function(h) {
+      histText += (h.role === 'user' ? '🧑 ' : '🤖 ') + (h.text || '').substring(0, 200) + '\n';
+    });
+    tgSend(chatId, histText.substring(0, 4000));
+    return;
+  }
+
+  if (lower === '/clear') {
+    if (telegramChats.has(chatId)) telegramChats.get(chatId).history = [];
+    tgSend(chatId, 'Context cleared for this chat.');
+    return;
+  }
+
+  // A2A forward to OpenClaw for complex tasks
+  if (lower.startsWith('/openclaw ')) {
+    var openclawQuery = text.substring('/openclaw '.length);
+    tgSend(chatId, '⏳ Forwarding to OpenClaw via A2A...');
+    var a2aPayload = JSON.stringify({
+      jsonrpc: '2.0',
+      method: 'tasks/send',
+      params: { message: { parts: [{ kind: 'text', text: openclawQuery }] }, skill: 'general' }
+    });
+    var a2aReq = http.request({ hostname: '127.0.0.1', port: 18789, path: '/tasks', method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + (process.env.OPENCLAW_A2A_TOKEN || 'openclaw-token-2026-arifos') } }, function(a2aRes) {
+      var body = '';
+      a2aRes.on('data', function(c) { body += c; });
+      a2aRes.on('end', function() {
+        try { var r = JSON.parse(body); tgSend(chatId, '✅ OpenClaw response: ' + (r.result ? JSON.stringify(r.result).substring(0, 1000) : body.substring(0, 1000))); } catch (e) { tgSend(chatId, '⚠️ A2A error: ' + body.substring(0, 500)); }
+      });
+    });
+    a2aReq.on('error', function(e) { tgSend(chatId, '❌ Cannot reach OpenClaw: ' + e.message); });
+    a2aReq.write(a2aPayload);
+    a2aReq.end();
+    return;
+  }
+
+  if (lower.startsWith('/judge ') || lower.startsWith('/deliberate ')) {
+    var candidateText = text.substring(text.indexOf(' ') + 1);
+    var result = deliberation({ text: candidateText }, 'tg-' + Date.now(), 'tg-ctx-' + Date.now());
+    var response = '*888 JUDGMENT*\nVerdict: `' + result.verdict + '`\nConfidence: `' + (result.confidence * 100).toFixed(0) + '%`\nRationale: ' + result.rationale;
+    if (result.notes) response += '\nNotes: ' + result.notes;
+    tgSend(chatId, response);
+    return;
+  }
+
+  // Free-form: run deliberation on any message
+  var result = deliberation({ text: text }, 'tg-' + Date.now(), 'tg-ctx-' + Date.now());
+  var responseText = '*Hermes Deliberation*\nVerdict: `' + result.verdict + '`\n';
+  responseText += 'Rationale: ' + result.rationale;
+  tgSend(chatId, responseText);
+}
+
+// === TELEGRAM POLLING ===
+function telegramPoll() {
+  tgGetUpdates(30).then(function(data) {
+    if (!data.ok || !data.result) { setTimeout(telegramPoll, TELEGRAM_POLL_INTERVAL); return; }
+    data.result.forEach(function(update) {
+      telegramOffset = update.update_id + 1;
+      if (update.message) {
+        handleTelegramCommand(update.message);
+      } else if (update.callback_query && update.callback_query.message) {
+        handleTelegramCommand(Object.assign({}, update.callback_query.message, { text: '/callback ' + (update.callback_query.data || '') }));
+      }
+    });
+    saveTelegramOffset();
+    setTimeout(telegramPoll, TELEGRAM_POLL_INTERVAL);
+  }).catch(function(err) {
+    console.error('[TELEGRAM] Poll error:', err.message);
+    setTimeout(telegramPoll, TELEGRAM_POLL_INTERVAL * 10);
+  });
+}
+
+// === TELEGRAM BOOTSTRAP ===
+function telegramBootstrap() {
+  tgGetMyName().then(function(r) {
+    if (r.ok && r.result) console.log('[TELEGRAM] Bot name:', r.result.name);
+  }).catch(function(e) {});
+  tgSetMyDescription('Hermes ASI Agent — 888 JUDGMENT authority for the arifOS federation. Evaluates proposals against F1-F13 constitutional floors. DM me for deliberation.').catch(function(e) {});
+  tgSetMyShortDescription('Hermes ASI — 888 JUDGMENT. Constitutional deliberation for arifOS.').catch(function(e) {});
+
+  // Log owned groups
+  tgGetUpdates(0).then(function(data) {
+    if (data.ok && data.result) {
+      data.result.forEach(function(u) {
+        if (u.message && u.message.chat) {
+          var c = u.message.chat;
+          telegramChats.set(c.id, { history: [], title: c.title || c.username || String(c.id), type: c.type || 'private', lastActivity: Date.now() });
+        }
+      });
+    }
+  }).catch(function(e) {});
+}
 
 // === arifOS ASI ROLE CONTRACT ===
 const ASI_ROLE_CONTRACT = `
@@ -250,7 +566,7 @@ app.get('/health', function(req, res) {
   });
 });
 
-app.get('/config', function(req, res) {
+app.get('/config', authMiddleware, function(req, res) {
   res.json({
     agent: 'Hermes Agent',
     model_contract: CONFIG.model_contract,
@@ -393,9 +709,106 @@ app.post('/tasks/:taskId/cancel', jsonRpcValidate, function(req, res) {
   res.json({ jsonrpc: '2.0', id: req.jsonrpc && req.jsonrpc.id, result: { id: task.id, status: task.status } });
 });
 
+// === AGENT ZERO BRIDGE ===
+var AGENT_ZERO_URL = process.env.AGENT_ZERO_URL || 'http://agent-zero:80';
+var AGENT_ZERO_API_KEY = process.env.AGENT_ZERO_API_KEY || '';
+
+app.post('/agent-zero/delegate', authMiddleware, function(req, res) {
+  var body = req.body || {};
+  var task = body.task || body.message || JSON.stringify(body);
+  var project = body.project || null;
+  var lifetime = body.lifetime_hours || 1;
+
+  var payload = JSON.stringify({
+    message: task,
+    lifetime_hours: lifetime,
+    project_name: project
+  });
+
+  var headers = {
+    'Content-Type': 'application/json',
+    'Content-Length': Buffer.byteLength(payload)
+  };
+  if (AGENT_ZERO_API_KEY) headers['X-API-KEY'] = AGENT_ZERO_API_KEY;
+
+  var options = {
+    hostname: AGENT_ZERO_URL.replace(/https?:\/\//, '').split(':')[0],
+    port: parseInt(AGENT_ZERO_URL.split(':')[2]) || 80,
+    path: '/api_message',
+    method: 'POST',
+    headers: headers,
+    timeout: 120000
+  };
+
+  var proxyReq = http.request(options, function(proxyRes) {
+    var data = '';
+    proxyRes.on('data', function(chunk) { data += chunk; });
+    proxyRes.on('end', function() {
+      try {
+        var result = JSON.parse(data);
+        res.json({ ok: true, response: result.response || result, context_id: result.context_id });
+      } catch (e) {
+        res.json({ ok: true, response: data });
+      }
+    });
+  });
+
+  proxyReq.on('error', function(e) {
+    res.status(502).json({ ok: false, error: 'Agent Zero unreachable: ' + e.message });
+  });
+
+  proxyReq.write(payload);
+  proxyReq.end();
+});
+
+app.post('/agent-zero/browser', jsonRpcValidate, function(req, res) {
+  var body = req.body || {};
+  var url = body.url || '';
+  var instructions = body.instructions || '';
+
+  var task = 'Open browser at ' + url + '. ' + instructions + '. Report what you see and do.';
+
+  var payload = JSON.stringify({ message: task, lifetime_hours: 1 });
+  var headers = {
+    'Content-Type': 'application/json',
+    'Content-Length': Buffer.byteLength(payload)
+  };
+  if (AGENT_ZERO_API_KEY) headers['X-API-KEY'] = AGENT_ZERO_API_KEY;
+
+  var host = AGENT_ZERO_URL.replace(/https?:\/\//, '').split(':')[0];
+  var port = parseInt(AGENT_ZERO_URL.split(':')[2]) || 80;
+
+  var proxyReq = http.request({
+    hostname: host, port: port, path: '/api_message', method: 'POST',
+    headers: headers, timeout: 120000
+  }, function(proxyRes) {
+    var data = '';
+    proxyRes.on('data', function(chunk) { data += chunk; });
+    proxyRes.on('end', function() {
+      try { res.json({ ok: true, response: JSON.parse(data).response || data }); }
+      catch (e) { res.json({ ok: true, response: data }); }
+    });
+  });
+  proxyReq.on('error', function(e) { res.status(502).json({ ok: false, error: e.message }); });
+  proxyReq.write(payload);
+  proxyReq.end();
+});
+
 // === START ===
 var PORT = process.env.PORT || 3002;
-app.post('/judge', function(req, res) {
+app.post('/judge', authMiddleware, function(req, res) {
+  // === MTIME CHECK: refresh MEMORY.md if updated mid-session ===
+  try {
+    const currentStat = fs.statSync(MEMORY_MD_PATH);
+    if (currentStat.mtimeMs > bootMemoryMtime) {
+      bootMemory = fs.readFileSync(MEMORY_MD_PATH, 'utf8');
+      bootMemoryMtime = currentStat.mtimeMs;
+      console.log('[MTIME] MEMORY.md refreshed (mtime ' + currentStat.mtime.toISOString() + ')');
+    }
+  } catch (e) {
+    // MEMORY.md unavailable — proceed with last known
+  }
+
   var body = req.body || {};
   var candidate = body.candidate || body.text || JSON.stringify(body);
   var taskId = body.task_id || generateId('hermes');
