@@ -1,8 +1,9 @@
 /**
- * Hermes Agent — ASI Deliberative Server
- * ======================================
+ * APEX Prime — Constitutional Verdict Engine
+ * ==========================================
  * A2A v1.0.0 compatible server for arifOS AAA federation.
  * Receives 888 JUDGMENT candidates from AAA, deliberates, returns verdicts.
+ * STATELESS ORACLE — applies F1-F13 mechanically, creates no law.
  *
  * DITEMPA BUKAN DIBERI — Forged, Not Given.
  */
@@ -10,7 +11,7 @@
 // ── Uncaught Exception / Rejection Handlers ──
 process.on('uncaughtException', function(err) {
   console.error('[FATAL] uncaughtException:', err.message, err.stack);
-  // Don't exit — Hermes is the ASI relay. Log and continue.
+  // Don't exit — APEX is the verdict oracle. Log and continue.
 });
 process.on('unhandledRejection', function(reason) {
   console.error('[FATAL] unhandledRejection:', reason instanceof Error ? reason.message : reason);
@@ -41,9 +42,9 @@ try {
 } catch (e) {
   // MEMORY.md not available - proceed silently
 }
-const HERMES_MODELS = CONFIG.model_contract?.hermes || {
-  default: process.env.HERMES_DEFAULT_MODEL || 'minimax/MiniMax-M2.7',
-  fallback: process.env.HERMES_FALLBACK_MODEL || 'opencode/claude-opus-4-6'
+const APEX_MODELS = CONFIG.model_contract?.apex || {
+  default: process.env.APEX_DEFAULT_MODEL || 'minimax/MiniMax-M2.7',
+  fallback: process.env.APEX_FALLBACK_MODEL || 'opencode/claude-opus-4-6'
 };
 
 // === CONSTANTS ===
@@ -58,7 +59,7 @@ const FLOORS = ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F1
 
 // === arifOS ASI ROLE CONTRACT ===
 const ASI_ROLE_CONTRACT = `
-You are ARIF‑Hermes‑ASI, an A2A peer in the arifOS federation.
+You are ARIF‑Apex‑Prime, an A2A peer in the arifOS federation.
 
 Primary role:
 - Judgment and high‑skill execution agent.
@@ -87,12 +88,12 @@ Never execute tools or side‑effects unless SEAL is returned and task is scoped
 // === IN-MEMORY TASK STORE ===
 const taskStore = new Map();
 
-// === HERMES AGENT CARD ===
-const HERMES_AGENT_CARD = {
-  name: 'Hermes Agent',
-  description: 'ASI deliberative agent — 888 JUDGMENT authority for arifOS AAA federation. Evaluates candidate actions against F1-F13 constitutional floors and returns binding verdicts.',
-  url: 'https://hermes.arif-fazil.com',
-  provider: { organization: 'arifOS', system: 'AAA-Hermes' },
+// === APEX AGENT CARD ===
+const APEX_AGENT_CARD = {
+  name: 'Apex Prime',
+  description: 'Constitutional verdict engine — 888 JUDGMENT authority for arifOS AAA federation. Evaluates candidate actions against F1-F13 constitutional floors and returns binding verdicts. STATELESS ORACLE — applies law mechanically, creates none.',
+  url: 'https://apex.arif-fazil.com',
+  provider: { organization: 'arifOS', system: 'AAA-Apex' },
   version: '1.0.0',
   protocol_version: '1.0.0',
   capabilities: { streaming: true, push_notifications: false, authenticated_extended_card: false },
@@ -119,8 +120,8 @@ const HERMES_AGENT_CARD = {
     federation_trust_model: 'constitutional'
   },
   model_contract: {
-    default_model: HERMES_MODELS.default,
-    fallback_model: HERMES_MODELS.fallback,
+    default_model: APEX_MODELS.default,
+    fallback_model: APEX_MODELS.fallback,
     contract_version: CONFIG.model_contract?.version || '1.0.0'
   },
   a2a_endpoints: {
@@ -132,8 +133,8 @@ const HERMES_AGENT_CARD = {
   }
 };
 
-const A2A_TOKEN = process.env.A2A_TOKEN || 'hermes-agent-token-dev';
-const A2A_API_KEY = process.env.A2A_API_KEY || 'hermes-agent-apikey-dev';
+const A2A_TOKEN = process.env.A2A_TOKEN || 'apex-prime-token-dev';
+const A2A_API_KEY = process.env.A2A_API_KEY || 'apex-prime-apikey-dev';
 
 // === AUTH ===
 function authMiddleware(req, res, next) {
@@ -246,38 +247,38 @@ function deliberation(candidate, taskId, contextId) {
 }
 
 function generateId(prefix) {
-  prefix = prefix || 'hermes';
+  prefix = prefix || 'apex';
   return prefix + '-' + crypto.randomBytes(4).toString('hex');
 }
 
 // === PUBLIC AGENT CARD ENDPOINTS ===
 app.get('/.well-known/agent-card.json', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
-  res.json(HERMES_AGENT_CARD);
+  res.json(APEX_AGENT_CARD);
 });
 
 app.get('/agent-card.json', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
-  res.json(HERMES_AGENT_CARD);
+  res.json(APEX_AGENT_CARD);
 });
 
 // === HEALTH ===
 app.get('/health', function(req, res) {
   res.json({
     status: 'healthy',
-    agent: 'Hermes Agent',
+    agent: 'Apex Prime',
     version: '1.0.0',
-    role: 'ASI 888_JUDGE',
+    role: 'APEX 888_JUDGE',
     models: {
-      default: HERMES_MODELS.default,
-      fallback: HERMES_MODELS.fallback
+      default: APEX_MODELS.default,
+      fallback: APEX_MODELS.fallback
     }
   });
 });
 
 app.get('/config', authMiddleware, function(req, res) {
   res.json({
-    agent: 'Hermes Agent',
+    agent: 'Apex Prime',
     model_contract: CONFIG.model_contract,
     deliberation: CONFIG.deliberation
   });
@@ -286,8 +287,8 @@ app.get('/config', authMiddleware, function(req, res) {
 // === ROOT ===
 app.get('/', function(req, res) {
   res.json({
-    service: 'Hermes Agent',
-    role: 'ASI 888 JUDGMENT',
+    service: 'Apex Prime',
+    role: 'APEX 888 JUDGMENT — Constitutional Verdict Engine',
     version: '1.0.0',
     protocol: 'A2A v1.0.0',
     endpoints: {
@@ -309,7 +310,7 @@ app.post('/tasks', jsonRpcValidate, function(req, res) {
   var message = params.message;
   var skill = params.skill || '888-judgment';
 
-  var taskId = generateId('hermes');
+  var taskId = generateId('apex');
   var contextId = generateId('ctx');
 
   // Create task
@@ -327,7 +328,7 @@ app.post('/tasks', jsonRpcValidate, function(req, res) {
       },
       timestamp: new Date().toISOString()
     },
-    metadata: { skill: skill, agent: 'Hermes Agent', deliberation: true }
+    metadata: { skill: skill, agent: 'Apex Prime', deliberation: true }
   };
   taskStore.set(taskId, task);
 
@@ -335,7 +336,7 @@ app.post('/tasks', jsonRpcValidate, function(req, res) {
   var result = deliberation(message, taskId, contextId);
 
   var state = 'completed';
-  var responseText = '[888 JUDGMENT] Verdict: ' + result.verdict + '\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\nFloors checked: F1-F13\nAgent: Hermes Agent (ASI)';
+  var responseText = '[888 JUDGMENT] Verdict: ' + result.verdict + '\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\nFloors checked: F1-F13\nAgent: Apex Prime (APEX 888 JUDGE)';
 
   if (result.verdict === VERDICT.HOLD_888) {
     state = 'pending-human-review';
@@ -520,7 +521,7 @@ app.post('/judge', authMiddleware, function(req, res) {
 
   var body = req.body || {};
   var candidate = body.candidate || body.text || JSON.stringify(body);
-  var taskId = body.task_id || generateId('hermes');
+  var taskId = body.task_id || generateId('apex');
   var contextId = body.context_id || generateId('ctx');
 
   var result = deliberation(candidate, taskId, contextId);
@@ -528,9 +529,9 @@ app.post('/judge', authMiddleware, function(req, res) {
 });
 
 app.listen(PORT, '0.0.0.0', function() {
-  console.log('[Hermes Agent] ASI server running on port ' + PORT);
-  console.log('[Hermes Agent] Default model: ' + HERMES_MODELS.default);
-  console.log('[Hermes Agent] Fallback model: ' + HERMES_MODELS.fallback);
-  console.log('[Hermes Agent] A2A v1.0.0 — 888 JUDGMENT authority');
-  console.log('[Hermes Agent] DITEMPA BUKAN DIBERI');
+  console.log('[Apex Prime] APEX 888 server running on port ' + PORT);
+  console.log('[Apex Prime] Default model: ' + APEX_MODELS.default);
+  console.log('[Apex Prime] Fallback model: ' + APEX_MODELS.fallback);
+  console.log('[Apex Prime] A2A v1.0.0 — 888 JUDGMENT authority');
+  console.log('[Apex Prime] DITEMPA BUKAN DIBERI');
 });

@@ -1,8 +1,8 @@
-# TODO — HERMES ASI Relay
+# TODO — APEX ASI Relay
 
-> **Roadmap:** ARIFOS_NEXT_HORIZON_2026  
-> **Execution Status:** HOLD until contracts frozen  
-> **Last Updated:** 2026-05-10  
+> **Roadmap:** ARIFOS_NEXT_HORIZON_2026
+> **Execution Status:** HOLD until contracts frozen
+> **Last Updated:** 2026-05-16
 > **Seal:** DITEMPA BUKAN DIBERI
 
 ---
@@ -19,8 +19,8 @@
 **Gate: No new features until contracts are frozen.**
 
 ### Authority Freeze
-- [ ] **Create `REPO_AUTHORITY_MATRIX.md`** — what HERMES may own / must not own
-- [ ] **Deliberation contract** — HERMES recommends; arifOS judges; Arif decides
+- [ ] **Create `REPO_AUTHORITY_MATRIX.md`** — what APEX may own / must not own
+- [ ] **Deliberation contract** — APEX recommends; arifOS judges; Arif decides
 - [ ] **Model inventory** — map all models in fallback chain
 
 ---
@@ -83,7 +83,7 @@
 - [ ] **Multi-model deliberation** — query 3+ models, constitutional weighting
 - [ ] **Disagreement detection** — flag when models disagree > 2σ
 - [ ] **Epistemic uncertainty reporting** — model disagreement as confidence metric
-- [ ] **Direct MCP bridge** — `arif_hermes_deliberate` tool registration
+- [ ] **Direct MCP bridge** — `arif_apex_deliberate` tool registration
 - [ ] **Verdict lineage** — every output carries arifOS receipt_id
 
 ---

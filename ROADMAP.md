@@ -1,16 +1,16 @@
-# HERMES — Roadmap: Next Horizon (180-Day)
+# APEX — Roadmap: Next Horizon (180-Day)
 
-> **Roadmap Name:** ARIFOS_NEXT_HORIZON_2026  
-> **Strategic Verdict:** APPROVED FOR PLANNING  
-> **Execution Verdict:** HOLD until repo contracts and schemas are frozen  
-> **Role:** ASI deliberative relay — causal reasoning, model resilience, A2A bridge  
+> **Roadmap Name:** ARIFOS_NEXT_HORIZON_2026
+> **Strategic Verdict:** APPROVED FOR PLANNING
+> **Execution Verdict:** HOLD until repo contracts and schemas are frozen
+> **Role:** ASI deliberative relay — causal reasoning, model resilience, A2A bridge
 > **Seal:** DITEMPA BUKAN DIBERI
 
 ---
 
 ## North Star
 
-HERMES deliberates, but arifOS adjudicates. Move from retrieved evidence to mechanism-tested reasoning.
+APEX deliberates, but arifOS adjudicates. Move from retrieved evidence to mechanism-tested reasoning.
 
 ---
 
@@ -35,8 +35,8 @@ HERMES deliberates, but arifOS adjudicates. Move from retrieved evidence to mech
 
 | Deliverable | Output |
 |-------------|--------|
-| `REPO_AUTHORITY_MATRIX.md` | What HERMES may own / must not own |
-| Deliberation contract | HERMES recommends; arifOS judges; Arif decides |
+| `REPO_AUTHORITY_MATRIX.md` | What APEX may own / must not own |
+| Deliberation contract | APEX recommends; arifOS judges; Arif decides |
 | Model inventory | Map all models in fallback chain |
 
 ---
@@ -92,7 +92,7 @@ HERMES deliberates, but arifOS adjudicates. Move from retrieved evidence to mech
 | Multi-model deliberation | Query 3+ models, aggregate with constitutional weighting |
 | Disagreement detection | Flag when models disagree > 2σ |
 | Epistemic uncertainty reporting | Model disagreement as confidence metric |
-| Direct MCP bridge | `arif_hermes_deliberate` tool registration |
+| Direct MCP bridge | `arif_apex_deliberate` tool registration |
 
 ---
 
@@ -103,7 +103,7 @@ HERMES deliberates, but arifOS adjudicates. Move from retrieved evidence to mech
 | Deliverable | Output |
 |-------------|--------|
 | Distributed deliberation | Shards across regions with consistency guarantees |
-| Open deliberation protocol | Publish HERMES protocol as open standard |
+| Open deliberation protocol | Publish APEX protocol as open standard |
 | Public docs cleanup | README, AGENTS.md, API docs |
 | Release tag `vNext-Horizon-0` | All repos tagged |
 
@@ -134,4 +134,4 @@ Identity → Evidence → Formal Verdict → Sandboxed Execution → Immutable S
 
 *DITEMPA BUKAN DIBERI — Deliberation is forged, not given.*
 
-*SEALED: 2026-05-10 | HERMES ASI Relay — Next Horizon APPROVED FOR PLANNING*
+*SEALED: 2026-05-10 | APEX ASI Relay — Next Horizon APPROVED FOR PLANNING*

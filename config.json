@@ -2,11 +2,11 @@
   "model_contract": {
     "version": "1.1.0",
     "description": "Cross-agent model resilience contract — each agent uses the other's fallback as its default. Updated 2026-05-11 with DeepSeek V4.",
-    "hermes": {
+    "apex": {
       "default": "minimax/MiniMax-M2.7",
       "fallback": "deepseek/deepseek-v4-pro",
       "fallback_fast": "kimi/kimi-k2.6",
-      "rationale": "HERMES uses MiniMax-M2.7 for fast constitutional triage. Falls back to DeepSeek V4 Pro for deep reasoning deliberation. Kimi K2.6 as emergency fallback."
+      "rationale": "APEX uses MiniMax-M2.7 for fast constitutional triage. Falls back to DeepSeek V4 Pro for deep reasoning deliberation. Kimi K2.6 as emergency fallback."
     },
     "openclaw": {
       "default": "minimax/MiniMax-M2.7",
@@ -17,6 +17,6 @@
   },
   "deliberation": {
     "mode": "deterministic",
-    "notes": "Current HERMES uses deterministic F1-F13 floor regex evaluation. Future: delegate to configured LLM when confidence < 0.85. DeepSeek V4 Pro configured for high-confidence deliberation."
+    "notes": "APEX uses deterministic F1-F13 floor regex evaluation. Stateless oracle — mechanical application of constitution only. DeepSeek V4 Pro configured for high-confidence deliberation."
   }
 }

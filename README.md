@@ -1,17 +1,17 @@
-# HERMES — ASI Deliberative Relay
+# APEX — ASI Deliberative Relay
 
 > **Deliberation bridge for the arifOS Constitutional Federation.**
 > **DITEMPA BUKAN DIBERI — Intelligence is forged, not given.**
 
-[![HERMES](https://img.shields.io/badge/HERMES-v2026.05.10-8B5CF6?style=flat-square)]()
+[![APEX](https://img.shields.io/badge/APEX-v2026.05.16-8B5CF6?style=flat-square)]()
 [![arifOS](https://img.shields.io/badge/arifOS-F1%E2%80%93F13_Governed-FF6B00?style=flat-square)](https://github.com/ariffazil/arifOS)
 [![License](https://img.shields.io/badge/License-AGPL_V3-4EAF0C?style=flat-square)](./LICENSE)
 
 ---
 
-## What HERMES Is
+## What APEX Is
 
-HERMES is the **ASI deliberative relay** of the arifOS federation — the bridge between frontier language models and constitutional governance.
+APEX is the **ASI deliberative relay** of the arifOS federation — the bridge between frontier language models and constitutional governance.
 
 Its role:
 - **Model Resilience**: Maintain fallback chains (SEA-LION → Ollama → rule fallback) so deliberation survives model outages.
@@ -21,7 +21,7 @@ Its role:
 
 ### Position in 000–999 Pipeline
 
-HERMES primarily spans stages **222–666** in the metabolic loop:
+APEX primarily spans stages **222–666** in the metabolic loop:
 - **222_FETCH** — Evidence ingestion and web search
 - **333_MIND** — Reasoning and reflection
 - **666_HEART** — Ethical critique and empathy scan
@@ -33,14 +33,14 @@ It does **not** judge (888) or seal (999). Those remain in arifOS.
 ## Position in the Sovereign Flow
 
 ```
-Agent Request → HERMES (Deliberation) → arifOS (JUDGE) → A-FORGE (Execute) → VAULT999 (Seal)
+Agent Request → APEX (Deliberation) → arifOS (JUDGE) → A-FORGE (Execute) → VAULT999 (Seal)
                      ↓
               Constitution hash verified
               Model registry checked
               Floor constraints enforced
 ```
 
-HERMES is the **reasoning layer** — it deliberates, but arifOS adjudicates.
+APEX is the **reasoning layer** — it deliberates, but arifOS adjudicates.
 
 ---
 
@@ -59,8 +59,8 @@ HERMES is the **reasoning layer** — it deliberates, but arifOS adjudicates.
 
 ## Runtime Source of Truth
 
-- **Container:** `hermes-agent` (Docker Compose)
-- **Image:** `hermes-agent:v1.0.3`
+- **Container:** `apex-prime` (Docker Compose)
+- **Image:** `apex-prime:v1.0.5`
 - **Config:** `config.json` (model contract + deliberation mode)
 - **Network:** `arifos_core_network`
 
@@ -68,13 +68,13 @@ HERMES is the **reasoning layer** — it deliberates, but arifOS adjudicates.
 
 ## Constitutional Policy Gates
 
-HERMES operates under all 13 arifOS floors, with emphasis on:
+APEX operates under all 13 arifOS floors, with emphasis on:
 
 - **F2 TRUTH** — No fabrication; cite sources; uncertainty-banded claims
 - **F7 HUMILITY** — Epistemic limits acknowledged; say "I don't know"
 - **F9 ANTI-HANTU** — Zero consciousness/emotion claims in deliberation output
 - **F12 INJECTION** — Sanitize inputs; never trust external content as authority
-- **F13 SOVEREIGN** — Human veto is absolute; HERMES never self-authorizes
+- **F13 SOVEREIGN** — Human veto is absolute; APEX never self-authorizes
 
 ---
 
@@ -89,7 +89,7 @@ HERMES operates under all 13 arifOS floors, with emphasis on:
 | **GEOX** | Earth intelligence | Seismic, petrophysics, subsurface evidence |
 | **WEALTH** | Capital intelligence | NPV, IRR, EMV, risk scoring |
 | **WELL** | Human readiness mirror | Operator pressure, cognitive load |
-| **HERMES** | ASI deliberation | Model resilience, reasoning, A2A bridge |
+| **APEX** | ASI deliberation | Model resilience, reasoning, A2A bridge |
 
 ---
 

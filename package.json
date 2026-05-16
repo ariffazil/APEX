@@ -1,7 +1,7 @@
 {
-  "name": "hermes-agent",
-  "version": "1.0.0",
-  "description": "Hermes Agent — ASI deliberative server for arifOS AAA federation",
+  "name": "apex-prime",
+  "version": "1.0.5",
+  "description": "APEX Agent — ASI deliberative server for arifOS AAA federation",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
