@@ -251,6 +251,64 @@ function generateId(prefix) {
   return prefix + '-' + crypto.randomBytes(4).toString('hex');
 }
 
+function executeTask(message, skill) {
+  var taskId = generateId('apex');
+  var contextId = generateId('ctx');
+  var chosenSkill = skill || '888-judgment';
+
+  var task = {
+    id: taskId,
+    contextId: contextId,
+    status: {
+      state: 'working',
+      message: {
+        role: 'agent',
+        parts: [{ kind: 'text', text: 'Deliberating on constitutional floors F1-F13...' }],
+        messageId: generateId(),
+        taskId: taskId,
+        contextId: contextId
+      },
+      timestamp: new Date().toISOString()
+    },
+    metadata: { skill: chosenSkill, agent: 'Apex Prime', deliberation: true }
+  };
+  taskStore.set(taskId, task);
+
+  var result = deliberation(message, taskId, contextId);
+  var state = 'completed';
+  var responseText = '[888 JUDGMENT] Verdict: ' + result.verdict + '\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\nFloors checked: F1-F13\nAgent: Apex Prime (APEX 888 JUDGE)';
+
+  if (result.verdict === VERDICT.HOLD_888) {
+    state = 'pending-human-review';
+    responseText = '[888 JUDGMENT] Verdict: HOLD_888 — human review required.\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\n\nThis action cannot proceed without Arif\'s confirmation.';
+  } else if (result.verdict === VERDICT.VOID) {
+    state = 'failed';
+    responseText = '[888 JUDGMENT] Verdict: VOID — constitutional violation.\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\n\nThis action is FORBIDDEN under arifOS F1-F13.';
+  }
+
+  var completedStatus = {
+    state: state,
+    message: {
+      role: 'agent',
+      parts: [{ kind: 'text', text: responseText }],
+      messageId: generateId(),
+      taskId: taskId,
+      contextId: contextId
+    },
+    timestamp: new Date().toISOString()
+  };
+
+  task.status = completedStatus;
+  taskStore.set(taskId, task);
+
+  return {
+    taskId: taskId,
+    contextId: contextId,
+    status: completedStatus,
+    task: task
+  };
+}
+
 // === PUBLIC AGENT CARD ENDPOINTS ===
 app.get('/.well-known/agent-card.json', function(req, res) {
   res.setHeader('Content-Type', 'application/json');
@@ -309,70 +367,58 @@ app.post('/tasks', jsonRpcValidate, function(req, res) {
   var params = jsonrpc.params || {};
   var message = params.message;
   var skill = params.skill || '888-judgment';
-
-  var taskId = generateId('apex');
-  var contextId = generateId('ctx');
-
-  // Create task
-  var task = {
-    id: taskId,
-    contextId: contextId,
-    status: {
-      state: 'working',
-      message: {
-        role: 'agent',
-        parts: [{ kind: 'text', text: 'Deliberating on constitutional floors F1-F13...' }],
-        messageId: generateId(),
-        taskId: taskId,
-        contextId: contextId
-      },
-      timestamp: new Date().toISOString()
-    },
-    metadata: { skill: skill, agent: 'Apex Prime', deliberation: true }
-  };
-  taskStore.set(taskId, task);
-
-  // Run 888 JUDGMENT
-  var result = deliberation(message, taskId, contextId);
-
-  var state = 'completed';
-  var responseText = '[888 JUDGMENT] Verdict: ' + result.verdict + '\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\nFloors checked: F1-F13\nAgent: Apex Prime (APEX 888 JUDGE)';
-
-  if (result.verdict === VERDICT.HOLD_888) {
-    state = 'pending-human-review';
-    responseText = '[888 JUDGMENT] Verdict: HOLD_888 — human review required.\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\n\nThis action cannot proceed without Arif\'s confirmation.';
-  } else if (result.verdict === VERDICT.VOID) {
-    state = 'failed';
-    responseText = '[888 JUDGMENT] Verdict: VOID — constitutional violation.\nRationale: ' + result.rationale + '\nConfidence: ' + result.confidence + '\n\nThis action is FORBIDDEN under arifOS F1-F13.';
-  }
-
-  var completedStatus = {
-    state: state,
-    message: {
-      role: 'agent',
-      parts: [{ kind: 'text', text: responseText }],
-      messageId: generateId(),
-      taskId: taskId,
-      contextId: contextId
-    },
-    timestamp: new Date().toISOString()
-  };
-
-  task.status = completedStatus;
-  taskStore.set(taskId, task);
+  var executed = executeTask(message, skill);
 
   res.json({
     jsonrpc: '2.0',
     id: id,
     result: {
-      id: taskId,
-      contextId: contextId,
-      status: completedStatus,
+      id: executed.taskId,
+      contextId: executed.contextId,
+      status: executed.status,
       artifacts: [],
       history: [{ parts: message && message.parts ? message.parts : [] }],
       kind: 'task',
-      metadata: task.metadata
+      metadata: executed.task.metadata
     }
+  });
+});
+
+// Compatibility bridge for OpenClaw/other peers needing direct POST /a2a.
+// Accepts both JSON-RPC and plain JSON payload.
+app.post('/a2a', authMiddleware, function(req, res) {
+  var body = req.body || {};
+  if (body.jsonrpc === '2.0' && body.method) {
+    req.body = body;
+    return jsonRpcValidate(req, res, function() {
+      var jsonrpc = req.jsonrpc;
+      var params = jsonrpc.params || {};
+      var executed = executeTask(params.message, params.skill || '888-judgment');
+      return res.json({
+        jsonrpc: '2.0',
+        id: jsonrpc.id,
+        result: {
+          id: executed.taskId,
+          contextId: executed.contextId,
+          status: executed.status,
+          artifacts: [],
+          history: [{ parts: params.message && params.message.parts ? params.message.parts : [] }],
+          kind: 'task',
+          metadata: executed.task.metadata
+        }
+      });
+    });
+  }
+
+  var candidate = body.candidate || body.message || body.text || JSON.stringify(body);
+  var executedPlain = executeTask(candidate, body.skill || '888-judgment');
+  return res.json({
+    ok: true,
+    endpoint: '/a2a',
+    taskId: executedPlain.taskId,
+    contextId: executedPlain.contextId,
+    verdict: executedPlain.status.state,
+    status: executedPlain.status
   });
 });
 
