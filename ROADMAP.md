@@ -3,7 +3,7 @@
 > **Roadmap Name:** ARIFOS_NEXT_HORIZON_2026
 > **Strategic Verdict:** APPROVED FOR PLANNING
 > **Execution Verdict:** HOLD until repo contracts and schemas are frozen
-> **Role:** ASI deliberative relay — causal reasoning, model resilience, A2A bridge
+> **Role:** Verdict service — causal reasoning support, model resilience, A2A bridge
 > **Seal:** DITEMPA BUKAN DIBERI
 
 ---

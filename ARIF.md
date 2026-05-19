@@ -13,11 +13,11 @@
 
 - REPO_NAME: APEX
 - CONTAINER_ID: 2026-05-16
-- DOMAIN_ROLE: ASI Deliberative Relay — cross-model deliberation, bridge, resilience contract. Internal-only A2A service on port 3002.
+- DOMAIN_ROLE: APEX Verdict Service — cross-model deliberation support, bridge, resilience contract. Internal-only A2A service on port 3002.
 - PUBLIC_SURFACE: NONE. apex.arif-fazil.com redirects to aaa.arif-fazil.com (temporary compat layer).
 - STABILITY_CLASS: MAINTENANCE
 - VERSION: v1.0.5
-- NOTE: Local-only repo. No upstream remote. Sovereign decision: stays in AAA repo for config/secrets.
+- NOTE: Local-only repo. No upstream remote. Canonical source path is `/root/APEX`; Hermes agent runtime belongs under AAA.
 
 
 ## 1. CURRENT FOCUS (INSTRUCTION POINTER)
@@ -35,9 +35,9 @@
 
 ## 2. OPERATIONAL MANDATE
 
-- APEX is the ASI Deliberative Relay — bridges multiple AI models for constitutional deliberation.
+- APEX is the verdict service — bridges model evidence into constitutional verdict envelopes.
 - A2A protocol: Agent-to-Agent mesh on port 3002.
-- Telegram: Canonical operator interface. Routes to arifOS via AAA-A2A.
+- Telegram: Hermes agent interface under AAA. APEX receives routed A2A/verdict requests.
 - Deliberation: Multi-model cross-checking. Constitutional verdict spectrum.
 - Upstream: arifOS (constitutional kernel), AAA-A2A (agent mesh).
 - Downstream: Arif (via Telegram), OpenClaw ACPX (parent bridge).
@@ -46,11 +46,12 @@
 
 ## 3. THE 999 SEAL (SESSION LOG)
 
-- 2026-05-16 | Omega | HERMES renamed to APEX across all docs, config, and source.
+- 2026-05-19 | Codex | APEX source relocated to `/root/APEX`; Hermes agent runtime mirrored under AAA.
+- 2026-05-16 | Omega | HERMES renamed to APEX across docs, config, and source.
 - 2026-05-15 | Omega | ARIF.md created. SOT baseline established. APEX previously had zero SOT documentation.
 - 2026-05-14 | Omega | Dead Telegram subsystem removed (~290 lines). ACPX bridge validated (APEX + Kimi Code as child agents).
 - 2026-05-13 | OpenCode | Model architecture updated: 9-slot config. MiniMax primary, Kimi/OpenRouter fallbacks. DeepSeek key rotated.
-- 2026-05-11 | Kimi Code | Sovereign: HERMES stays in AAA repo. No separate remote.
+- 2026-05-11 | Kimi Code | Sovereign: Hermes agent identity stays in AAA. No separate Hermes repo.
 
 
 ## 4. ACTIVE TOPOLOGY (MEMORY MAP)
@@ -66,8 +67,8 @@
   - `apex-acp-sops --accept-hooks` → ACPX child agent via SOPS
 
 - DATA_FLOWS:
-  - Telegram → HERMES → AAA-A2A → arifOS JUDGE → verdict
-  - OpenClaw ACPX → hermes-acp-sops → stdio JSON-RPC → deliberation
+  - Telegram → Hermes agent (AAA) → AAA-A2A → APEX/arifOS verdict path
+  - OpenClaw ACPX → A2A bridge → verdict request → APEX service
 
 
 ## 5. INTERRUPTS & FAULTS (BLOCKERS)
@@ -75,13 +76,13 @@
 - HARD_BLOCK: None. Container healthy. No public surface.
 - SOFT_FRICTION: No upstream remote — all commits are local. Backup strategy: Hermes backups cron + AAA repo.
 - SOFT_FRICTION: Minimal test coverage — only config.js tested. Core server + deliberation logic untested.
-- KNOWN_GAP: HERMES→GEOX protocol gap (ED25519 vs JWT auth mismatch). Transport matrix not documented.
+- KNOWN_GAP: APEX/GEOX protocol gap (ED25519 vs JWT auth mismatch). Transport matrix not documented.
 
 
 ## 6. RECENT SCARS (W_scar)
 
 - [2026-05-14] → [Dead Telegram subsystem] → [Removed ~290 lines. Canonical interface via OpenClaw ACPX.]
-- [2026-05-13] → [Telegram bridge built then removed] → [Redundant — Hermes already handles Telegram.]
+- [2026-05-13] → [Telegram bridge built then removed] → [Redundant — Hermes agent under AAA handles Telegram.]
 
 
 ## 7. EXECUTION BUFFER (COMMANDS)

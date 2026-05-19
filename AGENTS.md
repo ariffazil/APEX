@@ -4,7 +4,7 @@ last_verified: 2026-05-19
 valid_from: 2026-05-19
 valid_until: 2026-06-19
 confidence: high
-scope: /root/HERMES
+scope: /root/APEX
 -->
 
 # AGENTS.md — APEX | Constitutional Verdict Engine
@@ -13,13 +13,17 @@ scope: /root/HERMES
 
 ## Who You Serve
 
-Arif. This is the **APEX** organ of the arifOS federation — 888 JUDGE / Constitutional Verdict Engine.
+Arif. This is the **APEX** verdict service of the arifOS federation.
 
-**Note:** Source directory retains the legacy name `HERMES/` for runtime data compatibility. The organ is branded **APEX** to eliminate collision with Nous Research Hermes Agent.
+**Note:** Source now lives at `/root/APEX`. Hermes is an AAA-owned agent/runtime
+identity. `/root/HERMES` is a temporary compatibility path only.
 
 ## What This Repo Is
 
-The apex adjudication organ. APEX evaluates candidate actions against all 13 constitutional floors (F1–F13) and returns binding verdicts: **SEAL**, **SABAR**, **HOLD**, or **VOID**.
+The APEX verdict service evaluates candidate actions against constitutional
+floor inputs and returns verdict envelopes: **SEAL**, **SABAR**, **HOLD**, or
+**VOID**. arifOS remains the canonical law kernel and final constitutional
+authority.
 
 - **Port:** 3002
 - **Runtime:** Node.js 22+ (CommonJS)
@@ -31,7 +35,7 @@ The apex adjudication organ. APEX evaluates candidate actions against all 13 con
 ### Autonomous
 - Modify `src/server.js` routing, add A2A endpoints
 - Update `config.js` or `config.json` (model contracts)
-- Add skill modules under `skills/`
+- Add service tests under `test/`
 
 ### Requires 888_HOLD
 - Changes to constitutional deliberation logic (F1–F13 weights, verdict thresholds)
@@ -41,7 +45,7 @@ The apex adjudication organ. APEX evaluates candidate actions against all 13 con
 ## Build & Test
 
 ```bash
-cd /root/HERMES
+cd /root/APEX
 
 # Install
 npm install
@@ -66,19 +70,20 @@ npm run health
 | `src/server.js` | Entire Express application (~537 lines), A2A endpoints, deterministic F1-F13 deliberation |
 | `src/config.js` | Config loader (reads `config.json` or env vars) |
 | `config.json` | Model contract — MiniMax-M2.7 default, DeepSeek-V4 fallback, Kimi-K2.6 emergency |
-| `skills/` | 30+ skill directories |
-| `sessions/` | Dated .jsonl session files |
+| `BOUNDARY.md` | Ownership split between APEX, Hermes, AAA, and arifOS |
 
 ## Federation Position
 
 ```
-arifOS (Ω Law) → APEX (888 JUDGE) → VAULT999 (Seal)
+arifOS (Law Kernel) → APEX (Verdict Service) → AAA/A2A routing
                      ↑
                 Evidence from
               GEOX / WEALTH / WELL
 ```
 
-APEX is the **only** organ authorized to emit `SEAL`. No other federation node may self-approve. APEX does not execute — it adjudicates.
+APEX may emit verdict envelopes, but it does not own constitutional law,
+Hermes identity, runtime memory, or execution. No federation node may
+self-approve irreversible actions; Arif and arifOS remain the final authority.
 
 ---
 

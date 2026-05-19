@@ -4,34 +4,39 @@ last_verified: 2026-05-19
 valid_from: 2026-05-19
 valid_until: 2026-06-19
 confidence: high
-scope: /root/HERMES
+scope: /root/APEX
 epistemic_status: CLAIM
 -->
 
 # APEX — Constitutional Verdict Engine
 
-> **Formerly HERMES.** Rebranded to APEX to eliminate collision with Nous Research Hermes Agent.
-> The `/root/HERMES` directory is retained because it also stores Nous Research Hermes runtime data
-> (sessions, skills, cron outputs). The arifOS federation node source lives in `src/` and `test/`.
+> **Formerly housed at `/root/HERMES`.** Rebranded and relocated to APEX to
+> eliminate collision with the Hermes Agent runtime.
+> Hermes agent data now belongs under `AAA`; `/root/HERMES` is a temporary
+> compatibility path only.
 
 > **Status:** OPERATIONAL | **Organ:** RELAY (Ψ) | **Authority:** arifOS
-> **Domain:** Internal A2A agent | **Remote:** None (local-only)
+> **Domain:** Constitutional verdict service | **Remote:** None (local-only)
 
 ## 🏛️ What this repo is
 
-The constitutional verdict engine (888 JUDGE) within the arifOS federation. APEX is a CommonJS Express application that evaluates candidate actions against F1–F13 constitutional floors and returns binding SEAL / HOLD_888 / VOID verdicts. It runs as a standalone service on port 3002.
+The constitutional verdict engine within the arifOS federation. APEX is a
+CommonJS Express application that evaluates candidate actions against F1-F13
+constitutional floors and returns SEAL / HOLD_888 / VOID verdict envelopes. It
+runs as a standalone service on port 3002.
 
-**APEX owns the JUDGMENT — the deterministic constitutional review that gates agent action across the federation mesh.**
+**APEX owns the verdict service implementation. arifOS remains the canonical law
+kernel and final constitutional authority.**
 
 ## 📦 Ownership
 
-- **Owns**: A2A protocol relay, agent card endpoints, deterministic deliberation logic.
-- **Does NOT own**: Constitutional judgment (arifOS 888 JUDGE), execution (A-FORGE).
+- **Owns**: A2A protocol relay, agent card endpoints, deterministic verdict service logic.
+- **Does NOT own**: Agent identity/workspaces (AAA), constitutional law (arifOS), execution (A-FORGE).
 
 ## 🏗️ Current Structure
 
 ```
-HERMES/
+APEX/
 ├── src/
 │   ├── server.js          # Express application (~414 lines), A2A endpoints, deliberation
 │   └── config.js         # Config loader (reads config.json or env vars)
@@ -62,6 +67,10 @@ npm run health
 ## ⚠️ Important Notes
 
 - **No git remote configured** — this repo is local-only
+- **Canonical source path:** `/root/APEX`
+- **Hermes agent runtime path:** `/root/AAA/agents/hermes-asi/runtime`
+- **Compatibility path:** `/root/HERMES` may remain until systemd and runtime
+  references are fully retired
 - **No linter or formatter** currently configured
 - Deliberation logic is deterministic (CommonJS, no TypeScript)
 
