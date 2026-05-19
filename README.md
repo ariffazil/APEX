@@ -1,13 +1,27 @@
-# HERMES — ASI Deliberative Relay
+<!-- SOT-MANIFEST
+owner: Arif
+last_verified: 2026-05-19
+valid_from: 2026-05-19
+valid_until: 2026-06-19
+confidence: high
+scope: /root/HERMES
+epistemic_status: CLAIM
+-->
+
+# APEX — Constitutional Verdict Engine
+
+> **Formerly HERMES.** Rebranded to APEX to eliminate collision with Nous Research Hermes Agent.
+> The `/root/HERMES` directory is retained because it also stores Nous Research Hermes runtime data
+> (sessions, skills, cron outputs). The arifOS federation node source lives in `src/` and `test/`.
 
 > **Status:** OPERATIONAL | **Organ:** RELAY (Ψ) | **Authority:** arifOS
 > **Domain:** Internal A2A agent | **Remote:** None (local-only)
 
 ## 🏛️ What this repo is
 
-The ASI deliberative relay within the arifOS federation. HERMES is a CommonJS Express application that acts as an A2A (Agent-to-Agent) bridge, enabling cross-model deliberation and resilience contracts between constitutional agents. It runs as a standalone service on port 3002.
+The constitutional verdict engine (888 JUDGE) within the arifOS federation. APEX is a CommonJS Express application that evaluates candidate actions against F1–F13 constitutional floors and returns binding SEAL / HOLD_888 / VOID verdicts. It runs as a standalone service on port 3002.
 
-**HERMES owns the RELAY — the deterministic deliberation channel that connects agents across the federation mesh.**
+**APEX owns the JUDGMENT — the deterministic constitutional review that gates agent action across the federation mesh.**
 
 ## 📦 Ownership
 
