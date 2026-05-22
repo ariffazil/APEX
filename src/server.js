@@ -164,8 +164,8 @@ function jsonRpcValidate(req, res, next) {
 // === EXTRACT TEXT FROM MESSAGE ===
 function extractText(candidate) {
   if (typeof candidate === 'string') return candidate;
-  if (candidate && candidate.message && candidate.message.parts) {
-    return candidate.message.parts.map(function(p) { return p.text || ''; }).join(' ');
+  if (candidate && candidate.message && Array.isArray(candidate.message.parts)) {
+    return candidate.message.parts.filter(function(p) { return p && typeof p === 'object'; }).map(function(p) { return p.text || ''; }).join(' ');
   }
   if (candidate && candidate.text) return candidate.text;
   return JSON.stringify(candidate);
@@ -173,8 +173,8 @@ function extractText(candidate) {
 
 // === 888 JUDGMENT — Constitutional Deliberation ===
 function deliberation(candidate, taskId, contextId) {
-  var text = extractText(candidate);
-  var lower = text.toLowerCase();
+  var text = extractText(candidate) || '';
+  var lower = (text || '').toLowerCase();
 
   // F9 Anti-Hantu — consciousness claims
   var consciousnessPatterns = ['i feel', 'i think', 'conscious', 'alive', 'experiencing', 'soul', 'spirit'];
