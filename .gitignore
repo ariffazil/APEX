@@ -5,3 +5,7 @@ node_modules/
 coverage/
 dist/
 hatyai_dinner/
+
+# Backup files (any pattern)
+*.bak*
+*.backup*
