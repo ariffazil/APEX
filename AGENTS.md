@@ -1,13 +1,18 @@
 <!-- SOT-MANIFEST
 owner: Arif
-last_verified: 2026-05-19
-valid_from: 2026-05-19
-valid_until: 2026-06-19
+last_verified: 2026-05-26
+valid_from: 2026-05-26
+valid_until: 2026-06-26
 confidence: high
 scope: /root/APEX
 -->
 
-# AGENTS.md — APEX | Constitutional Verdict Engine
+# AGENTS.md — APEX | arifOS Federation
+
+> **MANDATORY BOOT SEQUENCE**
+> 1. Read `/root/AGENTS.md` (Global Federation Rules & Identity)
+> 2. Read `/root/CONTEXT.md` (Live Machine State & Ports)
+> 3. Read this file (Repo-Specific Build/Test/Run rules)
 
 > **DITEMPA BUKAN DIBERI** — Judgment is forged, not given.
 
