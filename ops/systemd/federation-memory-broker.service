@@ -1,0 +1,20 @@
+[Unit]
+Description=Federation Memory Broker — Hermes state.db to Redis telemetry
+After=network.target redis.service
+Wants=redis.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.hermes/plugins/federation-memory-broker
+ExecStart=/usr/bin/python3 /root/.hermes/plugins/federation-memory-broker/broker.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+Environment=HERMES_STATE_DB=/root/.hermes/state.db
+Environment=HERMES_REDIS_URL=redis://localhost:6379
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

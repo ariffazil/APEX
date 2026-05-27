@@ -1,0 +1,22 @@
+[Unit]
+Description=APEX 888 JUDGE — Constitutional Verdict Engine
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/HERMES
+ExecStart=/usr/bin/node src/server.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+Environment=NODE_ENV=production
+Environment=PORT=3002
+
+# Log to journal with full timestamps
+LogLevelMax=notice
+
+[Install]
+WantedBy=multi-user.target
