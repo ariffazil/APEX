@@ -172,6 +172,10 @@ function extractText(candidate) {
 }
 
 // === 888 JUDGMENT — Constitutional Deliberation ===
+// ⚠️  MIRRORED: This logic is absorbed into /root/AAA/a2a-server/server.js deliberation()
+// apex-prime.service is DECOMMISSIONED (2026-06-02). AAA port 3001 is the live judge.
+// If you edit F1-F13 floor logic here, you MUST apply the same change to AAA a2a-server.
+// Long-term fix: extract to @arifos/judge-core shared package.
 function deliberation(candidate, taskId, contextId) {
   var text = extractText(candidate) || '';
   var lower = (text || '').toLowerCase();
