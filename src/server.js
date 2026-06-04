@@ -578,7 +578,7 @@ app.post('/judge', authMiddleware, function(req, res) {
   res.json({ verdict: result.verdict, rationale: result.rationale, confidence: result.confidence });
 });
 
-app.listen(PORT, '0.0.0.0', function() {
+app.listen(PORT, '127.0.0.1', function() {
   console.log('[Apex Prime] APEX 888 server running on port ' + PORT);
   console.log('[Apex Prime] Default model: ' + APEX_MODELS.default);
   console.log('[Apex Prime] Fallback model: ' + APEX_MODELS.fallback);
