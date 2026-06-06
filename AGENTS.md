@@ -93,3 +93,13 @@ self-approve irreversible actions; Arif and arifOS remain the final authority.
 ---
 
 *DITEMPA BUKAN DIBERI — 999 SEAL ALIVE*
+
+
+## Constitution
+
+The 13 Constitutional Laws (L01–L13) live in **one canonical file**:
+
+→ [arifOS/static/arifos/theory/000/000_CONSTITUTION.md](../../arifOS/static/arifos/theory/000/000_CONSTITUTION.md)
+
+This organ emits the **Evidence Contract** (see Appendix B of the constitution) and does **not** self-judge. arifOS alone reads the envelope and applies L01–L13.
+
